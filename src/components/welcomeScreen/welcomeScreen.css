@@ -33,14 +33,16 @@
 }
 
 #logo img {
-    height: 2rem;
-    width: 2rem;
+    height: 3rem;
+    width: 3rem;
     margin-right: 0.5rem;
 }
 
 #logo span {
     color: #fff;
     font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
 }
 
 .welcome-screen__details {

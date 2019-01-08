@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
 import './fammyTop.css';
+import { withStyles } from '@material-ui/core/styles';
 import playBtn from './images/play-button.svg';
 import Progress from '@material-ui/core/LinearProgress';
+
+const styles = {
+ root: {
+  height: 30,
+ },
+};
 
 const playlist = [
  {
@@ -53,6 +60,7 @@ const playlist = [
 
 class FammyTop extends Component {
  render() {
+  const { classes } = this.props;
   const playlistEl = playlist.map((item) => {
    return <div className="fammy-top__chart__track" key={item.id}>
     <div className="fammy-top__chart__track__id">
@@ -67,9 +75,14 @@ class FammyTop extends Component {
      <div className="fammy-top__chart__track__artist"><a href="">{item.artist}</a></div>
     </div>
     {/*<div className="fammy-top__chart__track__plays">{item.plays}</div>*/}
-     <div className="fammy-top__chart__track__progress_horizontal_view">
-      <Progress variant="determinate" value={item.progress} />
-     </div>
+    <div className="fammy-top__chart__track__progress_horizontal_view">
+     <Progress variant="determinate" value={item.progress}
+               classes={{
+                root: classes.root,
+               }}
+     >
+     </Progress>
+    </div>
    </div>;
   });
   return (
@@ -84,4 +97,4 @@ class FammyTop extends Component {
  }
 }
 
-export default FammyTop;
+export default withStyles(styles)(FammyTop);
