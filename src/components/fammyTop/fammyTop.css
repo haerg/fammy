@@ -1,0 +1,88 @@
+.fammy-top {
+    padding: 2rem 4rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.fammy-top__title {
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.fammy-top__chart__track {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f4f4f4;
+    cursor: pointer;
+}
+
+.fammy-top__chart__track:hover {
+    background: #fafafa;
+}
+
+.fammy-top__chart__track:hover .fammy-top__chart__track__title a {
+    color: #66BB6A;
+}
+
+.fammy-top__chart__track__id {
+    width: 3rem;
+    text-align: center;
+    font-weight: 700;
+    position: relative;
+}
+
+.fammy-top__chart__track__play {
+    /*display: none;*/
+    height: 1.5rem;
+    width: 1.5rem;
+    position: absolute;
+}
+
+.fammy-top__chart__track__play img {
+    width: 100%;
+}
+
+.fammy-top__chart__track__img {
+    height: 4rem;
+    width: 4rem;
+}
+
+.fammy-top__chart__track__img img {
+    width: 100%;
+    border-radius: 3px;
+}
+
+.fammy-top__chart__track__info {
+    margin-left: 1.5rem;
+    flex: 1;
+}
+
+.fammy-top__chart__track__title {
+    font-weight: 500;
+    padding-bottom: .3rem;
+}
+
+.fammy-top__chart__track__title a {
+    text-decoration: none;
+    color: #000;
+}
+
+.fammy-top__chart__track__title a:hover {
+    text-decoration: underline;
+    color: #66BB6A;
+}
+
+.fammy-top__chart__track__artist {
+    font-size: .9rem;
+}
+
+.fammy-top__chart__track__artist a {
+    text-decoration: none;
+    color: #949494;
+}
+
+.fammy-top__chart__track__artist a:hover {
+    text-decoration: underline;
+}

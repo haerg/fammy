@@ -1,0 +1,90 @@
+.how-does-it-works {
+    padding: 2rem 4rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.how-does-it-works__title {
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.how-does-it-works__features {
+    display: flex;
+    margin: 3rem 2rem 0 2rem;
+    justify-content: center;
+}
+
+.how-does-it-works__feature {
+    max-width: 300px;
+    -webkit-box-shadow: 0 5px 18px -3px rgba(204, 204, 204, 1);
+    -moz-box-shadow: 0 5px 18px -3px rgba(204, 204, 204, 1);
+    box-shadow: 0 5px 18px -3px rgba(204, 204, 204, 1);
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    margin: 0 1rem;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: all .3s ease-in;
+}
+
+.how-does-it-works__feature:hover {
+    background-color: #66BB6A;
+    -webkit-box-shadow: 0 5px 18px -3px rgba(102, 187, 106, 1);
+    -moz-box-shadow: 0 5px 18px -3px rgba(102, 187, 106, 1);
+    box-shadow: 0 5px 18px -3px rgba(102, 187, 106, 1);
+}
+
+.how-does-it-works__feature:hover .how-does-it-works__feature__icon-hovered {
+    visibility: visible;
+}
+
+.how-does-it-works__feature:hover .how-does-it-works__feature__icon-original {
+    visibility: hidden;
+}
+
+.how-does-it-works__feature:hover .how-does-it-works__feature__title {
+    color: white;
+}
+
+.how-does-it-works__feature__icon {
+    height: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.how-does-it-works__feature__icon img {
+    height: 100%;
+    position: absolute;
+    transition: visibility .1s ease;
+}
+
+.how-does-it-works__feature__icon-original {
+    visibility: visible;
+}
+
+.how-does-it-works__feature__icon-hovered {
+    visibility: hidden;
+}
+
+.how-does-it-works__feature__title {
+    font-weight: 500;
+    margin-bottom: 1rem;
+    font-size: .9rem;
+    flex: 1;
+    line-height: 1.2;
+    transition: color .3s ease-in-out;
+
+}
+
+.how-does-it-works__feature__sub-title {
+    color: #cccccc;
+    flex: 1;
+    line-height: 1.2;
+    font-size: .9rem;
+}
