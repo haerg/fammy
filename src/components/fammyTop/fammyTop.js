@@ -92,13 +92,13 @@ class FammyTop extends Component {
      <div className="fammy-top__chart__track__title"><a href="">{item.track}</a></div>
      <div className="fammy-top__chart__track__artist"><a href="">{item.artist}</a></div>
     </div>
-    {/*<div className="fammy-top__chart__track__plays">{item.plays}</div>*/}
+    {/*{<div className="fammy-top__chart__track__plays">{item.plays}</div>}*/}
    </div>;
   });
   return (
       <div className="fammy-top">
 
-       <div className="fammy-top__title">Fammy Top</div>
+       <div className="fammy-top__title">Top Music to Invest</div>
        <div className="fammy-top__chart">
         {playlistEl}
        </div>

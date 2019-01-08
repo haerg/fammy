@@ -26,6 +26,17 @@
     color: #66BB6A;
 }
 
+.fammy-top__chart__track:hover {
+    position: relative;
+}
+
+.fammy-top__chart__track:hover:after {
+    /*content: url(images/play-button.png);*/
+    display: block;
+    position: absolute;
+    left: 10px;
+}
+
 .fammy-top__chart__track__id {
     width: 3rem;
     text-align: center;

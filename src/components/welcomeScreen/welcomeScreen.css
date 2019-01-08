@@ -1,5 +1,5 @@
 .welcome-screen {
-    background-image: url(../../background.jpeg);
+    background-image: url(../../background.jpg);
     height: 700px;
     position: relative;
     z-index: 1;
@@ -54,10 +54,26 @@
 }
 
 .welcome-screen__details__title {
-    font-size: 2rem;
+    font-size: 3rem;
     line-height: 3rem;
+    text-align: center;
 }
 
 .welcome-screen__details__sub-title {
-    padding: 0.5rem 0 1rem 0;
+    padding: 1.5rem 0 1rem 0;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.welcome-screen__wrapper_getstarted_button {
+    text-align: center;
+    padding: 2.5rem 0 1rem 0;
+}
+
+.welcome-screen__getstarted_button {
+    position: absolute;
+    top: 50%;
+    height: 50px;
+    width: 200px;
+    border-radius: 24px;
 }
