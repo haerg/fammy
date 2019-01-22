@@ -34,7 +34,7 @@ class WelcomeScreen extends Component {
                  root: classes.root,
                  label: classes.label,
                 }}>
-         Add Music
+         Sign In
         </Button>
        </div>
 
@@ -42,15 +42,17 @@ class WelcomeScreen extends Component {
         <div className="welcome-screen__details__title">
          Fammy makes it easy for good musicians to find resources to create a music video.
         </div>
-        <div className="welcome-screen__details__sub-title">Fame starts here</div>
+        <div className="welcome-screen__details__sub-title"> Backers get % from the video revenue based on their contribution.</div>
         <div>
-         <Button variant="contained"
-                 classes={{
-                  root: classes.root,
-                  label: classes.label,
-                 }}>
-          Invest Now
-         </Button>
+            <div className="welcome-screen__wrapper_getstarted_button">
+                <Button className="welcome-screen__getstarted_button"
+                    variant="contained"
+                    classes={{
+                    root: classes.root,
+                    label: classes.label,
+                }}>Get started
+            </Button>
+            </div>
         </div>
        </div>
 

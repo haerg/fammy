@@ -4,7 +4,7 @@
 }
 
 .how-does-it-works__title {
-    font-size: 1.8rem;
+    font-size: 2.0rem;
     text-align: center;
     font-weight: 700;
 }
@@ -17,10 +17,10 @@
 
 .how-does-it-works__feature {
     max-width: 300px;
-    -webkit-box-shadow: 0 5px 18px -3px rgba(204, 204, 204, 1);
-    -moz-box-shadow: 0 5px 18px -3px rgba(204, 204, 204, 1);
-    box-shadow: 0 5px 18px -3px rgba(204, 204, 204, 1);
-    border-radius: 3px;
+    -webkit-box-shadow: 0 0 18px -3px rgba(204, 204, 204, 1);
+    -moz-box-shadow: 0 0 18px -3px rgba(204, 204, 204, 1);
+    box-shadow: 0 0 18px -3px rgba(204, 204, 204, 1);
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     width: 33%;
@@ -46,6 +46,10 @@
 }
 
 .how-does-it-works__feature:hover .how-does-it-works__feature__title {
+    color: white;
+}
+
+.how-does-it-works__feature:hover .how-does-it-works__feature__sub-title {
     color: white;
 }
 
@@ -75,16 +79,18 @@
 .how-does-it-works__feature__title {
     font-weight: 500;
     margin-bottom: 1rem;
-    font-size: .9rem;
+    font-size: 1.0rem;
     flex: 1;
     line-height: 1.2;
     transition: color .3s ease-in-out;
-
+    text-align: center;
 }
 
 .how-does-it-works__feature__sub-title {
-    color: #cccccc;
+    color: gray;
     flex: 1;
     line-height: 1.2;
     font-size: .9rem;
+    text-align: center;
+    transition: color .3s ease-in-out;
 }

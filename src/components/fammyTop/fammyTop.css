@@ -56,6 +56,17 @@
     color: #66BB6A;
 }
 
+.fammy-top__chart__track:hover {
+    position: relative;
+}
+
+.fammy-top__chart__track:hover:after {
+    /*content: url(images/play-button.png);*/
+    display: block;
+    position: absolute;
+    left: 10px;
+}
+
 .fammy-top__chart__track__id {
     width: 3rem;
     text-align: center;
@@ -127,4 +138,11 @@
 
 .fammy-top__chart__track__artist a:hover {
     text-decoration: underline;
+}
+
+.fammy-top__chart__track__progress_horizontal_view {
+    position: center;
+    height: 50px;
+    width: 200px;
+    border-radius: 30px;
 }
