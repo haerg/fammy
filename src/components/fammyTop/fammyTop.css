@@ -7,6 +7,7 @@
     font-size: 1.8rem;
     text-align: center;
     font-weight: 700;
+    margin-bottom: 1rem;
 }
 
 .fammy-top__chart__track {
@@ -16,6 +17,35 @@
     padding: 1rem 0;
     border-bottom: 1px solid #f4f4f4;
     cursor: pointer;
+    height: 5rem;
+}
+.fammy-top__chart__track:hover .fammy-top__chart__track__number,
+.fammy-top__chart__track.current .fammy-top__chart__track__number {
+    display: none;
+}
+
+.fammy-top__chart__track .fammy-top__chart__track__pause {
+    display: none;
+}
+
+.fammy-top__chart__track.current .fammy-top__chart__track__pause {
+    display: block;
+}
+
+.fammy-top__chart__track.current .fammy-top__chart__track__number {
+    display: none;
+}
+
+.fammy-top__chart__track .fammy-top__chart__track__play {
+    display: none;
+}
+
+.fammy-top__chart__track.current:hover .fammy-top__chart__track__play {
+    display: none;
+}
+
+.fammy-top__chart__track:hover .fammy-top__chart__track__play {
+    display: block;
 }
 
 .fammy-top__chart__track:hover {
@@ -30,17 +60,29 @@
     width: 3rem;
     text-align: center;
     font-weight: 700;
-    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .fammy-top__chart__track__play {
-    /*display: none;*/
     height: 1.5rem;
     width: 1.5rem;
     position: absolute;
 }
 
 .fammy-top__chart__track__play img {
+    width: 100%;
+}
+
+.fammy-top__chart__track__pause {
+    height: 1.5rem;
+    width: 1.5rem;
+    position: absolute;
+}
+
+.fammy-top__chart__track__pause img {
     width: 100%;
 }
 
