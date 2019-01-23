@@ -20,7 +20,7 @@ class HowDoesItWorks extends Component {
           <img className="how-does-it-works__feature__icon-hovered" src={singerHovered} alt=""/>
          </div>
          <div className="how-does-it-works__feature__title">
-          Project creator sets their project's funding goal and deadline
+          Creator sets project's funding goal and deadline
          </div>
          <div className="how-does-it-works__feature__sub-title">
           If you like the music, you can give money to make it happen.
@@ -36,7 +36,7 @@ class HowDoesItWorks extends Component {
           Once the project has reached its funding goal - all backers are charged
          </div>
          <div className="how-does-it-works__feature__sub-title">
-          Funding on Fammy is all-or-nothing. If the project fails on its funding goal, no one
+          If the project fails on its funding goal, no one
           is charged.
          </div>
         </div>
@@ -47,7 +47,7 @@ class HowDoesItWorks extends Component {
           <img className="how-does-it-works__feature__icon-hovered" src={dollarHovered} alt=""/>
          </div>
          <div className="how-does-it-works__feature__title">
-          Backers actually get % from video revenue from YouTube based on their contribution
+          Backers get % from the video revenue, based on their contribution
          </div>
          <div className="how-does-it-works__feature__sub-title">
           In case music is actually good - its a win win for backers and for

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './welcomeScreen.css';
 import { withStyles } from '@material-ui/core/styles';
-import logo from './logo.svg';
+import logo from './fammy.png';
 import Button from '@material-ui/core/Button';
 
 const styles = {
