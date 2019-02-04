@@ -35,7 +35,7 @@ export default class FammyPlayer extends Component {
    this.setState({ playingTime: Math.round(this.props.item.audio.currentTime) });
   };
 
-  const playingTime = `0:${this.state.playingTime > 10 ? this.state.playingTime : ('0' +
+  const playingTime = `0:${this.state.playingTime >= 10 ? this.state.playingTime : ('0' +
       this.state.playingTime)}`;
 
   return (
