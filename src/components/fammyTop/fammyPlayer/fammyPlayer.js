@@ -5,12 +5,16 @@ import playPrevTrack from '../images/play-previous-track.svg';
 import playTrack from '../images/play-track.svg';
 import pauseTrack from '../images/pause-track.svg';
 import playNextTrack from '../images/play-next-track.svg';
-// import volumeMuted from './images/volume-muted.svg';
-// import volumeHigh from './images/volume-high.svg';
+import volumeMuted from '../images/volume-muted.svg';
+import volumeMed from '../images/volume-med.svg';
+import volumeHigh from '../images/volume-high.svg';
 
 export default class FammyPlayer extends Component {
  state = {
   playingTime: 0,
+  volume: 1,
+  volumeSrc: volumeHigh,
+  isVolumeEditorVisible: false,
  };
 
  static propTypes = {
@@ -30,7 +34,25 @@ export default class FammyPlayer extends Component {
   this.setState({ playingTime: event.target.value });
  };
 
+ showVolumeRange = () => {
+  this.setState({ isVolumeEditorVisible: !this.state.isVolumeEditorVisible });
+ };
+
+ changeVolume = (event) => {
+  const volume = +event.target.value;
+  let volumeSrc = volumeHigh;
+
+  if (volume === 0) {
+   volumeSrc = volumeMuted;
+  } else if (volume <= 0.5) {
+   volumeSrc = volumeMed;
+  }
+
+  this.setState({ volume, volumeSrc });
+ };
+
  render() {
+  this.props.item.audio.volume = this.state.volume;
   this.props.item.audio.ontimeupdate = () => {
    this.setState({ playingTime: Math.round(this.props.item.audio.currentTime) });
   };
@@ -40,6 +62,7 @@ export default class FammyPlayer extends Component {
 
   return (
       <div className={`fammy-top__player ${this.props.item.isPlaying ? 'active' : ''}`}>
+
        <div className="fammy-top__player__controls">
         <div className="fammy-top__player__control fammy-top__player__controls__prev"
              onClick={this.props.goPrevTrack}>
@@ -58,6 +81,7 @@ export default class FammyPlayer extends Component {
          <img alt="" src={playNextTrack}/>
         </div>
        </div>
+
        <div className="fammy-top__player__playstatus">
         <span className="fammy-top__player__playstatus__starttime">{playingTime}</span>
         <div className="fammy-top__player__playstatus__progressbar-container">
@@ -72,6 +96,7 @@ export default class FammyPlayer extends Component {
         </div>
         <span className="fammy-top__player__playstatus__endtime">0:30</span>
        </div>
+
        <div className="fammy-top__player__track">
         <div className="fammy-top__player__track__img">
          <img src={this.props.item.logoUrl} alt=""/>
@@ -83,8 +108,27 @@ export default class FammyPlayer extends Component {
          <div className="fammy-top__player__track__artist">
           <span>{this.props.item.artist}</span>
          </div>
+
         </div>
        </div>
+
+       <div className="fammy-top__player__volume">
+        <img src={this.state.volumeSrc} alt="" onClick={this.showVolumeRange}/>
+
+        <div className={`fammy-top__player__volume__popup ${this.state.isVolumeEditorVisible
+            ? 'show'
+            : ''}`}>
+         <input type="range"
+                className="fammy-top__player__playstatus__progressbar"
+                min="0"
+                max="1"
+                step="0.1"
+                value={this.state.volume}
+                onChange={this.changeVolume}/>
+         <img src={this.state.volumeSrc} alt="" onClick={this.showVolumeRange}/>
+        </div>
+       </div>
+
       </div>
   );
  }

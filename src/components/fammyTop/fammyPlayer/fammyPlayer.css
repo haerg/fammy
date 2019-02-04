@@ -12,7 +12,6 @@
     justify-items: center;
     align-items: center;
     height: 60px;
-    width: 100%;
 }
 
 .fammy-top__player.active .fammy-top__player__controls__pause {
@@ -193,7 +192,6 @@ input[type=range].fammy-top__player__playstatus__progressbar::-ms-fill-upper {
 
 input[type=range].fammy-top__player__playstatus__progressbar::-ms-thumb {
     border: 1px solid #66bb6a;
-    height: 12px;
     width: 12px;
     border-radius: 15px;
     background: #66bb6a;
@@ -208,3 +206,60 @@ input[type=range].fammy-top__player__playstatus__progressbar:focus::-ms-fill-low
 input[type=range].fammy-top__player__playstatus__progressbar:focus::-ms-fill-upper {
     background: rgba(102, 187, 106, 0.78);
 }
+
+.fammy-top__player__volume {
+    display: flex;
+    align-items: center;
+    max-width: 46px;
+    min-width: 46px;
+    height: 100%;
+    padding-left: 20px;
+    position: relative;
+}
+
+.fammy-top__player__volume img {
+    width: 46px;
+    height: 46px;
+    cursor: pointer;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.fammy-top__player__volume__popup {
+    position: absolute;
+    height: 160px;
+    width: 46px;
+    background: #fff;
+    left: 19px;
+    bottom: 6px;
+    border: 1px solid #e4e4e4;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .24), 0 0 2px 0 rgba(0, 0, 0, .12);
+    opacity: 0;
+    -webkit-transition: opacity .3s cubic-bezier(.4, .2, 0, 1);
+    transition: opacity .3s cubic-bezier(.4, .2, 0, 1);
+    pointer-events: none;
+}
+
+.fammy-top__player__volume__popup.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.fammy-top__player__volume__popup input[type=range].fammy-top__player__playstatus__progressbar {
+    position: absolute;
+    top: 60px;
+    left: -41px;
+    height: 2px;
+    width: 86px;
+    margin-left: 20px;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.fammy-top__player__volume__popup img {
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
