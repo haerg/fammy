@@ -89,12 +89,10 @@ const playlist = [
 ];
 
 class FammyTop extends Component {
- constructor() {
-  super();
-  this.state = {
-   currentTrack: null,
-  };
- }
+
+ state = {
+  currentTrack: null,
+ };
 
  play = (item) => {
   item.isPlaying = true;

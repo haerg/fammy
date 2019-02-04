@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { object, func } from 'prop-types';
 import './fammyPlayer.css';
 import playPrevTrack from '../images/play-previous-track.svg';
 import playTrack from '../images/play-track.svg';
@@ -8,21 +9,34 @@ import playNextTrack from '../images/play-next-track.svg';
 // import volumeHigh from './images/volume-high.svg';
 
 export default class FammyPlayer extends Component {
+ state = {
+  playingTime: 0,
+ };
 
- constructor(props) {
-  super(props);
-  this.state = {
-   startTime: 0,
-  };
- }
+ static propTypes = {
+  item: object.isRequired,
+  goPrevTrack: func.isRequired,
+  playTrack: func.isRequired,
+  pauseTrack: func.isRequired,
+  goNextTrack: func.isRequired,
+ };
 
  playTrack = () => {
   this.props.playTrack(this.props.item);
  };
 
+ changeRange = (event) => {
+  this.props.item.audio.currentTime = event.target.value;
+  this.setState({ playingTime: event.target.value });
+ };
+
  render() {
-  const startTime = `0:${this.state.startTime > 10 ? this.state.startTime : ('0' +
-      this.state.startTime)}`;
+  this.props.item.audio.ontimeupdate = () => {
+   this.setState({ playingTime: Math.round(this.props.item.audio.currentTime) });
+  };
+
+  const playingTime = `0:${this.state.playingTime > 10 ? this.state.playingTime : ('0' +
+      this.state.playingTime)}`;
 
   return (
       <div className={`fammy-top__player ${this.props.item.isPlaying ? 'active' : ''}`}>
@@ -45,10 +59,16 @@ export default class FammyPlayer extends Component {
         </div>
        </div>
        <div className="fammy-top__player__playstatus">
-        <span className="fammy-top__player__playstatus__starttime">{startTime}</span>
+        <span className="fammy-top__player__playstatus__starttime">{playingTime}</span>
         <div className="fammy-top__player__playstatus__progressbar-container">
-         <input type="range" className="fammy-top__player__playstatus__progressbar" min="0"
-                max="30"/>
+         <input type="range"
+                className="fammy-top__player__playstatus__progressbar"
+                min="0"
+                max="30"
+                step="1"
+                value={this.state.playingTime}
+                onChange={this.changeRange}
+         />
         </div>
         <span className="fammy-top__player__playstatus__endtime">0:30</span>
        </div>

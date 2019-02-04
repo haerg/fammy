@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './fammyTrack.css';
 import playBtn from '../images/play-button.svg';
 import pauseBtn from '../images/pause-button.svg';
+import { func, object } from 'prop-types';
 
 export default class FammyTrack extends Component {
 
@@ -9,8 +10,12 @@ export default class FammyTrack extends Component {
   this.props.playTrack(this.props.item);
  };
 
- render() {
+ static propTypes = {
+  item: object.isRequired,
+  playTrack: func.isRequired,
+ };
 
+ render() {
   return (
       <div
           className={`fammy-top__chart__track ${this.props.item.isPlaying ? 'current' : ''}`}
