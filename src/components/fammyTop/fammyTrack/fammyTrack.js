@@ -68,7 +68,7 @@ export default class FammyTrack extends Component {
        </div>
 
        <div className="fammy-top__chart__track__back-button" onClick={this.backTrack}>
-        Back this project
+        Back this song
        </div>
 
           <div className="fammy-top__chart__track__details-button" onClick={this.detailsTrack}>
