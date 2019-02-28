@@ -16,6 +16,12 @@ export default class FammyTrack extends Component {
   alert('smile')
  };
 
+    detailsTrack = (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        alert('details')
+    };
+
  static propTypes = {
   item: object.isRequired,
   playTrack: func.isRequired,
@@ -64,6 +70,10 @@ export default class FammyTrack extends Component {
        <div className="fammy-top__chart__track__back-button" onClick={this.backTrack}>
         Back this project
        </div>
+
+          <div className="fammy-top__chart__track__details-button" onClick={this.detailsTrack}>
+              Details
+          </div>
 
       </div>
   );
