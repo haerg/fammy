@@ -13,6 +13,11 @@ const playlist = [
   audioUrl: 'https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/AudioPreview128/v4/8f/d8/bf/8fd8bfa5-4a1d-462f-059e-c7b57b5409cd/mzaf_4287859394734930905.plus.aac.p.m4a',
   plays: 3,
   isPlaying: false,
+  info: {
+   daysLeft: 10,
+   moneyCurrent: 8000,
+   moneyNeeded: 12000,
+  },
  },
  {
   id: 2,
@@ -22,6 +27,11 @@ const playlist = [
   audioUrl: 'https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/AudioPreview128/v4/cb/03/19/cb031939-36c4-7542-af33-a64169be4c8c/mzaf_1558272479967123968.plus.aac.p.m4a',
   plays: 22,
   isPlaying: false,
+  info: {
+   daysLeft: 13,
+   moneyCurrent: 7000,
+   moneyNeeded: 12000,
+  },
  },
  {
   id: 3,
@@ -31,6 +41,11 @@ const playlist = [
   audioUrl: 'https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/AudioPreview118/v4/5f/83/70/5f8370e1-84d0-7699-c7c1-d86b8ba3002c/mzaf_1212062608084196781.plus.aac.p.m4a',
   plays: 13,
   isPlaying: false,
+  info: {
+   daysLeft: 15,
+   moneyCurrent: 6000,
+   moneyNeeded: 12000,
+  },
  },
  {
   id: 4,
@@ -40,6 +55,11 @@ const playlist = [
   audioUrl: 'https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/AudioPreview128/v4/46/29/d7/4629d776-e336-cfb0-d1a9-15cbf5d3bc65/mzaf_5119235406647478413.plus.aac.p.m4a',
   plays: 13,
   isPlaying: false,
+  info: {
+   daysLeft: 20,
+   moneyCurrent: 4000,
+   moneyNeeded: 12000,
+  },
  },
  {
   id: 5,
@@ -49,6 +69,11 @@ const playlist = [
   audioUrl: 'https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/AudioPreview125/v4/91/85/0f/91850f1d-85b8-1aa0-6eea-e5988b0eb194/mzaf_6254647395340771291.plus.aac.p.m4a',
   plays: 13,
   isPlaying: false,
+  info: {
+   daysLeft: 20,
+   moneyCurrent: 2000,
+   moneyNeeded: 12000,
+  },
  },
  {
   id: 6,
@@ -58,6 +83,11 @@ const playlist = [
   audioUrl: 'https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/AudioPreview118/v4/9c/e6/fd/9ce6fd38-1225-6ac3-f7a6-da80cb50346e/mzaf_1582186890349153418.plus.aac.p.m4a',
   plays: 13,
   isPlaying: false,
+  info: {
+   daysLeft: 23,
+   moneyCurrent: 1000,
+   moneyNeeded: 12000,
+  },
  },
  {
   id: 7,
@@ -67,6 +97,11 @@ const playlist = [
   audioUrl: 'https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/AudioPreview128/v4/85/9c/fc/859cfc11-eff0-aca8-b50f-679b4aa644af/mzaf_5556395319728888179.plus.aac.p.m4a',
   plays: 13,
   isPlaying: false,
+  info: {
+   daysLeft: 25,
+   moneyCurrent: 3000,
+   moneyNeeded: 12000,
+  },
  },
  {
   id: 8,
@@ -76,6 +111,11 @@ const playlist = [
   audioUrl: 'https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/AudioPreview118/v4/28/74/c1/2874c191-db74-ccce-c1d6-de686e2b59e0/mzaf_7006496898019862311.plus.aac.p.m4a',
   plays: 13,
   isPlaying: false,
+  info: {
+   daysLeft: 27,
+   moneyCurrent: 7000,
+   moneyNeeded: 12000,
+  },
  },
  {
   id: 9,
@@ -85,6 +125,11 @@ const playlist = [
   audioUrl: 'https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/AudioPreview128/v4/ca/b8/2b/cab82b04-bf80-eca4-9666-1d4ea83d2959/mzaf_6744258349999902748.plus.aac.p.m4a',
   plays: 13,
   isPlaying: false,
+  info: {
+   daysLeft: 40,
+   moneyCurrent: 1000,
+   moneyNeeded: 15000,
+  },
  },
 ];
 

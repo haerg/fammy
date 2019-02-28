@@ -16,6 +16,9 @@ export default class FammyTrack extends Component {
  };
 
  render() {
+  const styles = {
+   width: `${this.props.item.info.moneyCurrent / this.props.item.info.moneyNeeded * 100}%`,
+  };
   return (
       <div
           className={`fammy-top__chart__track ${this.props.item.isPlaying ? 'current' : ''}`}
@@ -37,7 +40,20 @@ export default class FammyTrack extends Component {
         </div>
        </div>
 
-       {/*<div className="fammy-top__chart__track__plays">{item.plays}</div>*/}
+       <div className="fammy-top__chart__track__progress">
+        <div className="fammy-top__chart__track__progress__details">
+         <div className="fammy-top__chart__track__progress__details-current"
+              style={styles}>&nbsp;</div>
+        </div>
+        <div className="fammy-top__chart__track__progress__sub-details">
+         <div>
+          {this.props.item.info.daysLeft} days left
+         </div>
+         <div>
+          ${this.props.item.info.moneyCurrent} to go
+         </div>
+        </div>
+       </div>
       </div>
   );
  }
