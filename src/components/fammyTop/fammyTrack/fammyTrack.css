@@ -139,7 +139,7 @@
 
 .fammy-top__chart__track__progress {
     width: 15rem;
-    margin: 0 1rem;
+    margin-right: 30px;
 }
 
 .fammy-top__chart__track__progress__details {
@@ -167,7 +167,8 @@
     border-radius: 10px;
     cursor: pointer;
     margin-left: 20px;
-    margin-right: 60px;
+    margin-right: 10px;
+    display: none;
 }
 
 .fammy-top__chart__track__back-button:hover {
@@ -181,9 +182,18 @@
     border-radius: 10px;
     cursor: pointer;
     margin-left: 20px;
-    margin-right: 20px;
+    margin-right: 10px;
+    display: none;
 }
 
 .fammy-top__chart__track__details-button:hover {
     background-color: #468c47;
+}
+
+.fammy-top__chart__track:hover .fammy-top__chart__track__details-button {
+    display: block;
+}
+
+.fammy-top__chart__track:hover .fammy-top__chart__track__back-button {
+    display: block;
 }
