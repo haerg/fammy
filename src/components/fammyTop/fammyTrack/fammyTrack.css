@@ -191,9 +191,16 @@
 }
 
 .fammy-top__chart__track:hover .fammy-top__chart__track__details-button {
+    animation: showNav 250ms ease-in-out both;
     display: block;
 }
 
+@keyframes showNav {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
 .fammy-top__chart__track:hover .fammy-top__chart__track__back-button {
+    animation: showNav 250ms ease-in-out both;
     display: block;
 }
