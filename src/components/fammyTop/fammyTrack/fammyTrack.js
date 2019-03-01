@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import {
+ withRouter,
+} from 'react-router-dom';
 import './fammyTrack.css';
 import playBtn from '../images/play-button.svg';
 import pauseBtn from '../images/pause-button.svg';
 import { func, object } from 'prop-types';
 
-export default class FammyTrack extends Component {
+class FammyTrack extends Component {
 
  playTrack = () => {
   this.props.playTrack(this.props.item);
@@ -13,14 +16,14 @@ export default class FammyTrack extends Component {
  backTrack = (event) => {
   event.preventDefault();
   event.stopPropagation();
-  alert('smile')
+  alert('smile');
  };
 
-    detailsTrack = (event) => {
-        event.preventDefault();
-        event.stopPropagation();
-        alert('details')
-    };
+ detailsTrack = (event) => {
+  event.preventDefault();
+  event.stopPropagation();
+  this.props.history.push(`/tracks/${this.props.item.id}`);
+ };
 
  static propTypes = {
   item: object.isRequired,
@@ -71,11 +74,13 @@ export default class FammyTrack extends Component {
         Back this song
        </div>
 
-          <div className="fammy-top__chart__track__details-button" onClick={this.detailsTrack}>
-              Details
-          </div>
+       <div className="fammy-top__chart__track__details-button" onClick={this.detailsTrack}>
+        Details
+       </div>
 
       </div>
   );
  }
 }
+
+export default withRouter(FammyTrack);
