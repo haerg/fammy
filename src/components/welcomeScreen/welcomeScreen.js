@@ -29,20 +29,20 @@ class WelcomeScreen extends Component {
          <img src={logo} alt="Fammy"/>
          <span>Fammy</span>
         </div>
-        <Button variant="contained"
-                classes={{
-                 root: classes.root,
-                 label: classes.label,
-                }}>
-         Sign In
-        </Button>
+        {/*<Button variant="contained"*/}
+                {/*classes={{*/}
+                 {/*root: classes.root,*/}
+                 {/*label: classes.label,*/}
+                {/*}}>*/}
+         {/*Sign In*/}
+        {/*</Button>*/}
        </div>
 
        <div className="welcome-screen__details">
         <div className="welcome-screen__details__title">
-         Fammy makes it easy for good musicians to find resources to create a music video.
+         Fammy makes it easy for musicians to find resources to create a music video.
         </div>
-        <div className="welcome-screen__details__sub-title"> Backers get % from the video revenue based on their contribution.</div>
+        <div className="welcome-screen__details__sub-title"> Backers get % from a video revenue on YouTube based on their contribution.</div>
         <div>
             <div className="welcome-screen__wrapper_getstarted_button">
                 <Button className="welcome-screen__getstarted_button"
