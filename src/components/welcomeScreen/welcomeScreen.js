@@ -3,18 +3,27 @@ import './welcomeScreen.css';
 import { withStyles } from '@material-ui/core/styles';
 import logo from './fammy.png';
 import Button from '@material-ui/core/Button';
+import scroll from './scroll-arrow-to-down.png';
 
 const styles = {
  root: {
-  backgroundColor: '#66BB6A',
+  backgroundColor: '#E5A200',
   color: 'white',
   '&:hover': {
-   backgroundColor: '#30b334',
+   backgroundColor: '#E5A200',
   },
  },
  label: {
   textTransform: 'capitalize',
  },
+    rounded: {
+        backgroundColor: 'transparent',
+        borderRadius: 100,
+        color: 'white',
+        '&:hover': {
+            backgroundColor: 'transparent',
+        },
+    }
 };
 
 class WelcomeScreen extends Component {
@@ -27,31 +36,25 @@ class WelcomeScreen extends Component {
        <div className="welcome-screen__logo-container">
         <div id="logo">
          <img src={logo} alt="Fammy"/>
-         <span>Fammy</span>
         </div>
-        {/*<Button variant="contained"*/}
-                {/*classes={{*/}
-                 {/*root: classes.root,*/}
-                 {/*label: classes.label,*/}
-                {/*}}>*/}
-         {/*Sign In*/}
-        {/*</Button>*/}
+        <Button variant="contained"
+                classes={{
+                 root: classes.root,
+                 label: classes.label,
+                }}>
+         Start my compain
+        </Button>
        </div>
 
        <div className="welcome-screen__details">
         <div className="welcome-screen__details__title">
-            Fammy makes it easy for musicians to find resources for a music video.
+            Fammy helps musicians find resources for a music video.
         </div>
-        <div className="welcome-screen__details__sub-title"> Backers get % from a video revenue on YouTube based on their contribution.</div>
+        <div className="welcome-screen__details__sub-title">Backers get part of a revenue from the video based on their contribution.
+        </div>
         <div>
-            <div className="welcome-screen__wrapper_getstarted_button">
-                <Button className="welcome-screen__getstarted_button"
-                    variant="contained"
-                    classes={{
-                    root: classes.root,
-                    label: classes.label,
-                }}>Get started
-            </Button>
+            <div id="scroll">
+                <img src={scroll}/>
             </div>
         </div>
        </div>
