@@ -15,13 +15,22 @@ const styles = {
  label: {
   textTransform: 'capitalize',
  },
-    rounded: {
+    roundedRed: {
         backgroundColor: '#DB5643',
         borderRadius: 30,
         height: 50,
         color: 'white',
         '&:hover': {
             backgroundColor: '#DB5643',
+        },
+    },
+    roundedWhite: {
+        backgroundColor: '#FAEFED',
+        borderRadius: 30,
+        height: 50,
+        color: '#DB5643',
+        '&:hover': {
+            backgroundColor: '#FAEFED',
         },
     },
     clear: {
@@ -32,6 +41,9 @@ const styles = {
         },
     },
     normalLabel: {
+        textTransform: 'none',
+    },
+    redLabel: {
         textTransform: 'none',
     }
 };
@@ -72,13 +84,28 @@ class WelcomeScreen extends Component {
         <div className="welcome-screen__details__sub-title">Backers get part of the video revenue based on their contribution
         </div>
            <div className="welcome-screen__wrapper_getstarted_button">
+
+               <div className="welcome-screen__wrapper_start_compain">
                <Button variant="contained"
                        classes={{
-                           root: classes.rounded,
-                           label: classes.normalLabel,
+                           root: classes.roundedWhite,
+                           label: classes.redLabel,
                        }}>
+                   Explore compains
+               </Button>
+               </div>
+
+               <div className="welcome-screen__wrapper_start_compain">
+
+               <Button variant="contained"
+                       classes={{
+                           root: classes.roundedRed,
+                           label: classes.normalLabel,
+                       }} >
                    Start my compain
                </Button>
+               </div>
+
            </div>
        </div>
 
