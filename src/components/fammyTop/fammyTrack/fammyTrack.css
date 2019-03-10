@@ -43,7 +43,7 @@
 }
 
 .fammy-top__chart__track:hover .fammy-top__chart__track__title a {
-    color: #66BB6A;
+    color: #DB5643;
 }
 
 .fammy-top__chart__track:hover {
@@ -114,7 +114,7 @@
 
 .fammy-top__chart__track__title a:hover {
     text-decoration: underline;
-    color: #66BB6A;
+    color: #DB5643;
 }
 
 .fammy-top__chart__track__artist {
@@ -130,13 +130,6 @@
     text-decoration: underline;
 }
 
-.fammy-top__chart__track__progress_horizontal_view {
-    position: center;
-    height: 50px;
-    width: 200px;
-    border-radius: 30px;
-}
-
 .fammy-top__chart__track__progress {
     width: 15rem;
     margin-right: 30px;
@@ -144,12 +137,14 @@
 
 .fammy-top__chart__track__progress__details {
     width: 100%;
-    border: 2px solid #66BB6A;
+    height: 5px;
+    border: 1px solid #DB5643;
     border-radius: 10px;
 }
 
 .fammy-top__chart__track__progress__details-current {
-    background-color: #66BB6A;
+    background-color: #DB5643;
+    height: 5px;
     border-radius: 10px;
 }
 
@@ -162,9 +157,9 @@
 
 .fammy-top__chart__track__back-button {
     padding: .5rem;
-    background-color: #66BB6A;
+    background-color: #DB5643;
     color: #fff;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
     margin-left: 20px;
     margin-right: 10px;
@@ -172,12 +167,12 @@
 }
 
 .fammy-top__chart__track__back-button:hover {
-    background-color: #468c47;
+    background-color: #DB5643;
 }
 
 .fammy-top__chart__track__details-button {
     padding: .5rem;
-    background-color: #66BB6A;
+    background-color: #DB5643;
     color: #fff;
     border-radius: 10px;
     cursor: pointer;
@@ -187,7 +182,7 @@
 }
 
 .fammy-top__chart__track__details-button:hover {
-    background-color: #468c47;
+    background-color: #DB5643;
 }
 
 .fammy-top__chart__track:hover .fammy-top__chart__track__details-button {

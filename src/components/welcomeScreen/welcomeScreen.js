@@ -3,14 +3,13 @@ import './welcomeScreen.css';
 import { withStyles } from '@material-ui/core/styles';
 import logo from './fammy.png';
 import Button from '@material-ui/core/Button';
-import scroll from './scroll-arrow-to-down.png';
 
 const styles = {
  root: {
-  backgroundColor: '#E5A200',
+  backgroundColor: '#DB5643',
   color: 'white',
   '&:hover': {
-   backgroundColor: '#E5A200',
+   backgroundColor: '#DB5643',
   },
  },
  label: {
@@ -18,7 +17,6 @@ const styles = {
  },
     rounded: {
         backgroundColor: 'transparent',
-        borderRadius: 100,
         color: 'white',
         '&:hover': {
             backgroundColor: 'transparent',
@@ -39,11 +37,18 @@ class WelcomeScreen extends Component {
         </div>
         <Button variant="contained"
                 classes={{
-                 root: classes.root,
+                 root: classes.rounded,
                  label: classes.label,
                 }}>
-         Start my compain
+         Sign up
         </Button>
+           <Button variant="contained"
+                   classes={{
+                       root: classes.rounded,
+                       label: classes.label,
+                   }}>
+               Log in
+           </Button>
        </div>
 
        <div className="welcome-screen__details">
@@ -52,11 +57,15 @@ class WelcomeScreen extends Component {
         </div>
         <div className="welcome-screen__details__sub-title">Backers get part of a revenue from the video based on their contribution.
         </div>
-        <div>
-            <div id="scroll">
-                <img src={scroll}/>
-            </div>
-        </div>
+           <div className="welcome-screen__wrapper_getstarted_button">
+               <Button variant="contained"
+                       classes={{
+                           root: classes.root,
+                           label: classes.label,
+                       }}>
+                   Start my compain
+               </Button>
+           </div>
        </div>
 
       </div>
