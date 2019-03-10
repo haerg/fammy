@@ -16,11 +16,23 @@ const styles = {
   textTransform: 'capitalize',
  },
     rounded: {
+        backgroundColor: '#DB5643',
+        borderRadius: 30,
+        height: 50,
+        color: 'white',
+        '&:hover': {
+            backgroundColor: '#DB5643',
+        },
+    },
+    clear: {
         backgroundColor: 'transparent',
         color: 'white',
         '&:hover': {
             backgroundColor: 'transparent',
         },
+    },
+    normalLabel: {
+        textTransform: 'none',
     }
 };
 
@@ -35,33 +47,35 @@ class WelcomeScreen extends Component {
         <div id="logo">
          <img src={logo} alt="Fammy"/>
         </div>
-        <Button variant="contained"
-                classes={{
-                 root: classes.rounded,
-                 label: classes.label,
-                }}>
-         Sign up
-        </Button>
-           <Button variant="contained"
-                   classes={{
-                       root: classes.rounded,
-                       label: classes.label,
-                   }}>
-               Log in
-           </Button>
+           <div className="welcome-screen__right-container">
+               <Button variant="text"
+                       classes={{
+                           root: classes.clear,
+                           label: classes.label,
+                       }}>
+                   Sign up
+               </Button>
+               <Button variant="text"
+                       classes={{
+                           root: classes.clear,
+                           label: classes.label,
+                       }}>
+                   Log in
+               </Button>
+            </div>
        </div>
 
        <div className="welcome-screen__details">
         <div className="welcome-screen__details__title">
-            Fammy helps musicians find resources for a music video.
+            Fammy helps musicians find resources for a music video
         </div>
-        <div className="welcome-screen__details__sub-title">Backers get part of a revenue from the video based on their contribution.
+        <div className="welcome-screen__details__sub-title">Backers get part of the video revenue based on their contribution
         </div>
            <div className="welcome-screen__wrapper_getstarted_button">
                <Button variant="contained"
                        classes={{
-                           root: classes.root,
-                           label: classes.label,
+                           root: classes.rounded,
+                           label: classes.normalLabel,
                        }}>
                    Start my compain
                </Button>
