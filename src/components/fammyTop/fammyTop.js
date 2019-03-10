@@ -220,7 +220,7 @@ class FammyTop extends Component {
   return (
       <div className="fammy-top">
 
-       <div className="fammy-top__title">Fammy Top</div>
+       <div className="fammy-top__title">Hot Campaigns</div>
        <div className="fammy-top__chart">
         {playlistEl}
        </div>

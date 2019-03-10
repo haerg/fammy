@@ -91,7 +91,7 @@ class WelcomeScreen extends Component {
                            root: classes.roundedWhite,
                            label: classes.redLabel,
                        }}>
-                   Explore compains
+                   Explore campaigns
                </Button>
                </div>
 
@@ -102,7 +102,7 @@ class WelcomeScreen extends Component {
                            root: classes.roundedRed,
                            label: classes.normalLabel,
                        }} >
-                   Start my compain
+                   Start my campaign
                </Button>
                </div>
 
