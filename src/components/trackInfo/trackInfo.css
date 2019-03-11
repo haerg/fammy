@@ -9,9 +9,14 @@
 
 .track-info-container__body {
     display: flex;
+    flex-direction: column;
 }
 
-.track-info-container__left {
+.track-info-container__first, .track-info-container__second {
+    display: flex;
+}
+
+.track-info-container__video {
     flex: 1;
     width: 50%;
 }
@@ -148,4 +153,49 @@
 
 .track-info-container__back-song-btn:hover {
     background-color: #a3513e;
+}
+
+.track-info-container__tabs {
+    flex: 1 1;
+    margin: 2rem;
+}
+
+.track-info-container__tabs__title {
+    font-weight: 500;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: .3rem;
+    padding-left: 1rem;
+}
+
+.track-info-container__tabs__body {
+    margin-top: 1rem;
+}
+
+.track-info-container__comments-box {
+    padding: 1rem;
+    border-radius: 3px;
+    background-color: #f4f4f4;
+}
+
+.track-info-container__comments-box textarea {
+    width: 100%;
+    resize: none;
+    border-radius: 3px;
+    border-color: #ccc;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    padding: 1rem;
+}
+
+.track-info-container__comments-box__actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+.track-info-container__comments-box__actions__limit {
+    margin-right: 1rem;
+    color: #bdbdbd;
+    font-size: .9rem;
 }
