@@ -27,7 +27,15 @@ class TrackInfo extends Component {
    element: PLAYLIST.find(e => e.id === +match.params.id),
    symbolsLeft: 500,
    newComment: '',
-   comments: [],
+   comments: [
+    {
+     text: 'test',
+     user: {
+      avatarUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyHDUVs0uDFvPeXHT1AofpQSW2gO6Sd-Efwf5ZKXpI4kOX5FGR',
+      date: new Date().getTime(),
+      name: 'John Zil',
+     },
+    }],
   };
  }
 
@@ -41,7 +49,7 @@ class TrackInfo extends Component {
     text: this.state.newComment,
     user: {
      avatarUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyHDUVs0uDFvPeXHT1AofpQSW2gO6Sd-Efwf5ZKXpI4kOX5FGR',
-     date: new Date(),
+     date: new Date().getTime(),
      name: 'John Zil',
     },
    }),
@@ -49,28 +57,42 @@ class TrackInfo extends Component {
   });
  };
 
+ formatDate(param) {
+  const date = new Date(param);
+  var dd = date.getDate();
+  var mm = date.getMonth() + 1;
+
+  var yyyy = date.getFullYear();
+  if (dd < 10) {
+   dd = '0' + dd;
+  }
+  if (mm < 10) {
+   mm = '0' + mm;
+  }
+  return dd + '/' + mm + '/' + yyyy;
+ }
+
  render = () => {
   const { classes } = this.props;
 
   const funded = (this.state.element.info.moneyCurrent / this.state.element.info.moneyNeeded *
       100).toFixed(0);
 
-  const comments = this.state.comments.map((item) => {
-   return (
-       <div className="track-info-container__comment">
-        <div className="track-info-container__comment__avatar">
-         <img src={item.user.avatarUrl}/>
-        </div>
-        <div className="track-info-container__comment__data">
-         <div className="track-info-container__comment__header">
-          <div>{item.user.name}</div>
-          <div>{item.user.date}</div>
-         </div>
-         <div className="track-info-container__comment__text">{item.text}</div>
-        </div>
+  const comments = this.state.comments.map((item, index) =>
+      <div className="track-info-container__comment" key={index}>
+       <div className="track-info-container__comment__avatar">
+        <img src={item.user.avatarUrl}/>
        </div>
-   );
-  });
+       <div className="track-info-container__comment__data">
+        <div className="track-info-container__comment__header">
+         <div className="track-info-container__comment__header__name">{item.user.name}</div>
+         <div className="track-info-container__comment__header__date">{this.formatDate(
+             item.user.date)}</div>
+        </div>
+        <div className="track-info-container__comment__text">{item.text}</div>
+       </div>
+      </div>,
+  );
   return (
       <div className="track-info-container">
 
