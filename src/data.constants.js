@@ -17,6 +17,15 @@ export const PLAYLIST = [
    moneyCurrent: 8000,
    moneyNeeded: 12000,
   },
+  comments: [
+   {
+    user: {
+     avatarUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyHDUVs0uDFvPeXHT1AofpQSW2gO6Sd-Efwf5ZKXpI4kOX5FGR',
+     date: new Date().getTime(),
+     name: 'John Zil',
+    },
+    text: 'Amazing Music and Video! South East Asia ROCKS! lived 8 years of my life there in PARADISE!',
+   }],
  },
  {
   id: 2,
@@ -36,6 +45,15 @@ export const PLAYLIST = [
    moneyCurrent: 7000,
    moneyNeeded: 12000,
   },
+  comments: [
+   {
+    user: {
+     avatarUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyHDUVs0uDFvPeXHT1AofpQSW2gO6Sd-Efwf5ZKXpI4kOX5FGR',
+     date: new Date().getTime(),
+     name: 'John Zil',
+    },
+    text: 'Amazing Music and Video! South East Asia ROCKS! lived 8 years of my life there in PARADISE!',
+   }],
  },
  {
   id: 3,
@@ -55,6 +73,15 @@ export const PLAYLIST = [
    moneyCurrent: 6000,
    moneyNeeded: 12000,
   },
+  comments: [
+   {
+    user: {
+     avatarUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyHDUVs0uDFvPeXHT1AofpQSW2gO6Sd-Efwf5ZKXpI4kOX5FGR',
+     date: new Date().getTime(),
+     name: 'John Zil',
+    },
+    text: 'Amazing Music and Video! South East Asia ROCKS! lived 8 years of my life there in PARADISE!',
+   }],
  },
  {
   id: 4,
@@ -74,6 +101,15 @@ export const PLAYLIST = [
    moneyCurrent: 4000,
    moneyNeeded: 12000,
   },
+  comments: [
+   {
+    user: {
+     avatarUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyHDUVs0uDFvPeXHT1AofpQSW2gO6Sd-Efwf5ZKXpI4kOX5FGR',
+     date: new Date().getTime(),
+     name: 'John Zil',
+    },
+    text: 'Amazing Music and Video! South East Asia ROCKS! lived 8 years of my life there in PARADISE!',
+   }],
  },
  {
   id: 5,
@@ -93,6 +129,15 @@ export const PLAYLIST = [
    moneyCurrent: 2000,
    moneyNeeded: 12000,
   },
+  comments: [
+   {
+    user: {
+     avatarUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyHDUVs0uDFvPeXHT1AofpQSW2gO6Sd-Efwf5ZKXpI4kOX5FGR',
+     date: new Date().getTime(),
+     name: 'John Zil',
+    },
+    text: 'Amazing Music and Video! South East Asia ROCKS! lived 8 years of my life there in PARADISE!',
+   }],
  },
  {
   id: 6,
@@ -112,6 +157,15 @@ export const PLAYLIST = [
    moneyCurrent: 1000,
    moneyNeeded: 12000,
   },
+  comments: [
+   {
+    user: {
+     avatarUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyHDUVs0uDFvPeXHT1AofpQSW2gO6Sd-Efwf5ZKXpI4kOX5FGR',
+     date: new Date().getTime(),
+     name: 'John Zil',
+    },
+    text: 'Amazing Music and Video! South East Asia ROCKS! lived 8 years of my life there in PARADISE!',
+   }],
  },
  {
   id: 7,
@@ -131,6 +185,15 @@ export const PLAYLIST = [
    moneyCurrent: 3000,
    moneyNeeded: 12000,
   },
+  comments: [
+   {
+    user: {
+     avatarUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyHDUVs0uDFvPeXHT1AofpQSW2gO6Sd-Efwf5ZKXpI4kOX5FGR',
+     date: new Date().getTime(),
+     name: 'John Zil',
+    },
+    text: 'Amazing Music and Video! South East Asia ROCKS! lived 8 years of my life there in PARADISE!',
+   }],
  },
  {
   id: 8,
@@ -150,6 +213,15 @@ export const PLAYLIST = [
    moneyCurrent: 7000,
    moneyNeeded: 12000,
   },
+  comments: [
+   {
+    user: {
+     avatarUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyHDUVs0uDFvPeXHT1AofpQSW2gO6Sd-Efwf5ZKXpI4kOX5FGR',
+     date: new Date().getTime(),
+     name: 'John Zil',
+    },
+    text: 'Amazing Music and Video! South East Asia ROCKS! lived 8 years of my life there in PARADISE!',
+   }],
  },
  {
   id: 9,
@@ -169,5 +241,14 @@ export const PLAYLIST = [
    moneyCurrent: 1000,
    moneyNeeded: 15000,
   },
+  comments: [
+   {
+    user: {
+     avatarUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyHDUVs0uDFvPeXHT1AofpQSW2gO6Sd-Efwf5ZKXpI4kOX5FGR',
+     date: new Date().getTime(),
+     name: 'John Zil',
+    },
+    text: 'Amazing Music and Video! South East Asia ROCKS! lived 8 years of my life there in PARADISE!',
+   }],
  },
 ];

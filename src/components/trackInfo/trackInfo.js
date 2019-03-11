@@ -23,19 +23,12 @@ class TrackInfo extends Component {
  constructor({ match }) {
   super();
 
+  const element = PLAYLIST.find(e => e.id === +match.params.id);
   this.state = {
-   element: PLAYLIST.find(e => e.id === +match.params.id),
+   element,
    symbolsLeft: 500,
    newComment: '',
-   comments: [
-    {
-     text: 'test',
-     user: {
-      avatarUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyHDUVs0uDFvPeXHT1AofpQSW2gO6Sd-Efwf5ZKXpI4kOX5FGR',
-      date: new Date().getTime(),
-      name: 'John Zil',
-     },
-    }],
+   comments: element.comments,
   };
  }
 
@@ -48,9 +41,9 @@ class TrackInfo extends Component {
    comments: this.state.comments.concat({
     text: this.state.newComment,
     user: {
-     avatarUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyHDUVs0uDFvPeXHT1AofpQSW2gO6Sd-Efwf5ZKXpI4kOX5FGR',
+     avatarUrl: 'https://randomuser.me/api/portraits/men/12.jpg',
      date: new Date().getTime(),
-     name: 'John Zil',
+     name: 'Alex Mood',
     },
    }),
    newComment: '',
