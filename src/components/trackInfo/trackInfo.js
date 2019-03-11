@@ -1,10 +1,22 @@
 import React, { Component } from 'react';
 import './trackInfo.css';
 import Logo from '../logo/logo';
+import { PLAYLIST } from '../../data.constants';
 
 class TrackInfo extends Component {
 
+ constructor({ match }) {
+  super();
+
+  this.state = {
+   element: PLAYLIST.find(e => e.id === +match.params.id),
+  };
+ }
+
  render = () => {
+
+  const funded = (this.state.element.info.moneyCurrent / this.state.element.info.moneyNeeded *
+      100).toFixed(0);
   return (
       <div className="track-info-container">
 
@@ -22,39 +34,43 @@ class TrackInfo extends Component {
 
          <div className="track-info-container__track">
           <div className="track-info-container__track__avatar">
-           <img alt="avatar" src="https://api.adorable.io/avatars/400/abott@adorable.io.png"/>
+           <img alt="avatar" src={this.state.element.logoUrl}/>
           </div>
-          <div className="track-info-container__track__song">
-           <div className="track-info-container__track__song__title">Without Me</div>
-           <div className="track-info-container__track__album">Halsey</div>
+          <div className=" track-info-container__track__song">
+           <div
+               className=" track-info-container__track__song__title">{this.state.element.track}</div>
+           <div className=" track-info-container__track__album">{this.state.element.artist}</div>
           </div>
          </div>
 
-         <div className="track-info-container__owner-container">
-          <div className="track-info-container__owner-container__title">Project owner</div>
-          <div className="track-info-container__owner">
-           <div className="track-info-container__owner__avatar">
-            <img alt="avatar"
-                 src="https://cdn0.iconfinder.com/data/icons/avatars-6/500/Avatar_boy_man_people_account_client_male_person_user_work_sport_beard_team_glasses-512.png"/>
+         <div className=" track-info-container__owner-container">
+          <div className=" track-info-container__owner-container__title">Project owner</div>
+          <div className=" track-info-container__owner">
+           <div className=" track-info-container__owner__avatar">
+            <img alt=" avatar"
+                 src="
+               https://cdn0.iconfinder.com/data/icons/avatars-6/500/Avatar_boy_man_people_account_client_male_person_user_work_sport_beard_team_glasses-512.png"/>
            </div>
            <div className="track-info-container__owner__data">
-            <div className="track-info-container__owner__name">John Doe</div>
-            <div className="track-info-container__owner__location">San Diego, United States</div>
+            <div
+                className="track-info-container__owner__name">{this.state.element.author.name}</div>
+            <div
+                className="track-info-container__owner__location">{this.state.element.author.location}</div>
            </div>
           </div>
          </div>
 
          <div className="track-info-container__progress">
           <div className="track-info-container__progress__funded">
-           <span>75%</span>
+           <span>{funded}%</span>
            <span className="track-info-container__progress__details">Funded</span>
           </div>
           <div className="track-info-container__progress__backers">
-           <span>310</span>
+           <span>{this.state.element.info.backers}</span>
            <span className="track-info-container__progress__details">Backers</span>
           </div>
           <div className="track-info-container__progress__days-left">
-           <span>12</span>
+           <span>{this.state.element.info.daysLeft}</span>
            <span className="track-info-container__progress__details">Days left</span>
           </div>
          </div>
@@ -66,7 +82,8 @@ class TrackInfo extends Component {
        </div>
 
       </div>
-  );
+  )
+      ;
  };
 }
 
