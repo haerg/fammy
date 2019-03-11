@@ -23,7 +23,7 @@
 }
 
 .track-info-container__campaign__title {
-    color: #66BB6A;
+    color: #DB5643;
     text-transform: uppercase;
     font-size: .8rem;
     font-weight: 500;
@@ -61,7 +61,7 @@
 }
 
 .track-info-container__owner-container__title {
-    color: #66BB6A;
+    color: #DB5643;
     text-transform: uppercase;
     font-size: .8rem;
     font-weight: 500;
@@ -138,14 +138,14 @@
     text-align: center;
     padding: .7rem;
     margin-top: 2rem;
-    background-color: #66BB6A;
+    background-color: #DB5643;
     color: #fff;
     border-radius: 3px;
     font-weight: 500;
     cursor: pointer;
+    box-sizing: border-box;
 }
 
 .track-info-container__back-song-btn:hover {
-    background-color: #468c47;
-    box-sizing: border-box;
+    background-color: #a3513e;
 }
