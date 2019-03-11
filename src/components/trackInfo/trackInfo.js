@@ -4,6 +4,7 @@ import './trackInfo.css';
 import Logo from '../logo/logo';
 import { PLAYLIST } from '../../data.constants';
 import { withStyles } from '@material-ui/core';
+import youtube from "../trackInfo/youtube.svg";
 
 const styles = {
  root: {
@@ -151,40 +152,72 @@ class TrackInfo extends Component {
         </div>
 
         <div className="track-info-container__second">
-         <div className="track-info-container__tabs">
-          <div className="track-info-container__tabs__title">Comments(30)</div>
-          <div className="track-info-container__tabs__body">
+         <div className="track-info-container__campaign_content">
+          <div className="track-info-container__tabs">
+           <div className="track-info-container__tabs__title">Comments(30)</div>
+           <div className="track-info-container__tabs__body">
 
-           <div className="track-info-container__comments-box">
-            <div>
+            <div className="track-info-container__comments-box">
+             <div>
              <textarea maxLength="500" placeholder="Leave your comment here" rows="3"
                        onChange={this.handleChange} value={this.state.newComment}></textarea>
-            </div>
-            <div className="track-info-container__comments-box__actions">
-             <div className="track-info-container__comments-box__actions__limit">
-              <span>{this.state.symbolsLeft}</span>
-              <span>&nbsp;of&nbsp;</span>
-              <span>500</span>
              </div>
-             <div>
-              <Button variant="text"
-                      onClick={this.postComment}
-                      classes={{
-                       root: classes.root,
-                       label: classes.normalLabel,
-                      }}>
-               Post a comment
-              </Button>
+             <div className="track-info-container__comments-box__actions">
+              <div className="track-info-container__comments-box__actions__limit">
+               <span>{this.state.symbolsLeft}</span>
+               <span>&nbsp;of&nbsp;</span>
+               <span>500</span>
+              </div>
+              <div>
+               <Button variant="text"
+                       onClick={this.postComment}
+                       classes={{
+                        root: classes.root,
+                        label: classes.normalLabel,
+                       }}>
+                Post a comment
+               </Button>
+              </div>
              </div>
             </div>
-           </div>
 
-           <div className="track-info-container__comments">
-            {comments}
-           </div>
+            <div className="track-info-container__comments">
+             {comments}
+            </div>
 
+           </div>
           </div>
+
          </div>
+         <div className="track-info-container__tabs">
+
+          <div className="track-info-container__tabs__title">How music videos earn money?</div>
+
+          {/*<div className="track-info-container__information">*/}
+           {/*<div className="track-info-container__information__first">*/}
+            {/*<span>YouTube Pay Rate Per View</span>*/}
+            {/*<span className="track-info-container__information__details">*/}
+             {/*On average, you can earn $.80 according to 1,000 perspectives monetized by banner advertisements, or, $five-$8 consistent with 1,000 views on a video monetized by means of rollout commercials (the advertisements before the video). So, on a video with 1,000,000 views monetized by rollout ads, you can earn 5,000-8,000.*/}
+            {/*</span>*/}
+           {/*</div>*/}
+          {/*</div>*/}
+
+          <div className="track-info-container__information">
+           <div className="track-info-container__information__icon">
+            <img className="track-info-container__information__icon-original" src={youtube} alt=""/>
+           </div>
+           <div className="track-info-container__information__title">
+            YouTube Pay Rate Per View
+           </div>
+           <div className="track-info-container__information__sub-title">
+            On average, you can earn $.80 according to 1,000 perspectives monetized by banner advertisements,
+            or, $five-$8 consistent with 1,000 views on a video monetized by means of rollout commercials (the advertisements before the video).
+            So, on a video with 1,000,000 views monetized by rollout ads, you can earn 5,000-8,000.
+           </div>
+          </div>
+
+         </div>
+
         </div>
 
        </div>
