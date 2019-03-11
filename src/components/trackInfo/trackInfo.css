@@ -1,0 +1,151 @@
+.track-info-container {
+    font-family: 'Roboto', sans-serif;
+}
+
+.track-info-container__header {
+    border-bottom: 1px solid #ccc;
+    padding: 2rem 4rem;
+}
+
+.track-info-container__body {
+    display: flex;
+}
+
+.track-info-container__left {
+    flex: 1;
+    width: 50%;
+}
+
+.track-info-container__campaign {
+    flex: 1;
+    width: 50%;
+    margin: 2rem;
+}
+
+.track-info-container__campaign__title {
+    color: #66BB6A;
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.track-info-container__track {
+    display: flex;
+    align-items: center;
+}
+
+.track-info-container__track__avatar {
+    width: 4rem;
+    height: 4rem;
+}
+
+.track-info-container__track__avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+}
+
+.track-info-container__track__song {
+    margin-left: 1.5rem;
+}
+
+.track-info-container__track__song__title {
+    font-weight: 500;
+    padding-bottom: .3rem;
+    font-size: 2rem;
+}
+
+.track-info-container__track__album {
+    color: #949494;
+}
+
+.track-info-container__owner-container__title {
+    color: #66BB6A;
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-weight: 500;
+    margin: 1rem 0;
+}
+
+.track-info-container__owner {
+    display: flex;
+    align-items: center;
+}
+
+.track-info-container__owner__avatar {
+    width: 3rem;
+    height: 3rem;
+}
+
+.track-info-container__owner__avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.track-info-container__owner__data {
+    margin-left: 1.5rem;
+}
+
+.track-info-container__owner__name {
+    font-weight: 500;
+    padding-bottom: .3rem;
+}
+
+.track-info-container__owner__location {
+    font-size: .9rem;
+    color: #949494;
+}
+
+.track-info-container__progress {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.track-info-container__progress div {
+    padding: .7rem 2.5rem;
+    background-color: #eee;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+}
+
+.track-info-container__progress div:first-child {
+    margin-left: 0;
+}
+
+.track-info-container__progress div:last-child {
+    margin-right: 0;
+}
+
+.track-info-container__progress div span {
+    font-weight: 500;
+}
+
+.track-info-container__progress__details {
+    font-size: .8rem;
+    color: #949494;
+    margin-top: .3rem;
+}
+
+.track-info-container__back-song-btn {
+    width: 100%;
+    text-align: center;
+    padding: .7rem;
+    margin-top: 2rem;
+    background-color: #66BB6A;
+    color: #fff;
+    border-radius: 3px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.track-info-container__back-song-btn:hover {
+    background-color: #468c47;
+    box-sizing: border-box;
+}
