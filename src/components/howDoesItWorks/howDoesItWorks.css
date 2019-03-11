@@ -27,13 +27,13 @@
     margin: 0 1rem;
     padding: 1.5rem;
     cursor: pointer;
-    transition: all .3s ease-in;
+    transition: all .2s ease-in;
 }
 
 .how-does-it-works__feature:hover {
-    -webkit-box-shadow: 0 0 18px -3px rgba(102, 187, 106, 1);
-    -moz-box-shadow: 0 0 18px -3px rgba(102, 187, 106, 1);
-    box-shadow: 0 0 18px -3px rgba(102, 187, 106, 1);
+    -webkit-box-shadow: 0 0 18px -3px rgba(204, 204, 204, 1);
+    -moz-box-shadow: 0 0 18px -3px rgba(204, 204, 204, 1);
+    box-shadow: 0 0 18px -3px rgba(204, 204, 204, 1);
     transform: scale(1.05);
 }
 

@@ -4,16 +4,8 @@
 }
 
 #logo img {
-    height: 4rem;
-    width: 4rem;
+    height: 2.5rem;
+    width: 8rem;
     margin-right: 0.5rem;
-}
-
-#logo span {
-    font-family: 'Roboto', sans-serif;
-    color: #66BB6A;
-    font-weight: 500;
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    margin-left: 10px;
+    margin-top: .5rem;
 }

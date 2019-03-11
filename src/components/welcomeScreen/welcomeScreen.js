@@ -6,15 +6,46 @@ import Logo from '../logo/logo';
 
 const styles = {
  root: {
-  backgroundColor: '#66BB6A',
+  backgroundColor: '#DB5643',
   color: 'white',
   '&:hover': {
-   backgroundColor: '#30b334',
+   backgroundColor: '#DB5643',
   },
  },
  label: {
   textTransform: 'capitalize',
  },
+    roundedRed: {
+        backgroundColor: '#DB5643',
+        borderRadius: 30,
+        height: 50,
+        color: 'white',
+        '&:hover': {
+            backgroundColor: '#DB5643',
+        },
+    },
+    roundedWhite: {
+        backgroundColor: '#FAEFED',
+        borderRadius: 30,
+        height: 50,
+        color: '#DB5643',
+        '&:hover': {
+            backgroundColor: '#FAEFED',
+        },
+    },
+    clear: {
+        backgroundColor: 'transparent',
+        color: 'white',
+        '&:hover': {
+            backgroundColor: 'transparent',
+        },
+    },
+    normalLabel: {
+        textTransform: 'none',
+    },
+    redLabel: {
+        textTransform: 'none',
+    }
 };
 
 class WelcomeScreen extends Component {
@@ -33,26 +64,54 @@ class WelcomeScreen extends Component {
         {/*}}>*/}
         {/*Sign In*/}
         {/*</Button>*/}
+           <div className="welcome-screen__right-container">
+               <Button variant="text"
+                       classes={{
+                           root: classes.clear,
+                           label: classes.label,
+                       }}>
+                   Sign up
+               </Button>
+               <Button variant="text"
+                       classes={{
+                           root: classes.clear,
+                           label: classes.label,
+                       }}>
+                   Log in
+               </Button>
+            </div>
        </div>
 
        <div className="welcome-screen__details">
         <div className="welcome-screen__details__title">
-         Fammy makes it easy for musicians to find resources for a music video.
+         Fammy helps musicians find resources for a music video.
         </div>
-        <div className="welcome-screen__details__sub-title"> Backers get % from a video revenue on
-         YouTube based on their contribution.
+        <div className="welcome-screen__details__sub-title">Backers get part of the video revenue based on their contribution
         </div>
-        <div>
-         <div className="welcome-screen__wrapper_getstarted_button">
-          <Button className="welcome-screen__getstarted_button"
-                  variant="contained"
-                  classes={{
-                   root: classes.root,
-                   label: classes.label,
-                  }}>Get started
-          </Button>
-         </div>
-        </div>
+           <div className="welcome-screen__wrapper_getstarted_button">
+
+               <div className="welcome-screen__wrapper_start_compain">
+               <Button variant="contained"
+                       classes={{
+                           root: classes.roundedWhite,
+                           label: classes.redLabel,
+                       }}>
+                   Explore campaigns
+               </Button>
+               </div>
+
+               <div className="welcome-screen__wrapper_start_compain">
+
+               <Button variant="contained"
+                       classes={{
+                           root: classes.roundedRed,
+                           label: classes.normalLabel,
+                       }} >
+                   Start my campaign
+               </Button>
+               </div>
+
+           </div>
        </div>
 
       </div>

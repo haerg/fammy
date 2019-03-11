@@ -8,7 +8,6 @@ class Logo extends Component {
   return (
       <div id="logo">
        <img src={logo} alt="Fammy"/>
-       <span>Fammy</span>
       </div>
   );
  };
