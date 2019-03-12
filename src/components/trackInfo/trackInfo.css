@@ -158,6 +158,11 @@
     margin: 2rem;
 }
 
+.track-info-container__tips {
+    flex: 1 1;
+    margin-top: 2rem;
+}
+
 .track-info-container__tabs__title {
      font-weight: 500;
      border-bottom: 1px solid #ccc;
