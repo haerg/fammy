@@ -263,7 +263,7 @@ class TrackInfo extends Component {
          </div>
          <div className="track-info-container__tabs">
 
-          <div className="track-info-container__tabs__title">How music videos earn money?</div>
+          <div className="track-info-container__tabs__title_without_broder">How music videos earn money?</div>
 
           <div className="track-info-container__information">
            <div className="track-info-container__information__icon">

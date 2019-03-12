@@ -159,10 +159,15 @@
 }
 
 .track-info-container__tabs__title {
+     font-weight: 500;
+     border-bottom: 1px solid #ccc;
+     padding-bottom: .3rem;
+     padding-left: 1rem;
+ }
+
+.track-info-container__tabs__title_without_broder {
     font-weight: 500;
-    border-bottom: 1px solid #ccc;
     padding-bottom: .3rem;
-    padding-left: 1rem;
 }
 
 .track-info-container__tabs__body {
@@ -246,7 +251,6 @@
     display: flex;
     flex-direction: column;
     width: 90%;
-    margin: 0 1rem;
     padding: 1.5rem;
     cursor: pointer;
     transition: all .2s ease-in;
