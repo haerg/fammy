@@ -25,6 +25,7 @@ const styles = theme => ({
   textTransform: 'none',
  },
  button: {
+  marginTop:10,
  },
  leftIcon: {
   marginRight: theme.spacing.unit,
@@ -39,7 +40,7 @@ const styles = theme => ({
   margin: theme.spacing.unit * 2,
  },
  btnIcon: {
-  width: 15,
+  marginTop:10,
  },
 });
 
@@ -212,6 +213,15 @@ class TrackInfo extends Component {
             }}>
 
              <FontAwesomeIcon icon="envelope" size="lg" />
+
+            </Button>
+
+            <Button variant="text" size="small" classes={{
+             root: classes.btnIcon,
+             label: classes.normalLabel,
+            }}>
+
+             <FontAwesomeIcon icon="link" size="lg" />
 
             </Button>
            </div>
