@@ -5,8 +5,14 @@ import Logo from '../logo/logo';
 import { PLAYLIST } from '../../data.constants';
 import { withStyles } from '@material-ui/core';
 import youtube from "../trackInfo/youtube.svg";
+import IconButton from '@material-ui/core/IconButton';
+import Icon from '@material-ui/core/Icon';
+import classNames from 'classnames';
+import StarBorder from '@material-ui/icons/StarBorder';
+import heart from "../trackInfo/heart.svg";
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const styles = {
+const styles = theme => ({
  root: {
   backgroundColor: '#DB5643',
   color: 'white',
@@ -17,7 +23,22 @@ const styles = {
  normalLabel: {
   textTransform: 'none',
  },
-};
+ button: {
+  margin: theme.spacing.unit,
+ },
+ leftIcon: {
+  marginRight: theme.spacing.unit,
+ },
+ rightIcon: {
+  marginLeft: theme.spacing.unit,
+ },
+ iconSmall: {
+  fontSize: 20,
+ },
+ icon: {
+  margin: theme.spacing.unit * 2,
+ },
+});
 
 class TrackInfo extends Component {
 
@@ -147,6 +168,20 @@ class TrackInfo extends Component {
           </div>
 
           <div className="track-info-container__back-song-btn">Back this song</div>
+          <div className="track-info-container__share">
+           <Button variant="text" size="small" classes={{
+            root: classes.button,
+            label: classes.normalLabel,
+           }}>
+            <StarBorder className={classNames(classes.leftIcon, classes.iconSmall)} />
+            Add to favorites
+           </Button>
+
+           <Button imageUrl=''>
+
+           </Button>
+
+          </div>
 
          </div>
         </div>
@@ -192,15 +227,6 @@ class TrackInfo extends Component {
          <div className="track-info-container__tabs">
 
           <div className="track-info-container__tabs__title">How music videos earn money?</div>
-
-          {/*<div className="track-info-container__information">*/}
-           {/*<div className="track-info-container__information__first">*/}
-            {/*<span>YouTube Pay Rate Per View</span>*/}
-            {/*<span className="track-info-container__information__details">*/}
-             {/*On average, you can earn $.80 according to 1,000 perspectives monetized by banner advertisements, or, $five-$8 consistent with 1,000 views on a video monetized by means of rollout commercials (the advertisements before the video). So, on a video with 1,000,000 views monetized by rollout ads, you can earn 5,000-8,000.*/}
-            {/*</span>*/}
-           {/*</div>*/}
-          {/*</div>*/}
 
           <div className="track-info-container__information">
            <div className="track-info-container__information__icon">
