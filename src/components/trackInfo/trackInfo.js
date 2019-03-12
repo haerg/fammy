@@ -10,7 +10,8 @@ import Icon from '@material-ui/core/Icon';
 import classNames from 'classnames';
 import StarBorder from '@material-ui/icons/StarBorder';
 import heart from "../trackInfo/heart.svg";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/fontawesome-free-solid'
 
 const styles = theme => ({
  root: {
@@ -37,6 +38,10 @@ const styles = theme => ({
  },
  icon: {
   margin: theme.spacing.unit * 2,
+ },
+ btnIcon: {
+  margin: theme.spacing.unit,
+  width: 15,
  },
 });
 
@@ -168,18 +173,50 @@ class TrackInfo extends Component {
           </div>
 
           <div className="track-info-container__back-song-btn">Back this song</div>
+
           <div className="track-info-container__share">
-           <Button variant="text" size="small" classes={{
-            root: classes.button,
-            label: classes.normalLabel,
-           }}>
-            <StarBorder className={classNames(classes.leftIcon, classes.iconSmall)} />
-            Add to favorites
-           </Button>
 
-           <Button imageUrl=''>
+           <div className="track-info-container__share_fav">
 
-           </Button>
+            <Button variant="text" size="small" classes={{
+             root: classes.button,
+             label: classes.normalLabel,
+            }}>
+             <StarBorder className={classNames(classes.leftIcon, classes.iconSmall)} />
+             Add to favorites
+            </Button>
+
+           </div>
+
+           <div className="track-info-container__share_link">
+
+            <Button variant="text" size="small" classes={{
+             root: classes.btnIcon,
+             label: classes.normalLabel,
+            }}>
+
+             <FontAwesomeIcon icon="envelope" size="lg" />
+
+            </Button>
+
+            <Button variant="text" size="small" classes={{
+             root: classes.btnIcon,
+             label: classes.normalLabel,
+            }}>
+
+             <FontAwesomeIcon icon="envelope" size="lg" />
+
+            </Button>
+
+            <Button variant="text" size="small" classes={{
+             root: classes.btnIcon,
+             label: classes.normalLabel,
+            }}>
+
+             <FontAwesomeIcon icon="envelope" size="lg" />
+
+            </Button>
+           </div>
 
           </div>
 
