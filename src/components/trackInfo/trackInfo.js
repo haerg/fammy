@@ -194,7 +194,7 @@ class TrackInfo extends Component {
              label: classes.normalLabel,
             }}>
 
-             <FontAwesomeIcon icon="facebook-square" size="lg" />
+             <FontAwesomeIcon icon="facebook" size="lg" />
 
             </Button>
 

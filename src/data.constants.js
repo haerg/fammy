@@ -25,6 +25,34 @@ export const PLAYLIST = [
      name: 'John Zil',
     },
     text: 'Amazing Music and Video! South East Asia ROCKS! lived 8 years of my life there in PARADISE!',
+   },  {
+    user: {
+     avatarUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyHDUVs0uDFvPeXHT1AofpQSW2gO6Sd-Efwf5ZKXpI4kOX5FGR',
+     date: new Date().getTime(),
+     name: 'John Zil',
+    },
+    text: 'Amazing Music and Video! South East Asia ROCKS! lived 8 years of my life there in PARADISE!',
+   },  {
+    user: {
+     avatarUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyHDUVs0uDFvPeXHT1AofpQSW2gO6Sd-Efwf5ZKXpI4kOX5FGR',
+     date: new Date().getTime(),
+     name: 'John Zil',
+    },
+    text: 'Amazing Music and Video! South East Asia ROCKS! lived 8 years of my life there in PARADISE!',
+   },  {
+    user: {
+     avatarUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyHDUVs0uDFvPeXHT1AofpQSW2gO6Sd-Efwf5ZKXpI4kOX5FGR',
+     date: new Date().getTime(),
+     name: 'John Zil',
+    },
+    text: 'Amazing Music and Video! South East Asia ROCKS! lived 8 years of my life there in PARADISE!',
+   },  {
+    user: {
+     avatarUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyHDUVs0uDFvPeXHT1AofpQSW2gO6Sd-Efwf5ZKXpI4kOX5FGR',
+     date: new Date().getTime(),
+     name: 'John Zil',
+    },
+    text: 'Amazing Music and Video! South East Asia ROCKS! lived 8 years of my life there in PARADISE!',
    }],
  },
  {

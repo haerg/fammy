@@ -181,7 +181,7 @@
 
 .track-info-container__comments-box {
     padding: 1rem;
-    border-radius: 3px;
+    border-radius: 10px;
     background-color: #f4f4f4;
 }
 
@@ -252,7 +252,7 @@
 }
 
 .track-info-container__information {
-    border-radius: 15px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     width: 90%;
@@ -264,9 +264,9 @@
 }
 
 .track-info-container__information:hover {
-    -webkit-box-shadow: 0 0 18px -3px rgba(204, 204, 204, 1);
-    -moz-box-shadow: 0 0 18px -3px rgba(204, 204, 204, 1);
-    box-shadow: 0 0 18px -3px rgba(204, 204, 204, 1);
+    /*-webkit-box-shadow: 0 0 18px -3px rgba(204, 204, 204, 1);*/
+    /*-moz-box-shadow: 0 0 18px -3px rgba(204, 204, 204, 1);*/
+    /*box-shadow: 0 0 18px -3px rgba(204, 204, 204, 1);*/
 }
 
 .track-info-container__information__icon {
