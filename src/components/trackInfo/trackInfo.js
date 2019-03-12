@@ -25,7 +25,6 @@ const styles = theme => ({
   textTransform: 'none',
  },
  button: {
-  margin: theme.spacing.unit,
  },
  leftIcon: {
   marginRight: theme.spacing.unit,
@@ -40,7 +39,6 @@ const styles = theme => ({
   margin: theme.spacing.unit * 2,
  },
  btnIcon: {
-  margin: theme.spacing.unit,
   width: 15,
  },
 });
