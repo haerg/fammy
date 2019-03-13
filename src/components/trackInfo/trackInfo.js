@@ -4,8 +4,18 @@ import './trackInfo.css';
 import Logo from '../logo/logo';
 import { PLAYLIST } from '../../data.constants';
 import { withStyles } from '@material-ui/core';
+import youtube from "../trackInfo/youtube.svg";
+import IconButton from '@material-ui/core/IconButton';
+import Icon from '@material-ui/core/Icon';
+import classNames from 'classnames';
+import StarBorder from '@material-ui/icons/StarBorder';
+import heart from "../trackInfo/heart.svg";
+import facebook from "../trackInfo/facebook-logo.svg";
+import twitter from "../trackInfo/twitter-logo-on-black-background.svg";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/fontawesome-free-solid'
 
-const styles = {
+const styles = theme => ({
  root: {
   backgroundColor: '#DB5643',
   color: 'white',
@@ -16,7 +26,25 @@ const styles = {
  normalLabel: {
   textTransform: 'none',
  },
-};
+ button: {
+  marginTop:10,
+ },
+ leftIcon: {
+  marginRight: theme.spacing.unit,
+ },
+ rightIcon: {
+  marginLeft: theme.spacing.unit,
+ },
+ iconSmall: {
+  fontSize: 20,
+ },
+ icon: {
+  margin: theme.spacing.unit * 2,
+ },
+ btnIcon: {
+  marginTop:10,
+ },
+});
 
 class TrackInfo extends Component {
 
@@ -106,6 +134,22 @@ class TrackInfo extends Component {
 
        <div className="track-info-container__header">
         <Logo/>
+        <div className="track-info-container__right-container">
+         <Button variant="text"
+                 classes={{
+                  root: classes.root,
+                  label: classes.label,
+                 }}>
+          Sign up
+         </Button>
+         <Button variant="text"
+                 classes={{
+                  root: classes.root,
+                  label: classes.label,
+                 }}>
+          Log in
+         </Button>
+        </div>
        </div>
 
        <div className="track-info-container__body">
@@ -153,61 +197,136 @@ class TrackInfo extends Component {
 
           <div className="track-info-container__progress">
            <div className="track-info-container__progress__funded">
-            <span>{funded}%</span>
+            <span className="track-info-container__progress__main">{funded}%</span>
             <span className="track-info-container__progress__details">Funded</span>
            </div>
            <div className="track-info-container__progress__backers">
-            <span>{this.state.element.info.backers}</span>
+            <span className="track-info-container__progress__main">{this.state.element.info.backers}</span>
             <span className="track-info-container__progress__details">Backers</span>
            </div>
            <div className="track-info-container__progress__days-left">
-            <span>{this.state.element.info.daysLeft}</span>
+            <span className="track-info-container__progress__main">{this.state.element.info.daysLeft}</span>
             <span className="track-info-container__progress__details">Days left</span>
            </div>
           </div>
 
           <div className="track-info-container__back-song-btn">Back this song</div>
 
+          <div className="track-info-container__share">
+
+           <div className="track-info-container__share_fav">
+
+            <Button variant="text" size="small" classes={{
+             root: classes.button,
+             label: classes.normalLabel,
+            }}>
+             <StarBorder className={classNames(classes.leftIcon, classes.iconSmall)} />
+             Add to favorites
+            </Button>
+
+           </div>
+
+           <div className="track-info-container__share_link">
+
+            <Button variant="text" size="small" classes={{
+             root: classes.btnIcon,
+             label: classes.normalLabel,
+            }}>
+             <img className="track-info-container__share_image" src={facebook} alt=""/>
+
+            </Button>
+
+            <Button variant="text" size="small" classes={{
+             root: classes.btnIcon,
+             label: classes.normalLabel,
+            }}>
+
+             <img className="track-info-container__share_image" src={twitter} alt=""/>
+
+            </Button>
+
+            <Button variant="text" size="small" classes={{
+             root: classes.btnIcon,
+             label: classes.normalLabel,
+            }}>
+
+             <FontAwesomeIcon icon="envelope" size="lg" />
+
+            </Button>
+
+            <Button variant="text" size="small" classes={{
+             root: classes.btnIcon,
+             label: classes.normalLabel,
+            }}>
+
+             <FontAwesomeIcon icon="link" size="lg" />
+
+            </Button>
+           </div>
+
+          </div>
+
          </div>
         </div>
 
         <div className="track-info-container__second">
-         <div className="track-info-container__tabs">
-          <div
-              className="track-info-container__tabs__title">Comments({this.state.comments.length})
-          </div>
-          <div className="track-info-container__tabs__body">
+         <div className="track-info-container__campaign_content">
+          <div className="track-info-container__tabs">
+           <div className="track-info-container__tabs__title">Comments({this.state.comments.length})</div>
+           <div className="track-info-container__tabs__body">
 
-           <div className="track-info-container__comments-box">
-            <div>
+            <div className="track-info-container__comments-box">
+             <div>
              <textarea maxLength="500" placeholder="Leave your comment here" rows="3"
                        onChange={this.handleChange} value={this.state.newComment}></textarea>
-            </div>
-            <div className="track-info-container__comments-box__actions">
-             <div className="track-info-container__comments-box__actions__limit">
-              <span>{this.state.symbolsLeft}</span>
-              <span>&nbsp;of&nbsp;</span>
-              <span>500</span>
              </div>
-             <div>
-              <Button variant="text"
-                      onClick={this.postComment}
-                      classes={{
-                       root: classes.root,
-                       label: classes.normalLabel,
-                      }}>
-               Post a comment
-              </Button>
+             <div className="track-info-container__comments-box__actions">
+              <div className="track-info-container__comments-box__actions__limit">
+               <span>{this.state.symbolsLeft}</span>
+               <span>&nbsp;of&nbsp;</span>
+               <span>500</span>
+              </div>
+              <div>
+               <Button variant="text"
+                       onClick={this.postComment}
+                       classes={{
+                        root: classes.root,
+                        label: classes.normalLabel,
+                       }}>
+                Post a comment
+               </Button>
+              </div>
              </div>
             </div>
-           </div>
 
-           <div className="track-info-container__comments">
-            {comments}
-           </div>
+            <div className="track-info-container__comments">
+             {comments}
+            </div>
 
+           </div>
           </div>
+
          </div>
+         <div className="track-info-container__tips">
+
+          <div className="track-info-container__tabs__title_without_broder">How music videos earn money?</div>
+
+          <div className="track-info-container__information">
+           <div className="track-info-container__information__icon">
+            <img className="track-info-container__information__icon-original" src={youtube} alt=""/>
+           </div>
+           <div className="track-info-container__information__title">
+            YouTube Pay Rate Per View
+           </div>
+           <div className="track-info-container__information__sub-title">
+            On average, you can earn $.80 according to 1,000 perspectives monetized by banner advertisements,
+            or, $five-$8 consistent with 1,000 views on a video monetized by means of rollout commercials (the advertisements before the video).
+            So, on a video with 1,000,000 views monetized by rollout ads, you can earn 5,000-8,000.
+           </div>
+          </div>
+
+         </div>
+
         </div>
 
        </div>
