@@ -1,0 +1,177 @@
+.campaign-details {
+    width: 40%;
+    margin: 2rem;
+}
+
+.campaign-details__title {
+    color: #DB5643;
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.campaign-details__track {
+    display: flex;
+    align-items: center;
+}
+
+.campaign-details__track__avatar {
+    width: 4rem;
+    height: 4rem;
+}
+
+.campaign-details__track__avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+}
+
+.campaign-details__track__song {
+    margin-left: 1.5rem;
+}
+
+.campaign-details__track__song__title {
+    font-weight: 500;
+    padding-bottom: .3rem;
+    font-size: 2rem;
+}
+
+.campaign-details__track__album {
+    color: #949494;
+}
+
+.campaign-details__owner-container__title {
+    color: #DB5643;
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.campaign-details__owner {
+    display: flex;
+    align-items: center;
+}
+
+.campaign-details__owner__avatar {
+    width: 3rem;
+    height: 3rem;
+}
+
+.campaign-details__owner__avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.campaign-details__owner__data {
+    margin-left: 1.5rem;
+}
+
+.campaign-details__owner__name {
+    font-weight: 500;
+    padding-bottom: .3rem;
+}
+
+.campaign-details__owner__location {
+    font-size: .9rem;
+    color: #949494;
+}
+
+.campaign-details__progress {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.campaign-details__progress div {
+    padding: .7rem 2.5rem;
+    background-color: #eee;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+}
+
+.campaign-details__progress div:first-child {
+    margin-left: 0;
+}
+
+.campaign-details__progress div:last-child {
+    margin-right: 0;
+}
+
+.campaign-details__progress div span {
+}
+
+.campaign-details__progress__main {
+    font-size: 1.0rem;
+    font-weight: 600;
+    color: #111111;
+    margin-top: .3rem;
+}
+
+.campaign-details__progress__details {
+    font-size: .7rem;
+    font-weight: 500;
+    color: #949494;
+    margin-top: .3rem;
+}
+
+.campaign-details__back-song-btn {
+    width: 100%;
+    text-align: center;
+    padding: .7rem;
+    margin-top: 2rem;
+    background-color: #DB5643;
+    color: #fff;
+    border-radius: 3px;
+    font-weight: 500;
+    cursor: pointer;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0 0 18px -3px rgba(204, 204, 204, 1);
+    -moz-box-shadow: 0 0 18px -3px rgba(204, 204, 204, 1);
+    box-shadow: 0 0 18px -3px rgba(204, 204, 204, 1);
+}
+
+.campaign-details__back-song-btn:hover {
+    background-color: #a3513e;
+}
+
+
+.campaign-details__share {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+
+.campaign-details__share_fav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+
+.campaign-details__share_link {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+
+.campaign-details__share_image {
+    height: 17px;
+}
+
+.campaign-details__share_image img {
+    width: 100%;
+    height: 100%;
+}
+

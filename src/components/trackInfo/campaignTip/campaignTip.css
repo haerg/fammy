@@ -1,17 +1,17 @@
 
-.track-info-container__tips {
+.campaign__tips {
     flex: 1 1;
     margin-top: 2rem;
     margin-right: 2rem;
 }
 
-.track-info-container__tabs__title_without_broder {
+.campaign__tabs__title_without_broder {
     font-weight: 500;
     padding-bottom: .3rem;
     color: #949494;
 }
 
-.track-info-container__information {
+.campaign__information {
     -webkit-box-shadow: 0 0 18px -3px rgba(204, 204, 204, 1);
     -moz-box-shadow: 0 0 18px -3px rgba(204, 204, 204, 1);
     box-shadow: 0 0 18px -3px rgba(204, 204, 204, 1);
@@ -26,11 +26,11 @@
     /*background-color: #f4f4f4;*/
 }
 
-.track-info-container__information:hover {
+.campaign__information:hover {
 
 }
 
-.track-info-container__information__icon {
+.campaign__information__icon {
     height: 3rem;
     text-align: center;
     margin-bottom: 1rem;
@@ -39,21 +39,21 @@
     justify-content: center;
 }
 
-.track-info-container__information__icon img {
+.campaign__information__icon img {
     height: 100%;
     position: absolute;
     transition: visibility .1s ease;
 }
 
-.track-info-container__information__iconoriginal {
+.campaign__information__iconoriginal {
     visibility: visible;
 }
 
-.track-info-container__information__icon-hovered {
+.campaign__information__icon-hovered {
     visibility: hidden;
 }
 
-.track-info-container__information__title {
+.campaign__information__title {
     font-weight: 500;
     margin-bottom: 1rem;
     font-size: 1.1rem;
@@ -63,7 +63,7 @@
     text-align: center;
 }
 
-.track-info-container__information__sub-title {
+.campaign__information__sub-title {
     color: gray;
     flex: 1;
     line-height: 1.2;

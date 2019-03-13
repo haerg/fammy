@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
-import './trackInfoTip.css';
+import './campaignTip.css';
 import youtube from './youtube.svg';
 
-class TrackInfoTip extends Component {
+class CampaignTip extends Component {
  render = () => {
 
   return (
-      <div className="track-info-container__tips">
+      <div className="campaign__tips">
 
-       <div className="track-info-container__tabs__title_without_broder">How music videos earn
+       <div className="campaign__tabs__title_without_broder">How music videos earn
         money?
        </div>
 
-       <div className="track-info-container__information">
-        <div className="track-info-container__information__icon">
-         <img className="track-info-container__information__icon-original" src={youtube} alt=""/>
+       <div className="campaign__information">
+        <div className="campaign__information__icon">
+         <img className="campaign__information__icon-original" src={youtube} alt=""/>
         </div>
-        <div className="track-info-container__information__title">
+        <div className="campaign__information__title">
          YouTube Pay Rate Per View
         </div>
-        <div className="track-info-container__information__sub-title">
+        <div className="campaign__information__sub-title">
          On average, you can earn $.80 according to 1,000 perspectives monetized by banner
          advertisements,
          or, $five-$8 consistent with 1,000 views on a video monetized by means of rollout
@@ -34,4 +34,4 @@ class TrackInfoTip extends Component {
  };
 }
 
-export default TrackInfoTip;
+export default CampaignTip;
