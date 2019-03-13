@@ -10,6 +10,8 @@ import Icon from '@material-ui/core/Icon';
 import classNames from 'classnames';
 import StarBorder from '@material-ui/icons/StarBorder';
 import heart from "../trackInfo/heart.svg";
+import facebook from "../trackInfo/facebook-logo.svg";
+import twitter from "../trackInfo/twitter-logo-on-black-background.svg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/fontawesome-free-solid'
 
@@ -193,8 +195,7 @@ class TrackInfo extends Component {
              root: classes.btnIcon,
              label: classes.normalLabel,
             }}>
-
-             <FontAwesomeIcon icon="facebook" size="lg" />
+             <img className="track-info-container__share_image" src={facebook} alt=""/>
 
             </Button>
 
@@ -203,7 +204,7 @@ class TrackInfo extends Component {
              label: classes.normalLabel,
             }}>
 
-             <FontAwesomeIcon icon="twitter-square" size="lg" />
+             <img className="track-info-container__share_image" src={twitter} alt=""/>
 
             </Button>
 

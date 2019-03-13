@@ -334,3 +334,12 @@
     cursor: pointer;
     transition: all .2s ease-in;
 }
+
+.track-info-container__share_image {
+    height: 17px;
+}
+
+.track-info-container__share_image img {
+    width: 100%;
+    height: 100%;
+}
