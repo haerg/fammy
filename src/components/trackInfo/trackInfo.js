@@ -4,16 +4,15 @@ import './trackInfo.css';
 import Logo from '../logo/logo';
 import { PLAYLIST } from '../../data.constants';
 import { withStyles } from '@material-ui/core';
-import youtube from "../trackInfo/youtube.svg";
-import IconButton from '@material-ui/core/IconButton';
-import Icon from '@material-ui/core/Icon';
 import classNames from 'classnames';
 import StarBorder from '@material-ui/icons/StarBorder';
-import heart from "../trackInfo/heart.svg";
-import facebook from "../trackInfo/facebook-logo.svg";
-import twitter from "../trackInfo/twitter-logo-on-black-background.svg";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/fontawesome-free-solid'
+import facebook from '../trackInfo/facebook-logo.svg';
+import twitter from '../trackInfo/twitter-logo-on-black-background.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCoffee } from '@fortawesome/fontawesome-free-solid';
+import TrackInfoTip from './trackInfoTip/trackInfoTip';
+import CampaignComments from './campaignComments/campaignComments';
+import CampaignMedia from './campaignMedia/campaignMedia';
 
 const styles = theme => ({
  root: {
@@ -27,7 +26,7 @@ const styles = theme => ({
   textTransform: 'none',
  },
  button: {
-  marginTop:10,
+  marginTop: 10,
  },
  leftIcon: {
   marginRight: theme.spacing.unit,
@@ -42,7 +41,7 @@ const styles = theme => ({
   margin: theme.spacing.unit * 2,
  },
  btnIcon: {
-  marginTop:10,
+  marginTop: 10,
  },
 });
 
@@ -54,48 +53,8 @@ class TrackInfo extends Component {
   const element = PLAYLIST.find(e => e.id === +match.params.id);
   this.state = {
    element,
-   currentMedia: element.media[0],
-   symbolsLeft: 500,
-   newComment: '',
    comments: element.comments,
   };
- }
-
- handleChange = (event) => {
-  this.setState({ symbolsLeft: 500 - event.target.value.length, newComment: event.target.value });
- };
-
- postComment = () => {
-  this.setState({
-   comments: this.state.comments.concat({
-    text: this.state.newComment,
-    user: {
-     avatarUrl: 'https://randomuser.me/api/portraits/men/12.jpg',
-     date: new Date().getTime(),
-     name: 'Alex Mood',
-    },
-   }),
-   newComment: '',
-  });
- };
-
- formatDate(param) {
-  const date = new Date(param);
-  var dd = date.getDate();
-  var mm = date.getMonth() + 1;
-
-  var yyyy = date.getFullYear();
-  if (dd < 10) {
-   dd = '0' + dd;
-  }
-  if (mm < 10) {
-   mm = '0' + mm;
-  }
-  return dd + '/' + mm + '/' + yyyy;
- }
-
- chooseMedia(item) {
-  this.setState({ currentMedia: item });
  }
 
  render = () => {
@@ -103,31 +62,6 @@ class TrackInfo extends Component {
 
   const funded = (this.state.element.info.moneyCurrent / this.state.element.info.moneyNeeded *
       100).toFixed(0);
-
-  const comments = this.state.comments.map((item, index) =>
-      <div className="track-info-container__comment" key={index}>
-       <div className="track-info-container__comment__avatar">
-        <img src={item.user.avatarUrl}/>
-       </div>
-       <div className="track-info-container__comment__data">
-        <div className="track-info-container__comment__header">
-         <div className="track-info-container__comment__header__name">{item.user.name}</div>
-         <div className="track-info-container__comment__header__date">{this.formatDate(
-             item.user.date)}</div>
-        </div>
-        <div className="track-info-container__comment__text">{item.text}</div>
-       </div>
-      </div>,
-  );
-
-  const smallMedia = this.state.element.media.map((item, index) =>
-      <div className={'track-info-container__media-small__item ' + (item.id ===
-      this.state.currentMedia.id ? 'active' : '')}
-           key={index}
-           onClick={() => {this.chooseMedia(item);}}>
-       <img src={item.url}/>
-      </div>,
-  );
 
   return (
       <div className="track-info-container">
@@ -154,15 +88,7 @@ class TrackInfo extends Component {
 
        <div className="track-info-container__body">
         <div className="track-info-container__first">
-         <div className="track-info-container__media">
-          <div className="track-info-container__media-big">
-           <div className="track-info-container__media__item"><img
-               src={this.state.currentMedia.url}/></div>
-          </div>
-          <div className="track-info-container__media-small">
-           {smallMedia}
-          </div>
-         </div>
+         <CampaignMedia media={this.state.element.media}/>
 
          <div className="track-info-container__campaign">
           <div className="track-info-container__campaign__title">Campaign</div>
@@ -201,11 +127,13 @@ class TrackInfo extends Component {
             <span className="track-info-container__progress__details">Funded</span>
            </div>
            <div className="track-info-container__progress__backers">
-            <span className="track-info-container__progress__main">{this.state.element.info.backers}</span>
+            <span
+                className="track-info-container__progress__main">{this.state.element.info.backers}</span>
             <span className="track-info-container__progress__details">Backers</span>
            </div>
            <div className="track-info-container__progress__days-left">
-            <span className="track-info-container__progress__main">{this.state.element.info.daysLeft}</span>
+            <span
+                className="track-info-container__progress__main">{this.state.element.info.daysLeft}</span>
             <span className="track-info-container__progress__details">Days left</span>
            </div>
           </div>
@@ -220,7 +148,7 @@ class TrackInfo extends Component {
              root: classes.button,
              label: classes.normalLabel,
             }}>
-             <StarBorder className={classNames(classes.leftIcon, classes.iconSmall)} />
+             <StarBorder className={classNames(classes.leftIcon, classes.iconSmall)}/>
              Add to favorites
             </Button>
 
@@ -250,7 +178,7 @@ class TrackInfo extends Component {
              label: classes.normalLabel,
             }}>
 
-             <FontAwesomeIcon icon="envelope" size="lg" />
+             <FontAwesomeIcon icon="envelope" size="lg"/>
 
             </Button>
 
@@ -259,7 +187,7 @@ class TrackInfo extends Component {
              label: classes.normalLabel,
             }}>
 
-             <FontAwesomeIcon icon="link" size="lg" />
+             <FontAwesomeIcon icon="link" size="lg"/>
 
             </Button>
            </div>
@@ -270,67 +198,23 @@ class TrackInfo extends Component {
         </div>
 
         <div className="track-info-container__second">
+
          <div className="track-info-container__campaign_content">
           <div className="track-info-container__tabs">
-           <div className="track-info-container__tabs__title">Comments({this.state.comments.length})</div>
+           <div className="track-info-container__tabs__title">
+            Comments({this.state.comments.length})
+           </div>
            <div className="track-info-container__tabs__body">
-
-            <div className="track-info-container__comments-box">
-             <div>
-             <textarea maxLength="500" placeholder="Leave your comment here" rows="3"
-                       onChange={this.handleChange} value={this.state.newComment}></textarea>
-             </div>
-             <div className="track-info-container__comments-box__actions">
-              <div className="track-info-container__comments-box__actions__limit">
-               <span>{this.state.symbolsLeft}</span>
-               <span>&nbsp;of&nbsp;</span>
-               <span>500</span>
-              </div>
-              <div>
-               <Button variant="text"
-                       onClick={this.postComment}
-                       classes={{
-                        root: classes.root,
-                        label: classes.normalLabel,
-                       }}>
-                Post a comment
-               </Button>
-              </div>
-             </div>
-            </div>
-
-            <div className="track-info-container__comments">
-             {comments}
-            </div>
-
+            <CampaignComments comments={this.state.comments}/>
            </div>
           </div>
-
          </div>
-         <div className="track-info-container__tips">
 
-          <div className="track-info-container__tabs__title_without_broder">How music videos earn money?</div>
-
-          <div className="track-info-container__information">
-           <div className="track-info-container__information__icon">
-            <img className="track-info-container__information__icon-original" src={youtube} alt=""/>
-           </div>
-           <div className="track-info-container__information__title">
-            YouTube Pay Rate Per View
-           </div>
-           <div className="track-info-container__information__sub-title">
-            On average, you can earn $.80 according to 1,000 perspectives monetized by banner advertisements,
-            or, $five-$8 consistent with 1,000 views on a video monetized by means of rollout commercials (the advertisements before the video).
-            So, on a video with 1,000,000 views monetized by rollout ads, you can earn 5,000-8,000.
-           </div>
-          </div>
-
-         </div>
+         <TrackInfoTip/>
 
         </div>
 
        </div>
-
       </div>
   );
 
