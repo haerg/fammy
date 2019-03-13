@@ -26,6 +26,7 @@ class TrackInfo extends Component {
   const element = PLAYLIST.find(e => e.id === +match.params.id);
   this.state = {
    element,
+   currentMedia: element.media[0],
    symbolsLeft: 500,
    newComment: '',
    comments: element.comments,
@@ -65,6 +66,10 @@ class TrackInfo extends Component {
   return dd + '/' + mm + '/' + yyyy;
  }
 
+ chooseMedia(item) {
+  this.setState({ currentMedia: item });
+ }
+
  render = () => {
   const { classes } = this.props;
 
@@ -86,6 +91,16 @@ class TrackInfo extends Component {
        </div>
       </div>,
   );
+
+  const smallMedia = this.state.element.media.map((item, index) =>
+      <div className={'track-info-container__media-small__item ' + (item.id ===
+      this.state.currentMedia.id ? 'active' : '')}
+           key={index}
+           onClick={() => {this.chooseMedia(item);}}>
+       <img src={item.url}/>
+      </div>,
+  );
+
   return (
       <div className="track-info-container">
 
@@ -95,8 +110,14 @@ class TrackInfo extends Component {
 
        <div className="track-info-container__body">
         <div className="track-info-container__first">
-         <div className="track-info-container__video">
-          Images
+         <div className="track-info-container__media">
+          <div className="track-info-container__media-big">
+           <div className="track-info-container__media__item"><img
+               src={this.state.currentMedia.url}/></div>
+          </div>
+          <div className="track-info-container__media-small">
+           {smallMedia}
+          </div>
          </div>
 
          <div className="track-info-container__campaign">
@@ -152,7 +173,9 @@ class TrackInfo extends Component {
 
         <div className="track-info-container__second">
          <div className="track-info-container__tabs">
-          <div className="track-info-container__tabs__title">Comments(30)</div>
+          <div
+              className="track-info-container__tabs__title">Comments({this.state.comments.length})
+          </div>
           <div className="track-info-container__tabs__body">
 
            <div className="track-info-container__comments-box">

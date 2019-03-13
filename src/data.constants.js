@@ -17,6 +17,18 @@ export const PLAYLIST = [
    moneyCurrent: 8000,
    moneyNeeded: 12000,
   },
+  media: [
+   {
+    id: 1,
+    url: 'http://fonday.ru/images/tmp/8/9/original/8994OsgvV97a5NIer54VNKcNxf9rm9z.jpg',
+    type: 'image',
+   },
+   {
+    id: 2,
+    url: 'https://static.addtoany.com/images/dracaena-cinnabari.jpg',
+    type: 'image',
+   },
+  ],
   comments: [
    {
     user: {
@@ -39,6 +51,18 @@ export const PLAYLIST = [
    name: 'Rhetta Burt',
    location: 'San Diego, United States',
   },
+  media: [
+   {
+    id: 1,
+    url: 'http://fonday.ru/images/tmp/8/9/original/8994OsgvV97a5NIer54VNKcNxf9rm9z.jpg',
+    type: 'image',
+   },
+   {
+    id: 2,
+    url: 'https://static.addtoany.com/images/dracaena-cinnabari.jpg',
+    type: 'image',
+   },
+  ],
   info: {
    backers: 124,
    daysLeft: 13,
@@ -67,6 +91,18 @@ export const PLAYLIST = [
    name: 'Faith Thea',
    location: 'San Diego, United States',
   },
+  media: [
+   {
+    id: 1,
+    url: 'http://fonday.ru/images/tmp/8/9/original/8994OsgvV97a5NIer54VNKcNxf9rm9z.jpg',
+    type: 'image',
+   },
+   {
+    id: 2,
+    url: 'https://static.addtoany.com/images/dracaena-cinnabari.jpg',
+    type: 'image',
+   },
+  ],
   info: {
    backers: 56,
    daysLeft: 15,
@@ -95,6 +131,18 @@ export const PLAYLIST = [
    name: 'Kiefer Max',
    location: 'San Diego, United States',
   },
+  media: [
+   {
+    id: 1,
+    url: 'http://fonday.ru/images/tmp/8/9/original/8994OsgvV97a5NIer54VNKcNxf9rm9z.jpg',
+    type: 'image',
+   },
+   {
+    id: 2,
+    url: 'https://static.addtoany.com/images/dracaena-cinnabari.jpg',
+    type: 'image',
+   },
+  ],
   info: {
    backers: 78,
    daysLeft: 20,
@@ -123,6 +171,18 @@ export const PLAYLIST = [
    name: 'Bryon Lenora',
    location: 'San Diego, United States',
   },
+  media: [
+   {
+    id: 1,
+    url: 'http://fonday.ru/images/tmp/8/9/original/8994OsgvV97a5NIer54VNKcNxf9rm9z.jpg',
+    type: 'image',
+   },
+   {
+    id: 2,
+    url: 'https://static.addtoany.com/images/dracaena-cinnabari.jpg',
+    type: 'image',
+   },
+  ],
   info: {
    backers: 32,
    daysLeft: 20,
@@ -151,6 +211,18 @@ export const PLAYLIST = [
    name: 'Alissa Trista',
    location: 'San Diego, United States',
   },
+  media: [
+   {
+    id: 1,
+    url: 'http://fonday.ru/images/tmp/8/9/original/8994OsgvV97a5NIer54VNKcNxf9rm9z.jpg',
+    type: 'image',
+   },
+   {
+    id: 2,
+    url: 'https://static.addtoany.com/images/dracaena-cinnabari.jpg',
+    type: 'image',
+   },
+  ],
   info: {
    backers: 125,
    daysLeft: 23,
@@ -179,6 +251,18 @@ export const PLAYLIST = [
    name: 'Jolie Brittani',
    location: 'San Diego, United States',
   },
+  media: [
+   {
+    id: 1,
+    url: 'http://fonday.ru/images/tmp/8/9/original/8994OsgvV97a5NIer54VNKcNxf9rm9z.jpg',
+    type: 'image',
+   },
+   {
+    id: 2,
+    url: 'https://static.addtoany.com/images/dracaena-cinnabari.jpg',
+    type: 'image',
+   },
+  ],
   info: {
    backers: 415,
    daysLeft: 25,
@@ -207,6 +291,18 @@ export const PLAYLIST = [
    name: 'Nigella Gertrude',
    location: 'San Diego, United States',
   },
+  media: [
+   {
+    id: 1,
+    url: 'http://fonday.ru/images/tmp/8/9/original/8994OsgvV97a5NIer54VNKcNxf9rm9z.jpg',
+    type: 'image',
+   },
+   {
+    id: 2,
+    url: 'https://static.addtoany.com/images/dracaena-cinnabari.jpg',
+    type: 'image',
+   },
+  ],
   info: {
    backers: 10,
    daysLeft: 27,
@@ -235,6 +331,18 @@ export const PLAYLIST = [
    name: 'Forest Travis',
    location: 'San Diego, United States',
   },
+  media: [
+   {
+    id: 1,
+    url: 'http://fonday.ru/images/tmp/8/9/original/8994OsgvV97a5NIer54VNKcNxf9rm9z.jpg',
+    type: 'image',
+   },
+   {
+    id: 2,
+    url: 'https://static.addtoany.com/images/dracaena-cinnabari.jpg',
+    type: 'image',
+   },
+  ],
   info: {
    backers: 220,
    daysLeft: 40,
