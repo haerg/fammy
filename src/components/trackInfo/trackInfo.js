@@ -119,6 +119,22 @@ class TrackInfo extends Component {
 
        <div className="track-info-container__header">
         <Logo/>
+        <div className="track-info-container__right-container">
+         <Button variant="text"
+                 classes={{
+                  root: classes.root,
+                  label: classes.label,
+                 }}>
+          Sign up
+         </Button>
+         <Button variant="text"
+                 classes={{
+                  root: classes.root,
+                  label: classes.label,
+                 }}>
+          Log in
+         </Button>
+        </div>
        </div>
 
        <div className="track-info-container__body">
