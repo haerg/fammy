@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 import './trackInfo.css';
-import Logo from '../logo/logo';
+import Header from '../header/header';
 import { PLAYLIST } from '../../data.constants';
 import { withStyles } from '@material-ui/core';
 import classNames from 'classnames';
@@ -66,25 +66,7 @@ class TrackInfo extends Component {
   return (
       <div className="track-info-container">
 
-       <div className="track-info-container__header">
-        <Logo/>
-        <div className="track-info-container__right-container">
-         <Button variant="text"
-                 classes={{
-                  root: classes.root,
-                  label: classes.label,
-                 }}>
-          Sign up
-         </Button>
-         <Button variant="text"
-                 classes={{
-                  root: classes.root,
-                  label: classes.label,
-                 }}>
-          Log in
-         </Button>
-        </div>
-       </div>
+       <Header/>
 
        <div className="track-info-container__body">
         <div className="track-info-container__first">

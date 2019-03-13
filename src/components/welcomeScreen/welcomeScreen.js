@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './welcomeScreen.css';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-import Logo from '../logo/logo';
+import Header from '../header/header';
 
 const styles = {
  root: {
@@ -55,32 +55,7 @@ class WelcomeScreen extends Component {
       <div className="welcome-screen">
        <div className="welcome-screen__overlay"/>
 
-       <div className="welcome-screen__logo-container">
-        <Logo></Logo>
-        {/*<Button variant="contained"*/}
-        {/*classes={{*/}
-        {/*root: classes.root,*/}
-        {/*label: classes.label,*/}
-        {/*}}>*/}
-        {/*Sign In*/}
-        {/*</Button>*/}
-           <div className="welcome-screen__right-container">
-               <Button variant="text"
-                       classes={{
-                           root: classes.clear,
-                           label: classes.label,
-                       }}>
-                   Sign up
-               </Button>
-               <Button variant="text"
-                       classes={{
-                           root: classes.clear,
-                           label: classes.label,
-                       }}>
-                   Log in
-               </Button>
-            </div>
-       </div>
+       <Header/>
 
        <div className="welcome-screen__details">
         <div className="welcome-screen__details__title">

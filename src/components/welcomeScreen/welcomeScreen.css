@@ -20,26 +20,6 @@
     z-index: -1;
 }
 
-.welcome-screen__logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2rem 4rem 0 4rem;
-    /*background-color: snow;*/
-}
-
-.welcome-screen__right-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-#logo img {
-    height: 2.5rem;
-    width: 8rem;
-    margin-right: 0.5rem;
-    margin-top: .5rem;
-}
 .welcome-screen__details {
     padding: 0 4rem;
     color: #fff;

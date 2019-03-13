@@ -2,25 +2,6 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.track-info-container__header {
-    /*border-bottom: 1px solid #ccc;*/
-    padding: 2rem 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.track-info-container__right-container {
-    display: flex;
-    width: 160px;
-    justify-content: space-between;
-}
-
-.track-info-container__right-container div {
-    text-align:center;
-    margin-left: 10px;
-}
-
 .track-info-container__body {
     display: flex;
     flex-direction: column;
@@ -29,7 +10,6 @@
 .track-info-container__first, .track-info-container__second {
     display: flex;
 }
-
 
 .track-info-container__campaign {
     width: 40%;
