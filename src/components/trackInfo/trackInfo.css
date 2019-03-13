@@ -141,11 +141,18 @@
 }
 
 .track-info-container__progress div span {
-    font-weight: 500;
+}
+
+.track-info-container__progress__main {
+    font-size: 1.0rem;
+    font-weight: 600;
+    color: #111111;
+    margin-top: .3rem;
 }
 
 .track-info-container__progress__details {
-    font-size: .8rem;
+    font-size: .7rem;
+    font-weight: 500;
     color: #949494;
     margin-top: .3rem;
 }
@@ -161,6 +168,9 @@
     font-weight: 500;
     cursor: pointer;
     box-sizing: border-box;
+    -webkit-box-shadow: 0 0 18px -3px rgba(204, 204, 204, 1);
+    -moz-box-shadow: 0 0 18px -3px rgba(204, 204, 204, 1);
+    box-shadow: 0 0 18px -3px rgba(204, 204, 204, 1);
 }
 
 .track-info-container__back-song-btn:hover {
@@ -182,11 +192,12 @@
      border-bottom: 1px solid #ccc;
      padding-bottom: .3rem;
      padding-left: 1rem;
- }
+}
 
 .track-info-container__tabs__title_without_broder {
     font-weight: 500;
     padding-bottom: .3rem;
+    color: #949494;
 }
 
 .track-info-container__tabs__body {

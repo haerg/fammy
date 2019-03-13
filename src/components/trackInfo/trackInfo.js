@@ -176,15 +176,15 @@ class TrackInfo extends Component {
 
           <div className="track-info-container__progress">
            <div className="track-info-container__progress__funded">
-            <span>{funded}%</span>
+            <span className="track-info-container__progress__main">{funded}%</span>
             <span className="track-info-container__progress__details">Funded</span>
            </div>
            <div className="track-info-container__progress__backers">
-            <span>{this.state.element.info.backers}</span>
+            <span className="track-info-container__progress__main">{this.state.element.info.backers}</span>
             <span className="track-info-container__progress__details">Backers</span>
            </div>
            <div className="track-info-container__progress__days-left">
-            <span>{this.state.element.info.daysLeft}</span>
+            <span className="track-info-container__progress__main">{this.state.element.info.daysLeft}</span>
             <span className="track-info-container__progress__details">Days left</span>
            </div>
           </div>
