@@ -18,7 +18,7 @@ class CampaignMedia extends Component {
 
  render = () => {
   const smallMedia = this.state.media.map((item, index) =>
-      <div className={'track-info-container__media-small__item ' + (item.id ===
+      <div className={'campaign__media-small__item ' + (item.id ===
       this.state.currentMedia.id ? 'active' : '')}
            key={index}
            onClick={() => {this.chooseMedia(item);}}>
@@ -27,12 +27,13 @@ class CampaignMedia extends Component {
   );
 
   return (
-      <div className="track-info-container__media">
-       <div className="track-info-container__media-big">
-        <div className="track-info-container__media__item"><img
-            src={this.state.currentMedia.url}/></div>
+      <div className="campaign__media">
+       <div className="campaign__media-big">
+        <div className="campaign__media__item">
+         <img src={this.state.currentMedia.url}/>
+        </div>
        </div>
-       <div className="track-info-container__media-small">
+       <div className="campaign__media-small">
         {smallMedia}
        </div>
       </div>
