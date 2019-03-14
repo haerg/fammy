@@ -22,8 +22,8 @@ class CampaignTip extends Component {
         <div className="campaign__information__sub-title">
          On average, you can earn $.80 according to 1,000 perspectives monetized by banner
          advertisements,
-         or, $five-$8 consistent with 1,000 views on a video monetized by means of rollout
-         commercials (the advertisements before the video).
+         or, $5-$8 consistent with 1,000 views on a video monetized by means of rollout
+         commercials.
          So, on a video with 1,000,000 views monetized by rollout ads, you can earn 5,000-8,000.
         </div>
        </div>
