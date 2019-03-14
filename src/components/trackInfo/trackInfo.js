@@ -6,6 +6,7 @@ import CampaignTip from './campaignTip/campaignTip';
 import CampaignComments from './campaignComments/campaignComments';
 import CampaignMedia from './campaignMedia/campaignMedia';
 import CampaignDetails from './campaignDetails/campaignDetails';
+import CompaignSlider from './compaignSlider/compaignSlider'
 
 class TrackInfo extends Component {
 
@@ -38,11 +39,12 @@ class TrackInfo extends Component {
          <div className="track-info-container__campaign_content">
           <div className="track-info-container__tabs">
            <div className="track-info-container__tabs__title">
-            Comments({this.state.comments.length})
+            <CompaignSlider />
            </div>
            <div className="track-info-container__tabs__body">
-            <CampaignComments comments={this.state.comments}/>
            </div>
+           <CampaignComments comments={this.state.comments}/>
+
           </div>
          </div>
 
