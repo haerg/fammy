@@ -96,11 +96,6 @@ class CompaignSlider extends React.Component {
         this.props.callbackFromParent(value);
     };
 
-    handleActive = (tab) => {
-       // alert(`A tab was activated.`);
-    };
-
-
     render() {
         const { classes } = this.props;
         const { value } = this.state;
@@ -115,25 +110,21 @@ class CompaignSlider extends React.Component {
                         disableRipple
                         classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
                         label="Story"
-                        data-route="0"
                         onActive={this.handleActive}
                     />
                     <Tab
                         disableRipple
                         classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
                         label="Updates"
-                        data-route="1"
                         onActive={this.handleActive}
                     />
                     <Tab
                         disableRipple
                         classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
                         label="Comments"
-                        data-route="2"
                         onActive={this.handleActive}
                     />
                 </Tabs>
-                {/*<Typography className={classes.typography}>Ant Design UI powered by Material-UI</Typography>*/}
             </div>
         );
     }
