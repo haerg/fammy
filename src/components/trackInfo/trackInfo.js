@@ -7,6 +7,9 @@ import CampaignComments from './campaignComments/campaignComments';
 import CampaignMedia from './campaignMedia/campaignMedia';
 import CampaignDetails from './campaignDetails/campaignDetails';
 import CompaignSlider from './compaignSlider/compaignSlider'
+import CampaignChanges from './compaignChanges/compaignChanges'
+
+
 import {BrowserRouter as Router, BrowserRouter, Route, Switch} from "react-router-dom";
 import App from "../../App";
 
@@ -44,16 +47,16 @@ class TrackInfo extends Component {
   const isShowChanges = this.state.isShowChanges;
   const isShowStory = this.state.isShowStory;
 
-  let componeetnUnderSlider;
+  let componentUnderSlider;
 
   if (isShowComments) {
-   componeetnUnderSlider = <CampaignComments comments={this.state.comments}/>
+   componentUnderSlider = <CampaignComments comments={this.state.comments}/>
   } else if (isShowChanges) {
-   componeetnUnderSlider = <CampaignMedia media={this.state.element.media}/>
+   componentUnderSlider = <CampaignChanges comments={this.state.comments}/>
   } else if (isShowStory) {
-   componeetnUnderSlider = <CampaignDetails element={this.state.element}/>
+   componentUnderSlider = <CampaignChanges comments={this.state.comments}/>
   } else {
-   componeetnUnderSlider = <CampaignComments comments={this.state.comments}/>
+   componentUnderSlider = <CampaignComments comments={this.state.comments}/>
   }
 
   return (
@@ -77,7 +80,7 @@ class TrackInfo extends Component {
            </div>
            <div className="track-info-container__tabs__body">
            </div>
-           {componeetnUnderSlider}
+           {componentUnderSlider}
           </div>
          </div>
          <CampaignTip/>
@@ -91,4 +94,3 @@ class TrackInfo extends Component {
 }
 
 export default TrackInfo;
-
