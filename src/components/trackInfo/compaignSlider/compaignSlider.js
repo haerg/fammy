@@ -74,6 +74,7 @@ class CompaignSlider extends React.Component {
     constructor({ }) {
         super();
         this.state = {
+            value: 2,
         };
     }
 
@@ -91,7 +92,7 @@ class CompaignSlider extends React.Component {
 
         return (
             <div className={classes.root}>
-                <Tabs value={2}
+                <Tabs value={value}
                       onChange={this.handleChange}
                       classes={{ root: classes.tabsRoot, indicator: classes.tabsIndicator }}
                 >
