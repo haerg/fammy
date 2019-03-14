@@ -91,15 +91,14 @@ class CompaignSlider extends React.Component {
 
         return (
             <div className={classes.root}>
-                <Tabs selected={0}
-                      value={value}
+                <Tabs value={2}
                       onChange={this.handleChange}
                       classes={{ root: classes.tabsRoot, indicator: classes.tabsIndicator }}
                 >
                     <Tab
                         disableRipple
                         classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
-                        label="Store"
+                        label="Story"
                     />
                     <Tab
                         disableRipple
