@@ -30,14 +30,17 @@ const styles = theme => ({
     tabsRoot: {
         borderBottom: '1px solid #ccc',
     },
-    tabsIndicator: {
-        backgroundColor: '#1890ff',
+    tabsIndicatorRoot: {
+        width: 50,
+        backgroundColor: '#cc5e4b',
     },
     tabRoot: {
         textTransform: 'initial',
-        minWidth: 72,
-        fontWeight: theme.typography.fontWeightRegular,
-        marginRight: theme.spacing.unit * 4,
+        minWidth: 50,
+        width: 120,
+        fontWeight: 700,
+        marginRight: 0,
+        color: '#555555',
         fontFamily: [
             '-apple-system',
             'BlinkMacSystemFont',
@@ -51,15 +54,15 @@ const styles = theme => ({
             '"Segoe UI Symbol"',
         ].join(','),
         '&:hover': {
-            color: '#40a9ff',
+            color: '#000000',
             opacity: 1,
         },
         '&$tabSelected': {
-            color: '#1890ff',
-            fontWeight: theme.typography.fontWeightMedium,
+            color: '#000000',
+            fontWeight: 700,
         },
         '&:focus': {
-            color: '#40a9ff',
+            color: '#000000',
         },
     },
     tabSelected: {},
