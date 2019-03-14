@@ -7,6 +7,8 @@ import CampaignComments from './campaignComments/campaignComments';
 import CampaignMedia from './campaignMedia/campaignMedia';
 import CampaignDetails from './campaignDetails/campaignDetails';
 import CompaignSlider from './compaignSlider/compaignSlider'
+import {BrowserRouter as Router, BrowserRouter, Route, Switch} from "react-router-dom";
+import App from "../../App";
 
 class TrackInfo extends Component {
 
@@ -20,7 +22,39 @@ class TrackInfo extends Component {
   };
  }
 
+ myCallback = (dataFromChild) => {
+   switch (dataFromChild) {
+    case 0:
+     this.setState({isShowStory: true, isShowChanges: false, isShowComments: false});
+     break
+    case 1:
+     this.setState({isShowStory: false, isShowChanges: true, isShowComments: false});
+     break
+    case 2:
+     this.setState({isShowStory: false, isShowChanges: false, isShowComments: true});
+     break
+    default:
+     break
+   }
+ }
+
  render = () => {
+
+  const isShowComments = this.state.isShowComments;
+  const isShowChanges = this.state.isShowChanges;
+  const isShowStory = this.state.isShowStory;
+
+  let componeetnUnderSlider;
+
+  if (isShowComments) {
+   componeetnUnderSlider = <CampaignComments comments={this.state.comments}/>
+  } else if (isShowChanges) {
+   componeetnUnderSlider = <CampaignMedia media={this.state.element.media}/>
+  } else if (isShowStory) {
+   componeetnUnderSlider = <CampaignDetails element={this.state.element}/>
+  } else {
+   componeetnUnderSlider = <CampaignComments comments={this.state.comments}/>
+  }
 
   return (
       <div className="track-info-container">
@@ -39,17 +73,14 @@ class TrackInfo extends Component {
          <div className="track-info-container__campaign_content">
           <div className="track-info-container__tabs">
            <div className="track-info-container__tabs__title">
-            <CompaignSlider />
+            <CompaignSlider callbackFromParent={this.myCallback}/>
            </div>
            <div className="track-info-container__tabs__body">
            </div>
-           <CampaignComments comments={this.state.comments}/>
-
+           {componeetnUnderSlider}
           </div>
          </div>
-
          <CampaignTip/>
-
         </div>
 
        </div>
@@ -60,3 +91,4 @@ class TrackInfo extends Component {
 }
 
 export default TrackInfo;
+

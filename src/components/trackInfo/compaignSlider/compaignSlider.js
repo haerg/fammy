@@ -32,7 +32,10 @@ const styles = theme => ({
     },
     tabsIndicatorRoot: {
         width: 50,
-        backgroundColor: '#cc5e4b',
+    },
+    tabsIndicator: {
+        width: 50,
+        backgroundColor: '#DB5643',
     },
     tabRoot: {
         textTransform: 'initial',
@@ -71,6 +74,9 @@ const styles = theme => ({
     },
 });
 
+function handleActive(tab) {
+    alert(0);
+}
 
 class CompaignSlider extends React.Component {
 
@@ -87,7 +93,13 @@ class CompaignSlider extends React.Component {
 
     handleChange = (event, value) => {
         this.setState({ value });
+        this.props.callbackFromParent(value);
     };
+
+    handleActive = (tab) => {
+       // alert(`A tab was activated.`);
+    };
+
 
     render() {
         const { classes } = this.props;
@@ -103,16 +115,22 @@ class CompaignSlider extends React.Component {
                         disableRipple
                         classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
                         label="Story"
+                        data-route="0"
+                        onActive={this.handleActive}
                     />
                     <Tab
                         disableRipple
                         classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
                         label="Updates"
+                        data-route="1"
+                        onActive={this.handleActive}
                     />
                     <Tab
                         disableRipple
                         classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
                         label="Comments"
+                        data-route="2"
+                        onActive={this.handleActive}
                     />
                 </Tabs>
                 {/*<Typography className={classes.typography}>Ant Design UI powered by Material-UI</Typography>*/}
