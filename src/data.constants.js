@@ -37,34 +37,15 @@ export const PLAYLIST = [
      name: 'John Zil',
     },
     text: 'Amazing Music and Video! South East Asia ROCKS! lived 8 years of my life there in PARADISE!',
-   },  {
+   }],
+  updates: [
+   {
     user: {
-     avatarUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyHDUVs0uDFvPeXHT1AofpQSW2gO6Sd-Efwf5ZKXpI4kOX5FGR',
+     avatarUrl: 'https://cdn0.iconfinder.com/data/icons/avatars-6/500/Avatar_boy_man_people_account_client_male_person_user_work_sport_beard_team_glasses-512.png',
      date: new Date().getTime(),
-     name: 'John Zil',
+     name: 'Zoe Eben',
     },
-    text: 'Amazing Music and Video! South East Asia ROCKS! lived 8 years of my life there in PARADISE!',
-   },  {
-    user: {
-     avatarUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyHDUVs0uDFvPeXHT1AofpQSW2gO6Sd-Efwf5ZKXpI4kOX5FGR',
-     date: new Date().getTime(),
-     name: 'John Zil',
-    },
-    text: 'Amazing Music and Video! South East Asia ROCKS! lived 8 years of my life there in PARADISE!',
-   },  {
-    user: {
-     avatarUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyHDUVs0uDFvPeXHT1AofpQSW2gO6Sd-Efwf5ZKXpI4kOX5FGR',
-     date: new Date().getTime(),
-     name: 'John Zil',
-    },
-    text: 'Amazing Music and Video! South East Asia ROCKS! lived 8 years of my life there in PARADISE!',
-   },  {
-    user: {
-     avatarUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyHDUVs0uDFvPeXHT1AofpQSW2gO6Sd-Efwf5ZKXpI4kOX5FGR',
-     date: new Date().getTime(),
-     name: 'John Zil',
-    },
-    text: 'Amazing Music and Video! South East Asia ROCKS! lived 8 years of my life there in PARADISE!',
+    text: 'Dear Backers, 100% Funded! + #1 on Trending! + Stretch Goal Unlocked!',
    }],
  },
  {
@@ -106,6 +87,15 @@ export const PLAYLIST = [
     },
     text: 'Amazing Music and Video! South East Asia ROCKS! lived 8 years of my life there in PARADISE!',
    }],
+  updates: [
+   {
+    user: {
+     avatarUrl: 'https://cdn0.iconfinder.com/data/icons/avatars-6/500/Avatar_boy_man_people_account_client_male_person_user_work_sport_beard_team_glasses-512.png',
+     date: new Date().getTime(),
+     name: 'Zoe Eben',
+    },
+    text: 'Dear Backers, 100% Funded! + #1 on Trending! + Stretch Goal Unlocked!',
+   }],
  },
  {
   id: 3,
@@ -145,6 +135,15 @@ export const PLAYLIST = [
      name: 'John Zil',
     },
     text: 'Amazing Music and Video! South East Asia ROCKS! lived 8 years of my life there in PARADISE!',
+   }],
+  updates: [
+   {
+    user: {
+     avatarUrl: 'https://images.shazam.com/coverart/t441990739-b1437575238_s400.jpg',
+     date: new Date().getTime(),
+     name: 'Zoe Eben',
+    },
+    text: 'Dear Backers, 100% Funded! + #1 on Trending! + Stretch Goal Unlocked!',
    }],
  },
  {
@@ -186,6 +185,15 @@ export const PLAYLIST = [
     },
     text: 'Amazing Music and Video! South East Asia ROCKS! lived 8 years of my life there in PARADISE!',
    }],
+  updates: [
+   {
+    user: {
+     avatarUrl: 'https://images.shazam.com/coverart/t441990739-b1437575238_s400.jpg',
+     date: new Date().getTime(),
+     name: 'Zoe Eben',
+    },
+    text: 'Dear Backers, 100% Funded! + #1 on Trending! + Stretch Goal Unlocked!',
+   }],
  },
  {
   id: 5,
@@ -225,6 +233,15 @@ export const PLAYLIST = [
      name: 'John Zil',
     },
     text: 'Amazing Music and Video! South East Asia ROCKS! lived 8 years of my life there in PARADISE!',
+   }],
+  updates: [
+   {
+    user: {
+     avatarUrl: 'https://images.shazam.com/coverart/t441990739-b1437575238_s400.jpg',
+     date: new Date().getTime(),
+     name: 'Zoe Eben',
+    },
+    text: 'Dear Backers, 100% Funded! + #1 on Trending! + Stretch Goal Unlocked!',
    }],
  },
  {
@@ -266,6 +283,15 @@ export const PLAYLIST = [
     },
     text: 'Amazing Music and Video! South East Asia ROCKS! lived 8 years of my life there in PARADISE!',
    }],
+  updates: [
+   {
+    user: {
+     avatarUrl: 'https://images.shazam.com/coverart/t441990739-b1437575238_s400.jpg',
+     date: new Date().getTime(),
+     name: 'Zoe Eben',
+    },
+    text: 'Dear Backers, 100% Funded! + #1 on Trending! + Stretch Goal Unlocked!',
+   }],
  },
  {
   id: 7,
@@ -305,6 +331,15 @@ export const PLAYLIST = [
      name: 'John Zil',
     },
     text: 'Amazing Music and Video! South East Asia ROCKS! lived 8 years of my life there in PARADISE!',
+   }],
+  updates: [
+   {
+    user: {
+     avatarUrl: 'https://images.shazam.com/coverart/t441990739-b1437575238_s400.jpg',
+     date: new Date().getTime(),
+     name: 'Zoe Eben',
+    },
+    text: 'Dear Backers, 100% Funded! + #1 on Trending! + Stretch Goal Unlocked!',
    }],
  },
  {
@@ -346,6 +381,15 @@ export const PLAYLIST = [
     },
     text: 'Amazing Music and Video! South East Asia ROCKS! lived 8 years of my life there in PARADISE!',
    }],
+  updates: [
+   {
+    user: {
+     avatarUrl: 'https://images.shazam.com/coverart/t441990739-b1437575238_s400.jpg',
+     date: new Date().getTime(),
+     name: 'Zoe Eben',
+    },
+    text: 'Dear Backers, 100% Funded! + #1 on Trending! + Stretch Goal Unlocked!',
+   }],
  },
  {
   id: 9,
@@ -385,6 +429,15 @@ export const PLAYLIST = [
      name: 'John Zil',
     },
     text: 'Amazing Music and Video! South East Asia ROCKS! lived 8 years of my life there in PARADISE!',
+   }],
+  updates: [
+   {
+    user: {
+     avatarUrl: 'https://images.shazam.com/coverart/t441990739-b1437575238_s400.jpg',
+     date: new Date().getTime(),
+     name: 'Zoe Eben',
+    },
+    text: 'Dear Backers, 100% Funded! + #1 on Trending! + Stretch Goal Unlocked!',
    }],
  },
 ];

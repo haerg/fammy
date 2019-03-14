@@ -22,6 +22,7 @@ class TrackInfo extends Component {
   this.state = {
    element,
    comments: element.comments,
+   updates: element.updates,
   };
  }
 
@@ -52,9 +53,9 @@ class TrackInfo extends Component {
   if (isShowComments) {
    componentUnderSlider = <CampaignComments comments={this.state.comments}/>
   } else if (isShowChanges) {
-   componentUnderSlider = <CampaignChanges comments={this.state.comments}/>
+   componentUnderSlider = <CampaignChanges updates={this.state.updates}/>
   } else if (isShowStory) {
-   componentUnderSlider = <CampaignChanges comments={this.state.comments}/>
+   componentUnderSlider = <CampaignComments comments={this.state.comments}/>
   } else {
    componentUnderSlider = <CampaignComments comments={this.state.comments}/>
   }
@@ -72,7 +73,6 @@ class TrackInfo extends Component {
         </div>
 
         <div className="track-info-container__second">
-
          <div className="track-info-container__campaign_content">
           <div className="track-info-container__tabs">
            <div className="track-info-container__tabs__title">

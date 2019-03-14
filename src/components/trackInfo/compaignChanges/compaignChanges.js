@@ -18,13 +18,13 @@ const styles = theme => ({
 
 class CampaignChanges extends Component {
 
-    constructor({ comments }) {
+    constructor({ updates }) {
         super();
 
         this.state = {
             symbolsLeft: 500,
             newComment: '',
-            comments,
+            updates,
         };
     }
 
@@ -43,28 +43,10 @@ class CampaignChanges extends Component {
         return dd + '/' + mm + '/' + yyyy;
     }
 
-    handleChange = (event) => {
-        this.setState({ symbolsLeft: 500 - event.target.value.length, newComment: event.target.value });
-    };
-
-    postComment = () => {
-        this.setState({
-            comments: this.state.comments.concat({
-                text: this.state.newComment,
-                user: {
-                    avatarUrl: 'https://randomuser.me/api/portraits/men/12.jpg',
-                    date: new Date().getTime(),
-                    name: 'Alex Mood',
-                },
-            }),
-            newComment: '',
-        });
-    };
-
     render = () => {
         const { classes } = this.props;
 
-        const comments = this.state.comments.map((item, index) =>
+        const comments = this.state.updates.map((item, index) =>
             <div className="campaign__comment" key={index}>
                 <div className="campaign__comment__avatar">
                     <img src={item.user.avatarUrl}/>
