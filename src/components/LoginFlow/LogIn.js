@@ -4,6 +4,7 @@ import './LogIn.css';
 import Header from "../welcomeScreen/welcomeScreen";
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import logo from "../header/logo/fammy.png";
 
 const styles = theme => ({
     container: {
@@ -29,6 +30,12 @@ class LogIn extends React.Component {
         event.preventDefault();
         event.stopPropagation();
         this.props.history.push(`/signUp`);
+    };
+
+    logoClick = (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        this.props.history.push('/');
     };
 
     constructor(props) {
@@ -62,6 +69,9 @@ class LogIn extends React.Component {
         return (
             <div className="top-container">
             <div className="login">
+                <div id="mainLogo">
+                    <img src={logo} alt="Fammy" onClick={this.logoClick}/>
+                </div>
                 <TextField
                     id="outlined-name"
                     label="Email address"

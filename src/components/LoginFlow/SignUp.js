@@ -4,6 +4,8 @@ import Header from "../welcomeScreen/welcomeScreen";
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import {withStyles} from "@material-ui/core";
+import Logo from "../header/header";
+import logo from "../header/logo/fammy.png";
 
 const styles = theme => ({
     container: {
@@ -28,6 +30,12 @@ class SignUp extends React.Component {
         event.preventDefault();
         event.stopPropagation();
         this.props.history.push(`/logIn`);
+    };
+
+    logoClick = (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        this.props.history.push('/');
     };
 
     constructor(props) {
@@ -62,6 +70,9 @@ class SignUp extends React.Component {
         return (
             <div className="signup-top-container">
                 <div className="login">
+                    <div id="mainLogo">
+                        <img src={logo} alt="Fammy" onClick={this.logoClick}/>
+                    </div>
                     <TextField
                         id="outlined-name"
                         label="Name"
