@@ -4,14 +4,16 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router, BrowserRouter, Route, Switch } from 'react-router-dom';
 import TrackInfo from './components/trackInfo/trackInfo';
+import LogIn from './components/LoginFlow/LogIn';
 import App from './App';
 
 ReactDOM.render((
     <BrowserRouter>
      <Router>
       <Switch>
-       <Route path="/tracks/:id" component={TrackInfo}/>
-       <Route path="/" component={App}/>
+          <Route path="/logIn" component={LogIn}/>
+          <Route path="/tracks/:id" component={TrackInfo}/>
+          <Route path="/" component={App}/>
       </Switch>
      </Router>
     </BrowserRouter>

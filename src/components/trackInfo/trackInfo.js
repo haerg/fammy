@@ -68,7 +68,6 @@ class TrackInfo extends Component {
        <div className="track-info-container__body">
         <div className="track-info-container__first">
          <CampaignMedia media={this.state.element.media}/>
-
          <CampaignDetails element={this.state.element}/>
         </div>
 
