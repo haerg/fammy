@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './LogIn.css';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, Row, Col  } from 'reactstrap';
 import Header from "../welcomeScreen/welcomeScreen";
 
 class LogIn extends React.Component {
@@ -8,8 +8,8 @@ class LogIn extends React.Component {
         super(props);
 
         this.state = {
-            email: "Email",
-            password: "password"
+            email: "Email address",
+            password: "Password"
         };
 
         this.handleEmailChange = this.handleEmailChange.bind(this);
@@ -56,12 +56,14 @@ class LogIn extends React.Component {
                             onChange={this.handlePasswordChange}
                         />
                     </FormGroup>
-                    <FormGroup check>
-                        <Label check>
-                            <Input type="checkbox" /> Remember Me
-                        </Label>
-                    </FormGroup>
-                    <Button>Submit</Button>
+                    <Row>
+                        <Col xs="6">
+                            <Button color="link">Don't have an account?</Button>
+                        </Col>
+                        <Col xs="6">
+                            <Button color="success">Sign in</Button>
+                        </Col>
+                    </Row>
                 </Form>
             </div>
             </div>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './SignUp.css';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import {Button, Form, FormGroup, Label, Input, Row, Col} from 'reactstrap';
 import Header from "../welcomeScreen/welcomeScreen";
 
 class SignUp extends React.Component {
@@ -8,8 +8,9 @@ class SignUp extends React.Component {
         super(props);
 
         this.state = {
-            email: "Email",
-            password: "password"
+            name: "Name",
+            email: "Email address",
+            password: "Password"
         };
 
         this.handleEmailChange = this.handleEmailChange.bind(this);
@@ -34,8 +35,18 @@ class SignUp extends React.Component {
         return (
             <div className="signup-top-container">
                 <div className="signup">
-                    <h1>Create Account</h1>
+                    <h1>Sign Up</h1>
                     <Form onSubmit={this.handleSubmit}>
+                        <FormGroup>
+                            <Label for="name">Name</Label>
+                            <Input
+                                type="name"
+                                name="name"
+                                id="name"
+                                placeholder={this.state.name}
+                                onChange={this.handleEmailChange}
+                            />
+                        </FormGroup>
                         <FormGroup>
                             <Label for="email">Email</Label>
                             <Input
@@ -56,12 +67,14 @@ class SignUp extends React.Component {
                                 onChange={this.handlePasswordChange}
                             />
                         </FormGroup>
-                        <FormGroup check>
-                            <Label check>
-                                <Input type="checkbox" /> Remember Me
-                            </Label>
-                        </FormGroup>
-                        <Button>Submit</Button>
+                        <Row>
+                            <Col xs="6">
+                                <Button color="link">Have an account?</Button>
+                            </Col>
+                            <Col xs="6">
+                                <Button color="success">Create Account</Button>
+                            </Col>
+                        </Row>
                     </Form>
                 </div>
             </div>
