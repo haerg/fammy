@@ -53,7 +53,7 @@ class SignUp extends React.Component {
     render() {
         const { classes } = this.props;
         return (
-            <div className="top-container">
+            <div className="signup-top-container">
                 <div className="login">
                     <TextField
                         id="outlined-name"
