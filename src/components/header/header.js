@@ -50,7 +50,7 @@ class Header extends Component {
                 classes={{
                  // root: classes.root,
                  // label: classes.label,
-                }}>
+                }} onClick={this.logInAction}>
          Log in
         </Button>
        </div>
@@ -61,7 +61,7 @@ class Header extends Component {
  };
 }
 
-const LogInRouter = () => withRouter(Header);
-const LogInStyle = () => withStyles(styles)(Header);
+// withRouter(Header);
+// withStyles(styles)(Header);
 
 export default withRouter(Header);
