@@ -27,8 +27,13 @@ class Header extends Component {
     logInAction = (event) => {
         event.preventDefault();
         event.stopPropagation();
-        this.props.history.push(`/tracks/1`);
         this.props.history.push(`/logIn`);
+    };
+
+    signUpAction = (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        this.props.history.push(`/signUp`);
     };
 
     render = () => {
@@ -43,7 +48,7 @@ class Header extends Component {
                 classes={{
                  // root: classes.root,
                  // label: classes.label,
-                }} onClick={this.logInAction}>
+                }} onClick={this.signUpAction}>
          Sign up
         </Button>
         <Button variant="text"

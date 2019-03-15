@@ -5,6 +5,7 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router, BrowserRouter, Route, Switch } from 'react-router-dom';
 import TrackInfo from './components/trackInfo/trackInfo';
 import LogIn from './components/LoginFlow/LogIn';
+import SignUp from './components/LoginFlow/SignUp';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -13,6 +14,7 @@ ReactDOM.render((
      <Router>
       <Switch>
           <Route path="/logIn" component={LogIn}/>
+          <Route path="/signUp" component={SignUp}/>
           <Route path="/tracks/:id" component={TrackInfo}/>
           <Route path="/" component={App}/>
       </Switch>
