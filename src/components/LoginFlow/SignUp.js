@@ -23,6 +23,13 @@ const styles = theme => ({
 });
 
 class SignUp extends React.Component {
+
+    logInAction = (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        this.props.history.push(`/logIn`);
+    };
+
     constructor(props) {
         super(props);
 
@@ -81,7 +88,7 @@ class SignUp extends React.Component {
                     />
 
                     <div className="btn-container">
-                        <Button color="primary" className={classes.button}>
+                        <Button color="primary" className={classes.button} onClick={this.logInAction}>
                             Have an account?
                         </Button>
                         <Button variant="contained" color="primary"  className={classes.button}>
