@@ -7,7 +7,7 @@ import TrackInfo from './components/trackInfo/trackInfo';
 import LogIn from './components/LoginFlow/LogIn';
 import SignUp from './components/LoginFlow/SignUp';
 import App from './App';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render((
     <BrowserRouter>

@@ -1,7 +1,26 @@
 import React, { Component } from 'react';
 import './SignUp.css';
-import {Button, Form, FormGroup, Label, Input, Row, Col} from 'reactstrap';
 import Header from "../welcomeScreen/welcomeScreen";
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+import {withStyles} from "@material-ui/core";
+
+const styles = theme => ({
+    container: {
+        display: 'flex',
+        flexWrap: 'wrap',
+    },
+    textField: {
+        marginLeft: theme.spacing.unit,
+        marginRight: theme.spacing.unit,
+    },
+    dense: {
+        marginTop: 19,
+    },
+    menu: {
+        width: 200,
+    },
+});
 
 class SignUp extends React.Component {
     constructor(props) {
@@ -32,54 +51,47 @@ class SignUp extends React.Component {
     }
 
     render() {
+        const { classes } = this.props;
         return (
-            <div className="signup-top-container">
-                <div className="signup">
-                    <h1>Sign Up</h1>
-                    <Form onSubmit={this.handleSubmit}>
-                        <FormGroup>
-                            <Label for="name">Name</Label>
-                            <Input
-                                type="name"
-                                name="name"
-                                id="name"
-                                placeholder={this.state.name}
-                                onChange={this.handleEmailChange}
-                            />
-                        </FormGroup>
-                        <FormGroup>
-                            <Label for="email">Email</Label>
-                            <Input
-                                type="email"
-                                name="email"
-                                id="email"
-                                placeholder={this.state.email}
-                                onChange={this.handleEmailChange}
-                            />
-                        </FormGroup>
-                        <FormGroup>
-                            <Label for="password">Password</Label>
-                            <Input
-                                type="password"
-                                name="password"
-                                id="password"
-                                placeholder={this.state.password}
-                                onChange={this.handlePasswordChange}
-                            />
-                        </FormGroup>
-                        <Row>
-                            <Col xs="6">
-                                <Button color="link">Have an account?</Button>
-                            </Col>
-                            <Col xs="6">
-                                <Button color="success">Create Account</Button>
-                            </Col>
-                        </Row>
-                    </Form>
+            <div className="top-container">
+                <div className="login">
+                    <TextField
+                        id="outlined-name"
+                        label="Name"
+                        className={classes.textField}
+                        // onChange={this.handleChange('name')}
+                        margin="normal"
+                        variant="outlined"
+                    />
+                    <TextField
+                        id="outlined-name"
+                        label="Email address"
+                        className={classes.textField}
+                        // onChange={this.handleChange('name')}
+                        margin="normal"
+                        variant="outlined"
+                    />
+                    <TextField
+                        id="outlined-name"
+                        label="Password"
+                        className={classes.textField}
+                        // onChange={this.handleChange('name')}
+                        margin="normal"
+                        variant="outlined"
+                    />
+
+                    <div className="btn-container">
+                        <Button color="primary" className={classes.button}>
+                            Have an account?
+                        </Button>
+                        <Button variant="contained" color="primary"  className={classes.button}>
+                            Create Account
+                        </Button>
+                    </div>
                 </div>
             </div>
         );
     }
 }
 
-export default SignUp;
+export default withStyles(styles)(SignUp);

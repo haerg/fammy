@@ -1,7 +1,27 @@
 import React, { Component } from 'react';
+import { withStyles } from '@material-ui/core';
 import './LogIn.css';
-import { Button, Form, FormGroup, Label, Input, Row, Col  } from 'reactstrap';
 import Header from "../welcomeScreen/welcomeScreen";
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+
+const styles = theme => ({
+    container: {
+        display: 'flex',
+        flexWrap: 'wrap',
+    },
+    textField: {
+        marginLeft: theme.spacing.unit,
+        marginRight: theme.spacing.unit,
+    },
+    dense: {
+        marginTop: 19,
+    },
+    menu: {
+        width: 200,
+    },
+});
+
 
 class LogIn extends React.Component {
     constructor(props) {
@@ -31,44 +51,40 @@ class LogIn extends React.Component {
     }
 
     render() {
+        const { classes } = this.props;
         return (
             <div className="top-container">
             <div className="login">
-                <h1>Login</h1>
-                <Form onSubmit={this.handleSubmit}>
-                    <FormGroup>
-                        <Label for="email">Email</Label>
-                        <Input
-                            type="email"
-                            name="email"
-                            id="email"
-                            placeholder={this.state.email}
-                            onChange={this.handleEmailChange}
-                        />
-                    </FormGroup>
-                    <FormGroup>
-                        <Label for="password">Password</Label>
-                        <Input
-                            type="password"
-                            name="password"
-                            id="password"
-                            placeholder={this.state.password}
-                            onChange={this.handlePasswordChange}
-                        />
-                    </FormGroup>
-                    <Row>
-                        <Col xs="6">
-                            <Button color="link">Don't have an account?</Button>
-                        </Col>
-                        <Col xs="6">
-                            <Button color="success">Sign in</Button>
-                        </Col>
-                    </Row>
-                </Form>
-            </div>
+                <TextField
+                    id="outlined-name"
+                    label="Email address"
+                    className={classes.textField}
+                    // onChange={this.handleChange('name')}
+                    margin="normal"
+                    variant="outlined"
+                />
+                <TextField
+                    id="outlined-name"
+                    label="Password"
+                    className={classes.textField}
+                    // onChange={this.handleChange('name')}
+                    margin="normal"
+                    variant="outlined"
+                />
+
+                <div className="btn-container">
+                    <Button color="primary" className={classes.button}>
+                        Don't have an account?
+                    </Button>
+                    <Button variant="contained" color="primary"  className={classes.button}>
+                        Sign In
+                    </Button>
+                </div>
+                </div>
             </div>
         );
     }
 }
 
-export default LogIn;
+
+export default withStyles(styles)(LogIn);

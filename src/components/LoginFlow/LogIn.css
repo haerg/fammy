@@ -16,10 +16,19 @@
     margin: 0 auto 20px;
     background-color: #FFF;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
     background-size: cover;
     border-radius: 5px;
     -webkit-box-shadow: 0 0 18px -3px rgba(204, 204, 204, 1);
     -moz-box-shadow: 0 0 18px -3px rgba(204, 204, 204, 1);
     box-shadow: 0 0 18px -3px rgba(204, 204, 204, 1);
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
