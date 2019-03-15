@@ -6,6 +6,7 @@ import { BrowserRouter as Router, BrowserRouter, Route, Switch } from 'react-rou
 import TrackInfo from './components/trackInfo/trackInfo';
 import LogIn from './components/LoginFlow/LogIn';
 import App from './App';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render((
     <BrowserRouter>
