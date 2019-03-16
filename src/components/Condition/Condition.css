@@ -1,0 +1,11 @@
+.condition-background-view {
+    background-color: #dda68e;
+    height: 200px;
+    position: relative;
+    z-index: 1;
+    background-position: bottom center;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+}

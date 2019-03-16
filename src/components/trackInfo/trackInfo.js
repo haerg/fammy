@@ -8,6 +8,7 @@ import CampaignMedia from './campaignMedia/campaignMedia';
 import CampaignDetails from './campaignDetails/campaignDetails';
 import CompaignSlider from './compaignSlider/compaignSlider'
 import CampaignChanges from './compaignChanges/compaignChanges'
+import MainFooter from '../MainFooter/MainFooter';
 
 
 import {BrowserRouter as Router, BrowserRouter, Route, Switch} from "react-router-dom";
@@ -86,6 +87,7 @@ class TrackInfo extends Component {
         </div>
 
        </div>
+       <MainFooter/>
       </div>
   );
 

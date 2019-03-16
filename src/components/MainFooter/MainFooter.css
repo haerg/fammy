@@ -1,0 +1,26 @@
+.footer-background-view {
+    background-color: #fdfdfd;
+    height: 200px;
+    margin: 0 auto 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    background-position: bottom center;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+
+#mainLogo {
+    display: flex;
+    align-items: center;
+}
+
+#mainLogo img {
+    height: 2.5rem;
+    width: 8rem;
+    cursor: pointer;
+}
+
