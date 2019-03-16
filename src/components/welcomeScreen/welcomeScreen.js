@@ -3,6 +3,9 @@ import './welcomeScreen.css';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Header from '../header/header';
+import {
+    withRouter,
+} from 'react-router-dom';
 
 const styles = {
  root: {
@@ -49,6 +52,13 @@ const styles = {
 };
 
 class WelcomeScreen extends Component {
+
+  createCampaign = (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      this.props.history.push(`/createCampaign`);
+  };
+
  render() {
   const { classes } = this.props;
   return (
@@ -68,8 +78,8 @@ class WelcomeScreen extends Component {
                <div className="welcome-screen__wrapper_start_compain">
                <Button variant="contained"
                        classes={{
-                           root: classes.roundedWhite,
-                           label: classes.redLabel,
+                           // root: classes.roundedWhite,
+                           // label: classes.redLabel,
                        }}>
                    Explore campaigns
                </Button>
@@ -79,9 +89,9 @@ class WelcomeScreen extends Component {
 
                <Button variant="contained"
                        classes={{
-                           root: classes.roundedRed,
-                           label: classes.normalLabel,
-                       }} >
+                           // root: classes.roundedRed,
+                           // label: classes.normalLabel,
+                       }} onClick={this.createCampaign}>
                    Start my campaign
                </Button>
                </div>
@@ -94,4 +104,5 @@ class WelcomeScreen extends Component {
  }
 }
 
-export default withStyles(styles)(WelcomeScreen);
+// export default withStyles(styles)(WelcomeScreen);
+export default withRouter(WelcomeScreen);

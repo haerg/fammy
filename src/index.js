@@ -6,6 +6,7 @@ import { BrowserRouter as Router, BrowserRouter, Route, Switch } from 'react-rou
 import TrackInfo from './components/trackInfo/trackInfo';
 import LogIn from './components/LoginFlow/LogIn';
 import SignUp from './components/LoginFlow/SignUp';
+import CreateCampaign from './components/CreateCampaign/CreateCampaign';
 import App from './App';
 
 ReactDOM.render((
@@ -14,6 +15,7 @@ ReactDOM.render((
       <Switch>
           <Route path="/logIn" component={LogIn}/>
           <Route path="/signUp" component={SignUp}/>
+          <Route path="/createCampaign" component={CreateCampaign}/>
           <Route path="/tracks/:id" component={TrackInfo}/>
           <Route path="/" component={App}/>
       </Switch>
