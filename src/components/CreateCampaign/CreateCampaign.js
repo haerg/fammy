@@ -6,6 +6,8 @@ import Button from '@material-ui/core/Button';
 import {withStyles} from "@material-ui/core";
 import Logo from "../header/header";
 import logo from "../header/logo/fammy.png";
+import Typography from '@material-ui/core/Typography';
+import PropTypes from 'prop-types';
 
 const styles = theme => ({
     container: {
@@ -13,8 +15,8 @@ const styles = theme => ({
         flexWrap: 'wrap',
     },
     textField: {
-        marginLeft: theme.spacing.unit,
-        marginRight: theme.spacing.unit,
+        marginLeft: 20,
+        marginRight: 20,
     },
     dense: {
         marginTop: 19,
@@ -27,9 +29,9 @@ const styles = theme => ({
 class CreateCampaign extends React.Component {
 
     logInAction = (event) => {
-        event.preventDefault();
-        event.stopPropagation();
-        this.props.history.push(`/logIn`);
+        // event.preventDefault();
+        // event.stopPropagation();
+        // this.props.history.push(`/logIn`);
     };
 
     logoClick = (event) => {
@@ -68,39 +70,144 @@ class CreateCampaign extends React.Component {
     render() {
         const { classes } = this.props;
         return (
-            <div className="signup-top-container">
-                <div className="login">
+            <div className="create-campaign-top-container">
+                <div className="create-campaign-signup">
                     <div id="mainLogo">
                         <img src={logo} alt="Fammy" onClick={this.logoClick}/>
                     </div>
-                    <TextField
-                        id="outlined-name"
-                        label="Name"
-                        className={classes.textField}
-                        // onChange={this.handleChange('name')}
-                        margin="normal"
-                        variant="outlined"
-                    />
-                    <TextField
-                        id="outlined-name"
-                        label="Email address"
-                        className={classes.textField}
-                        // onChange={this.handleChange('name')}
-                        margin="normal"
-                        variant="outlined"
-                    />
-                    <TextField
-                        id="outlined-name"
-                        label="Password"
-                        className={classes.textField}
-                        // onChange={this.handleChange('name')}
-                        margin="normal"
-                        variant="outlined"
-                    />
+                    <div className="create-campaign-horizontal-container">
+                        <div className="create-campaign-horizontal-container-left">
+                            {/*<Typography component="h6" variant="h6">*/}
+                                {/*Song title*/}
+                            {/*</Typography>*/}
+                            <Typography component="p" variant="h6">
+                                Artist name
+                            </Typography>
+                        </div>
+                        <div className="create-campaign-horizontal-container-right">
+                            <TextField
+                                id="outlined-name"
+                                label="Artist name"
+                                className={classes.textField}
+                                // onChange={this.handleChange('name')}
+                                fullWidth
+                                margin="normal"
+                                variant="outlined"
+                            />
+                        </div>
+                    </div>
 
-                    <div className="btn-container">
+                    <div className="create-campaign-horizontal-container">
+                        <div className="create-campaign-horizontal-container-left">
+                            <Typography component="p" variant="h6">
+                                Song name
+                            </Typography>
+                        </div>
+                        <div className="create-campaign-horizontal-container-right">
+                            <TextField
+                                id="outlined-name"
+                                label="Song name"
+                                className={classes.textField}
+                                // onChange={this.handleChange('name')}
+                                fullWidth
+                                margin="normal"
+                                variant="outlined"
+                            />
+                        </div>
+                    </div>
+
+
+                    <div className="create-campaign-horizontal-container">
+                        <div className="create-campaign-horizontal-container-left">
+                            <Typography component="p" variant="h6">
+                                Spotify URL to the audio
+                            </Typography>
+                        </div>
+                        <div className="create-campaign-horizontal-container-right">
+                            <TextField
+                                id="outlined-name"
+                                label="Spotify URL"
+                                className={classes.textField}
+                                // onChange={this.handleChange('name')}
+                                fullWidth
+                                margin="normal"
+                                variant="outlined"
+                            />
+                        </div>
+                    </div>
+
+                    <div className="create-campaign-horizontal-container">
+                        <div className="create-campaign-horizontal-container-left">
+                            <Typography component="p" variant="h6">
+                                Add a videos that describes your project
+                            </Typography>
+                            <Typography component="p" variant="subtitle1">
+                                Tell people what you’re raising funds to do, how you plan to make it happen, who you are, and why you care about this project
+                                You can add more than one video, just use ',' between links
+                            </Typography>
+                        </div>
+                        <div className="create-campaign-horizontal-container-right">
+                            <TextField
+                                id="outlined-name"
+                                label="YouTube URL"
+                                className={classes.textField}
+                                // onChange={this.handleChange('name')}
+                                fullWidth
+                                margin="normal"
+                                variant="outlined"
+                            />
+                        </div>
+                    </div>
+
+                    <div className="create-campaign-horizontal-container">
+                        <div className="create-campaign-horizontal-container-left">
+                            <Typography component="p" variant="h6">
+                                Campaign duration
+                            </Typography>
+                            <Typography component="p" variant="subtitle1">
+                                Set a time limit for your campaign. You won’t be able to change this after you launch
+                            </Typography>
+                        </div>
+                        <div className="create-campaign-horizontal-container-right">
+                            <TextField
+                                id="outlined-name"
+                                label="YouTube URL"
+                                className={classes.textField}
+                                // onChange={this.handleChange('name')}
+                                fullWidth
+                                margin="normal"
+                                variant="outlined"
+                            />
+                        </div>
+                    </div>
+
+                    <div className="create-campaign-horizontal-container">
+                        <div className="create-campaign-horizontal-container-left">
+                            <Typography component="p" variant="h6">
+                                Funding goal
+                            </Typography>
+                            <Typography component="p" variant="subtitle1">
+                                Set an achievable goal that covers what you need to complete your project.
+                                Funding is all-or-nothing. If you don’t meet your goal, you won’t receive any money.
+                            </Typography>
+                        </div>
+                        <div className="create-campaign-horizontal-container-right">
+                            <TextField
+                                id="outlined-name"
+                                label="YouTube URL"
+                                className={classes.textField}
+                                // onChange={this.handleChange('name')}
+                                fullWidth
+                                margin="normal"
+                                variant="outlined"
+                            />
+                        </div>
+                    </div>
+
+
+                    <div className="create-campaign-btn-container">
                         <Button color="primary" className={classes.button} onClick={this.logInAction}>
-                            Have an account?
+                            By creating Campaign you agree with Terms
                         </Button>
                         <Button variant="contained" color="primary"  className={classes.button}>
                             Create Campaign

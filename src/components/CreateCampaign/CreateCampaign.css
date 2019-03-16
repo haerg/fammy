@@ -1,4 +1,4 @@
-.signup-top-container {
+.create-campaign-top-container {
     height:100vh;
     position: relative;
     z-index: 1;
@@ -11,22 +11,46 @@
     justify-content: center;
 }
 
-.signup{
-    width: 500px;
-    margin: 0 auto 20px;
+.create-campaign-signup{
+    margin: 20px 20px 20px 20px;
     background-color: #FFF;
     padding: 20px;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    background-size: cover;
     border-radius: 5px;
     -webkit-box-shadow: 0 0 18px -3px rgba(204, 204, 204, 1);
     -moz-box-shadow: 0 0 18px -3px rgba(204, 204, 204, 1);
     box-shadow: 0 0 18px -3px rgba(204, 204, 204, 1);
 }
 
-.btn-container {
+.create-campaign-horizontal-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.create-campaign-horizontal-container-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 40%;
+}
+
+.create-campaign-horizontal-container-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 60%;
+}
+
+.create-campaign-btn-container {
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
