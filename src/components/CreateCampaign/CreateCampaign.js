@@ -8,6 +8,8 @@ import Logo from "../header/header";
 import logo from "../header/logo/fammy.png";
 import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import Input from '@material-ui/core/Input';
 
 const styles = theme => ({
     container: {
@@ -46,7 +48,8 @@ class CreateCampaign extends React.Component {
         this.state = {
             name: "Name",
             email: "Email address",
-            password: "Password"
+            password: "Password",
+            amount: "0"
         };
 
         this.handleEmailChange = this.handleEmailChange.bind(this);
@@ -71,7 +74,7 @@ class CreateCampaign extends React.Component {
         const { classes } = this.props;
         return (
             <div className="create-campaign-top-container">
-                <div className="create-campaign-signup">
+                <div className="create-campaign">
                     <div id="mainLogo">
                         <img src={logo} alt="Fammy" onClick={this.logoClick}/>
                     </div>
@@ -136,7 +139,7 @@ class CreateCampaign extends React.Component {
                         </div>
                     </div>
 
-                    <div className="create-campaign-horizontal-container">
+                    <div className="create-campaign-horizontal-container-double-height">
                         <div className="create-campaign-horizontal-container-left">
                             <Typography component="p" variant="h6">
                                 Add a videos that describes your project
@@ -159,7 +162,7 @@ class CreateCampaign extends React.Component {
                         </div>
                     </div>
 
-                    <div className="create-campaign-horizontal-container">
+                    <div className="create-campaign-horizontal-container-double-height">
                         <div className="create-campaign-horizontal-container-left">
                             <Typography component="p" variant="h6">
                                 Campaign duration
@@ -171,7 +174,7 @@ class CreateCampaign extends React.Component {
                         <div className="create-campaign-horizontal-container-right">
                             <TextField
                                 id="outlined-name"
-                                label="YouTube URL"
+                                label="Enter number of days"
                                 className={classes.textField}
                                 // onChange={this.handleChange('name')}
                                 fullWidth
@@ -181,7 +184,7 @@ class CreateCampaign extends React.Component {
                         </div>
                     </div>
 
-                    <div className="create-campaign-horizontal-container">
+                    <div className="create-campaign-horizontal-container-double-height">
                         <div className="create-campaign-horizontal-container-left">
                             <Typography component="p" variant="h6">
                                 Funding goal
@@ -192,14 +195,12 @@ class CreateCampaign extends React.Component {
                             </Typography>
                         </div>
                         <div className="create-campaign-horizontal-container-right">
-                            <TextField
-                                id="outlined-name"
-                                label="YouTube URL"
-                                className={classes.textField}
-                                // onChange={this.handleChange('name')}
+                            <Input
+                                id="adornment-amount"
                                 fullWidth
-                                margin="normal"
-                                variant="outlined"
+                                className={classes.textField}
+                                // onChange={this.handleChange('amount')}
+                                startAdornment={<InputAdornment position="start">$</InputAdornment>}
                             />
                         </div>
                     </div>
