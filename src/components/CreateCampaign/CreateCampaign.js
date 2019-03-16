@@ -10,6 +10,8 @@ import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import Input from '@material-ui/core/Input';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
 
 const styles = theme => ({
     container: {
@@ -42,6 +44,10 @@ class CreateCampaign extends React.Component {
         this.props.history.push('/');
     };
 
+    handleChange = name => event => {
+        this.setState({ [name]: event.target.checked });
+    };
+
     constructor(props) {
         super(props);
 
@@ -49,7 +55,10 @@ class CreateCampaign extends React.Component {
             name: "Name",
             email: "Email address",
             password: "Password",
-            amount: "0"
+            amount: "0",
+            checkedA: false,
+            checkedB: false,
+            checkedC: false
         };
 
         this.handleEmailChange = this.handleEmailChange.bind(this);
@@ -78,11 +87,11 @@ class CreateCampaign extends React.Component {
                     <div id="mainLogo">
                         <img src={logo} alt="Fammy" onClick={this.logoClick}/>
                     </div>
+                    <Typography component="h6" variant="h6">
+                        Make it easy for people to learn about your project.
+                    </Typography>
                     <div className="create-campaign-horizontal-container">
                         <div className="create-campaign-horizontal-container-left">
-                            {/*<Typography component="h6" variant="h6">*/}
-                                {/*Song title*/}
-                            {/*</Typography>*/}
                             <Typography component="p" variant="h6">
                                 Artist name
                             </Typography>
@@ -165,6 +174,30 @@ class CreateCampaign extends React.Component {
                     <div className="create-campaign-horizontal-container-double-height">
                         <div className="create-campaign-horizontal-container-left">
                             <Typography component="p" variant="h6">
+                                Campaign description
+                            </Typography>
+                            <Typography component="p" variant="subtitle1">
+                                Describe what you're raising funds to do, why you care about it, how you plan to make it happen, and who you are.
+                                Your description should tell backers everything they need to know.
+                            </Typography>
+                        </div>
+                        <div className="create-campaign-horizontal-container-right">
+                            <TextField
+                                id="outlined-name"
+                                label="Write about your project, like you're explaining to a friend"
+                                className={classes.textField}
+                                multiline={true}
+                                // onChange={this.handleChange('name')}
+                                fullWidth
+                                margin="normal"
+                                variant="outlined"
+                            />
+                        </div>
+                    </div>
+
+                    <div className="create-campaign-horizontal-container-double-height">
+                        <div className="create-campaign-horizontal-container-left">
+                            <Typography component="p" variant="h6">
                                 Campaign duration
                             </Typography>
                             <Typography component="p" variant="subtitle1">
@@ -201,6 +234,46 @@ class CreateCampaign extends React.Component {
                                 className={classes.textField}
                                 // onChange={this.handleChange('amount')}
                                 startAdornment={<InputAdornment position="start">$</InputAdornment>}
+                            />
+                        </div>
+                    </div>
+
+                    <div className="create-campaign-horizontal-container-double-height">
+                        <div className="create-campaign-horizontal-container-left">
+                            <Typography component="p" variant="h6">
+                                Finally, let’s confirm your eligibility.
+                            </Typography>
+                        </div>
+                        <div className="create-campaign-horizontal-container-right">
+                            <FormControlLabel
+                                control={
+                                    <Checkbox
+                                        checked={this.state.checkedA}
+                                        onChange={this.handleChange('checkedA')}
+                                        value="checkedA"
+                                    />
+                                }
+                                label="I am at least 18 years old."
+                            />
+                            <FormControlLabel
+                                control={
+                                    <Checkbox
+                                        checked={this.state.checkedB}
+                                        onChange={this.handleChange('checkedB')}
+                                        value="checkedA"
+                                    />
+                                }
+                                label="I can verify a bank account and government-issued ID."
+                            />
+                            <FormControlLabel
+                                control={
+                                    <Checkbox
+                                        checked={this.state.checkedC}
+                                        onChange={this.handleChange('checkedC')}
+                                        value="checkedA"
+                                    />
+                                }
+                                label="I have a debit and/or credit card."
                             />
                         </div>
                     </div>
