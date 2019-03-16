@@ -1,16 +1,28 @@
 import React, { Component } from 'react';
+import { withStyles } from '@material-ui/core';
 import './fammyTop.css';
 import FammyTrack from './fammyTrack/fammyTrack';
-
 import FammyPlayer from './fammyPlayer/fammyPlayer';
 import { PLAYLIST } from '../../data.constants';
+import Button from '@material-ui/core/Button/Button';
 
-
+const styles = theme => ({
+ root: {
+  backgroundColor: '#DB5643',
+  color: 'white',
+  '&:hover': {
+   backgroundColor: '#DB5643',
+  },
+ },
+});
 
 class FammyTop extends Component {
 
  state = {
   currentTrack: null,
+  offset: 0,
+  limit: 5,
+  tracks: [],
  };
 
  play = (item) => {
@@ -74,8 +86,36 @@ class FammyTop extends Component {
   this.playTrack(PLAYLIST[nextIndex]);
  };
 
+ getTracks = (params) => {
+  return PLAYLIST.slice(params.offset, params.offset + params.limit);
+ };
+
+ loadData = ({ limit = 5, offset = 0 } = {}) => {
+  const newTracks = this.getTracks({ limit, offset });
+
+  if (!newTracks.length) {
+   this.setState({ noMoreTracks: true });
+  } else {
+   const tracks = this.state.tracks.concat(newTracks);
+   let noMoreTracks = false;
+   if (newTracks.length < this.state.limit) {
+    noMoreTracks = true;
+   }
+
+   this.setState({ offset: offset, limit, tracks, noMoreTracks });
+  }
+ };
+
+ showMore = () => {
+  this.loadData({ offset: this.state.offset + 5 });
+ };
+
+ componentWillMount = () => {
+  this.loadData();
+ };
+
  render = () => {
-  const playlistEl = PLAYLIST.map((item) => {
+  const playlistEl = this.state.tracks.map((item) => {
    return <FammyTrack
        key={item.id}
        item={item}
@@ -91,6 +131,19 @@ class FammyTop extends Component {
       goNextTrack={this.goNextTrack}
   /> : '');
 
+  const { classes } = this.props;
+
+  const showMoreBtn = (this.state.noMoreTracks ? '' :
+      <div className="fammy-top__show-more-container">
+       <Button variant="text"
+               classes={{
+                root: classes.root,
+                label: classes.label,
+               }} onClick={this.showMore}>
+        Show More
+       </Button>
+      </div>);
+
   return (
       <div className="fammy-top">
 
@@ -98,10 +151,11 @@ class FammyTop extends Component {
        <div className="fammy-top__chart">
         {playlistEl}
        </div>
+       {showMoreBtn}
        {player}
       </div>
   );
  };
 }
 
-export default FammyTop;
+export default withStyles(styles)(FammyTop);

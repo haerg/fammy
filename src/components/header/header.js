@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
-import './header.css';
-import Logo from '../header/logo/logo';
 import { withStyles } from '@material-ui/core';
 import { withRouter } from 'react-router-dom';
 
+import './header.css';
+import Logo from '../header/logo/logo';
 
 const styles = theme => ({
  root: {
@@ -19,22 +19,21 @@ const styles = theme => ({
  },
 });
 
-
 class Header extends Component {
 
-    logInAction = (event) => {
-        event.preventDefault();
-        event.stopPropagation();
-        this.props.history.push(`/logIn`);
-    };
+ logInAction = (event) => {
+  event.preventDefault();
+  event.stopPropagation();
+  this.props.history.push(`/logIn`);
+ };
 
-    signUpAction = (event) => {
-        event.preventDefault();
-        event.stopPropagation();
-        this.props.history.push(`/signUp`);
-    };
+ signUpAction = (event) => {
+  event.preventDefault();
+  event.stopPropagation();
+  this.props.history.push(`/signUp`);
+ };
 
-    render = () => {
+ render = () => {
   const { classes } = this.props;
 
   return (
