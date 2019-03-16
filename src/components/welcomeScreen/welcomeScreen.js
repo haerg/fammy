@@ -78,8 +78,8 @@ class WelcomeScreen extends Component {
                <div className="welcome-screen__wrapper_start_compain">
                <Button variant="contained"
                        classes={{
-                           // root: classes.roundedWhite,
-                           // label: classes.redLabel,
+                           root: classes.roundedWhite,
+                           label: classes.redLabel,
                        }}>
                    Explore campaigns
                </Button>
@@ -89,8 +89,8 @@ class WelcomeScreen extends Component {
 
                <Button variant="contained"
                        classes={{
-                           // root: classes.roundedRed,
-                           // label: classes.normalLabel,
+                           root: classes.roundedRed,
+                           label: classes.normalLabel,
                        }} onClick={this.createCampaign}>
                    Start my campaign
                </Button>
@@ -104,5 +104,4 @@ class WelcomeScreen extends Component {
  }
 }
 
-// export default withStyles(styles)(WelcomeScreen);
-export default withRouter(WelcomeScreen);
+export default withStyles(styles)(withRouter(WelcomeScreen));

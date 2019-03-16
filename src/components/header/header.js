@@ -3,10 +3,8 @@ import Button from '@material-ui/core/Button';
 import './header.css';
 import Logo from '../header/logo/logo';
 import { withStyles } from '@material-ui/core';
-import { func, object } from 'prop-types';
-import {
-    withRouter,
-} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
+
 
 const styles = theme => ({
  root: {
@@ -46,15 +44,15 @@ class Header extends Component {
        <div className="header__buttons">
         <Button variant="text"
                 classes={{
-                 // root: classes.root,
-                 // label: classes.label,
+                 root: classes.root,
+                 label: classes.label,
                 }} onClick={this.signUpAction}>
          Sign up
         </Button>
         <Button variant="text"
                 classes={{
-                 // root: classes.root,
-                 // label: classes.label,
+                 root: classes.root,
+                 label: classes.label,
                 }} onClick={this.logInAction}>
          Log in
         </Button>
@@ -66,7 +64,4 @@ class Header extends Component {
  };
 }
 
-// withRouter(Header);
-// withStyles(styles)(Header);
-
-export default withRouter(Header);
+export default withStyles(styles)(withRouter(Header));
