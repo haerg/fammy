@@ -128,6 +128,24 @@ class CreateCampaign extends React.Component {
                         </div>
                     </div>
 
+                    <div className="create-campaign-horizontal-container">
+                        <div className="create-campaign-horizontal-container-left">
+                            <Typography component="p" variant="h6">
+                                Song cover image URL
+                            </Typography>
+                        </div>
+                        <div className="create-campaign-horizontal-container-right">
+                            <TextField
+                                id="outlined-name"
+                                label="Cover image URL"
+                                className={classes.textField}
+                                // onChange={this.handleChange('name')}
+                                fullWidth
+                                margin="normal"
+                                variant="outlined"
+                            />
+                        </div>
+                    </div>
 
                     <div className="create-campaign-horizontal-container">
                         <div className="create-campaign-horizontal-container-left">
@@ -151,7 +169,7 @@ class CreateCampaign extends React.Component {
                     <div className="create-campaign-horizontal-container-double-height">
                         <div className="create-campaign-horizontal-container-left">
                             <Typography component="p" variant="h6">
-                                Add a videos that describes your project
+                                Add videos that describes your project
                             </Typography>
                             <Typography component="p" variant="subtitle1">
                                 Tell people what you’re raising funds to do, how you plan to make it happen, who you are, and why you care about this project
