@@ -1,0 +1,261 @@
+
+.track-info-top__player {
+    z-index: 100;
+    background: rgba(255, 255, 255, .95);
+    padding: 0 30px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    height: 60px;
+    margin-top: 10px;
+}
+
+.track-info-top__player.active .track-info-top__player__controls__pause {
+    display: block;
+}
+
+.track-info-top__player.active .track-info-top__player__controls__play {
+    display: none;
+}
+
+.track-info-top__player__controls {
+    display: flex;
+    justify-content: space-between;
+    max-width: 46px;
+    min-width: 46px;
+    flex: 1 1 100%;
+}
+
+.track-info-top__player__control {
+    width: 1.5rem;
+    cursor: pointer;
+}
+
+.track-info-top__player__control img {
+    width: 100%;
+}
+
+.track-info-top__player__controls__pause {
+    display: none;
+}
+
+.track-info-top__player__playstatus {
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 4 4 100%;
+}
+
+.track-info-top__player__playstatus__progressbar-container {
+    display: flex;
+    flex: 1 1 100%;
+}
+
+.track-info-top__player__playstatus__starttime,
+.track-info-top__player__playstatus__endtime {
+    color: #DB5643;
+    font-size: .9rem;
+    max-width: 3rem;
+}
+
+.track-info-top__player__playstatus__starttime {
+    margin-right: 1rem;
+}
+
+.track-info-top__player__playstatus__endtime {
+    margin-left: 1rem;
+}
+
+.track-info-top__player__track {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    min-width: 250px;
+}
+
+.track-info-top__player__track__img {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.track-info-top__player__track__img img {
+    width: 100%;
+}
+
+.track-info-top__player__track__info {
+    margin-left: .5rem;
+    flex: 1;
+    font-size: .9rem;
+}
+
+.track-info-top__player__track__title {
+    font-weight: 500;
+    padding-bottom: .3rem;
+}
+
+.track-info-top__player__track__title a {
+    text-decoration: none;
+    color: #000;
+}
+
+.track-info-top__player__track__title a:hover {
+    text-decoration: underline;
+    color: #DB5643;
+}
+
+.track-info-top__player__track__artist {
+    font-size: .9rem;
+}
+
+.track-info-top__player__track__artist span {
+    color: #949494;
+}
+
+input[type=range].track-info-top__player__playstatus__progressbar {
+    -webkit-appearance: none;
+    width: 100%;
+    margin: 4px 0;
+}
+
+input[type=range].track-info-top__player__playstatus__progressbar:focus {
+    outline: none;
+}
+
+input[type=range].track-info-top__player__playstatus__progressbar::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    background: #DB5643;
+    border-radius: 0px;
+    border: 0px solid rgba(0, 0, 0, 0);
+}
+
+input[type=range].track-info-top__player__playstatus__progressbar::-webkit-slider-thumb {
+    border: 1px solid #DB5643;
+    height: 12px;
+    width: 12px;
+    border-radius: 15px;
+    background: #DB5643;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -4px;
+}
+
+input[type=range].track-info-top__player__playstatus__progressbar:focus::-webkit-slider-runnable-track {
+    background: #DB5643;
+}
+
+input[type=range].track-info-top__player__playstatus__progressbar::-moz-range-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    background: #DB5643;
+    border-radius: 0px;
+    border: 0px solid rgba(0, 0, 0, 0);
+}
+
+input[type=range].track-info-top__player__playstatus__progressbar::-moz-range-thumb {
+    border: 1px solid #DB5643;
+    height: 12px;
+    width: 12px;
+    border-radius: 15px;
+    background: #DB5643;
+    cursor: pointer;
+}
+
+input[type=range].track-info-top__player__playstatus__progressbar::-ms-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+input[type=range].track-info-top__player__playstatus__progressbar::-ms-fill-lower {
+    background: #DB5643;
+    border: 0px solid rgba(0, 0, 0, 0);
+    border-radius: 0px;
+}
+
+input[type=range].track-info-top__player__playstatus__progressbar::-ms-fill-upper {
+    background: #DB5643;
+    border: 0px solid rgba(0, 0, 0, 0);
+    border-radius: 0px;
+}
+
+input[type=range].track-info-top__player__playstatus__progressbar::-ms-thumb {
+    border: 1px solid #DB5643;
+    width: 12px;
+    border-radius: 15px;
+    background: #DB5643;
+    cursor: pointer;
+    height: 4px;
+}
+
+input[type=range].track-info-top__player__playstatus__progressbar:focus::-ms-fill-lower {
+    background: #DB5643;
+}
+
+input[type=range].track-info-top__player__playstatus__progressbar:focus::-ms-fill-upper {
+    background: #DB5643;
+}
+
+.track-info-top__player__volume {
+    display: flex;
+    align-items: center;
+    max-width: 46px;
+    min-width: 46px;
+    height: 100%;
+    padding-left: 20px;
+    position: relative;
+}
+
+.track-info-top__player__volume img {
+    width: 46px;
+    height: 46px;
+    cursor: pointer;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.track-info-top__player__volume__popup {
+    position: absolute;
+    height: 160px;
+    width: 46px;
+    background: #fff;
+    left: 19px;
+    bottom: 6px;
+    border: 1px solid #e4e4e4;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .24), 0 0 2px 0 rgba(0, 0, 0, .12);
+    opacity: 0;
+    -webkit-transition: opacity .3s cubic-bezier(.4, .2, 0, 1);
+    transition: opacity .3s cubic-bezier(.4, .2, 0, 1);
+    pointer-events: none;
+}
+
+.track-info-top__player__volume__popup.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.track-info-top__player__volume__popup input[type=range].track-info-top__player__playstatus__progressbar {
+    position: absolute;
+    top: 60px;
+    left: -41px;
+    height: 2px;
+    width: 86px;
+    margin-left: 20px;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.track-info-top__player__volume__popup img {
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+

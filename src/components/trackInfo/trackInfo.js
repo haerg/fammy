@@ -9,10 +9,12 @@ import CampaignDetails from './campaignDetails/campaignDetails';
 import CompaignSlider from './compaignSlider/compaignSlider'
 import CampaignChanges from './compaignChanges/compaignChanges'
 import MainFooter from '../MainFooter/MainFooter';
+import TrackInfoPlayer from '../trackInfo/trackInfoPlayer/trackInfoPlayer';
 
 
 import {BrowserRouter as Router, BrowserRouter, Route, Switch} from "react-router-dom";
 import App from "../../App";
+// import FammyPlayer from "../fammyTop/fammyTop";
 
 class TrackInfo extends Component {
 
@@ -20,12 +22,48 @@ class TrackInfo extends Component {
   super();
 
   const element = PLAYLIST.find(e => e.id === +match.params.id);
+  if (!element.audio) {
+   element.audio = new Audio(element.audioUrl);
+   element.audio.onended = this.goNextTrack;
+  }
+
   this.state = {
    element,
+   currentTrack: element,
    comments: element.comments,
    updates: element.updates,
   };
  }
+
+ playTrack = (item) => {
+  if (this.state.currentTrack && this.state.currentTrack.id !== item.id) {
+   const prevItem = PLAYLIST.find(i => i.id === this.state.currentTrack.id);
+   this.pause(prevItem);
+  }
+
+  if (item.audio.paused) {
+   this.play(item);
+  } else {
+   this.pause(item);
+  }
+  this.setState({ currentTrack: item });
+ };
+
+ pauseTrack = () => {
+  this.playTrack(this.state.currentTrack);
+ };
+
+
+ play = (item) => {
+  item.isPlaying = true;
+  item.audio.play();
+ };
+
+ pause = (item) => {
+  item.isPlaying = false;
+  item.audio.pause();
+ };
+
 
  myCallback = (dataFromChild) => {
    switch (dataFromChild) {
@@ -69,6 +107,11 @@ class TrackInfo extends Component {
        <div className="track-info-container__body">
         <div className="track-info-container__first">
          <CampaignMedia media={this.state.element.media}/>
+         {/*<TrackInfoPlayer*/}
+            {/*item={this.state.currentTrack}*/}
+            {/*playTrack={this.playTrack}*/}
+            {/*pauseTrack={this.pauseTrack}*/}
+        {/*/>*/}
          <CampaignDetails element={this.state.element}/>
         </div>
 

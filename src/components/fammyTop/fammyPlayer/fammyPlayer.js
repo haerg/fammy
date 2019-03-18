@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { object, func } from 'prop-types';
 import './fammyPlayer.css';
-import playPrevTrack from '../images/play-previous-track.svg';
-import playTrack from '../images/play-track.svg';
-import pauseTrack from '../images/pause-track.svg';
-import playNextTrack from '../images/play-next-track.svg';
-import volumeMuted from '../images/volume-muted.svg';
-import volumeMed from '../images/volume-med.svg';
-import volumeHigh from '../images/volume-high.svg';
+import playPrevTrack from '../../../images/play-previous-track.svg';
+import playTrack from '../../../images/play-track.svg';
+import pauseTrack from '../../../images/pause-track.svg';
+import playNextTrack from '../../../images/play-next-track.svg';
+import volumeMuted from '../../../images/volume-muted.svg';
+import volumeMed from '../../../images/volume-med.svg';
+import volumeHigh from '../../../images/volume-high.svg';
 
 export default class FammyPlayer extends Component {
  state = {

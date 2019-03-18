@@ -5,6 +5,8 @@ import { withStyles } from '@material-ui/core';
 import facebook from './facebook-logo.svg';
 import twitter from './twitter-logo-on-black-background.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {PLAYLIST} from "../../../data.constants";
+import TrackInfoPlayer from '../../trackInfo/trackInfoPlayer/trackInfoPlayer';
 
 const styles = theme => ({
  root: {
@@ -45,10 +47,49 @@ class CampaignDetails extends Component {
  constructor({ element }) {
   super();
 
+  if (!element.audio) {
+   element.audio = new Audio(element.audioUrl);
+   element.audio.onended = this.goNextTrack;
+  }
+
+
   this.state = {
    element,
+   currentTrack: element,
+   comments: element.comments,
+   updates: element.updates,
   };
  }
+
+
+ playTrack = (item) => {
+  if (this.state.currentTrack && this.state.currentTrack.id !== item.id) {
+   const prevItem = PLAYLIST.find(i => i.id === this.state.currentTrack.id);
+   this.pause(prevItem);
+  }
+
+  if (item.audio.paused) {
+   this.play(item);
+  } else {
+   this.pause(item);
+  }
+  this.setState({ currentTrack: item });
+ };
+
+ pauseTrack = () => {
+  this.playTrack(this.state.currentTrack);
+ };
+
+
+ play = (item) => {
+  item.isPlaying = true;
+  item.audio.play();
+ };
+
+ pause = (item) => {
+  item.isPlaying = false;
+  item.audio.pause();
+ };
 
  render = () => {
   const { classes } = this.props;
@@ -104,7 +145,14 @@ class CampaignDetails extends Component {
                 className="campaign-details__progress__main">{this.state.element.info.daysLeft}</span>
          <span className="campaign-details__progress__details">Days left</span>
         </div>
+
        </div>
+
+       <TrackInfoPlayer
+           item={this.state.currentTrack}
+           playTrack={this.playTrack}
+           pauseTrack={this.pauseTrack}
+       />
 
        <div className="campaign-details__back-song-btn">Back this song</div>
 
