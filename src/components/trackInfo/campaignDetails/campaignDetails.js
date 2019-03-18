@@ -52,7 +52,6 @@ class CampaignDetails extends Component {
    element.audio.onended = this.goNextTrack;
   }
 
-
   this.state = {
    element,
    currentTrack: element,

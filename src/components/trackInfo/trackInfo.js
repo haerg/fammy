@@ -10,6 +10,7 @@ import CompaignSlider from './compaignSlider/compaignSlider'
 import CampaignChanges from './compaignChanges/compaignChanges'
 import MainFooter from '../MainFooter/MainFooter';
 import TrackInfoPlayer from '../trackInfo/trackInfoPlayer/trackInfoPlayer';
+import FammyPlayer from '../../components/fammyTop/fammyPlayer/fammyPlayer';
 
 
 import {BrowserRouter as Router, BrowserRouter, Route, Switch} from "react-router-dom";
@@ -22,6 +23,7 @@ class TrackInfo extends Component {
   super();
 
   const element = PLAYLIST.find(e => e.id === +match.params.id);
+
   if (!element.audio) {
    element.audio = new Audio(element.audioUrl);
    element.audio.onended = this.goNextTrack;
@@ -107,11 +109,6 @@ class TrackInfo extends Component {
        <div className="track-info-container__body">
         <div className="track-info-container__first">
          <CampaignMedia media={this.state.element.media}/>
-         {/*<TrackInfoPlayer*/}
-            {/*item={this.state.currentTrack}*/}
-            {/*playTrack={this.playTrack}*/}
-            {/*pauseTrack={this.pauseTrack}*/}
-        {/*/>*/}
          <CampaignDetails element={this.state.element}/>
         </div>
 

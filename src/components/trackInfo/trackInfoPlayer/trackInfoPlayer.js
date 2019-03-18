@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { object, func } from 'prop-types';
 import './trackInfoPlayer.css';
-import playPrevTrack from '../../../images/play-previous-track.svg';
 import playTrack from '../../../images/play-track.svg';
 import pauseTrack from '../../../images/pause-track.svg';
-import playNextTrack from '../../../images/play-next-track.svg';
 import volumeMuted from '../../../images/volume-muted.svg';
 import volumeMed from '../../../images/volume-med.svg';
 import volumeHigh from '../../../images/volume-high.svg';
@@ -64,11 +62,11 @@ export default class TrackInfoPlayer extends Component {
             <div className={`track-info-top__player ${this.props.item.isPlaying ? 'active' : ''}`}>
 
                 <div className="track-info-top__player__controls">
-                    <div className="track-info-top__player__control fammy-top__player__controls__play"
+                    <div className="track-info-top__player__control track-info-top__player__controls__play"
                          onClick={this.playTrack}>
                         <img alt="" src={playTrack}/>
                     </div>
-                    <div className="track-info-top__player__control fammy-top__player__controls__pause"
+                    <div className="track-info-top__player__control track-info-top__player__controls__pause"
                          onClick={this.props.pauseTrack}>
                         <img alt="" src={pauseTrack}/>
                     </div>
