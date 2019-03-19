@@ -110,6 +110,12 @@ class CampaignDetails extends Component {
         </div>
        </div>
 
+       <TrackInfoPlayer
+           item={this.state.currentTrack}
+           playTrack={this.playTrack}
+           pauseTrack={this.pauseTrack}
+       />
+
        <div className=" campaign-details__owner-container">
         <div className=" campaign-details__owner-container__title">Project owner</div>
         <div className=" campaign-details__owner">
@@ -147,11 +153,6 @@ class CampaignDetails extends Component {
 
        </div>
 
-       <TrackInfoPlayer
-           item={this.state.currentTrack}
-           playTrack={this.playTrack}
-           pauseTrack={this.pauseTrack}
-       />
 
        <div className="campaign-details__back-song-btn">Back this song</div>
 

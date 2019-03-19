@@ -47,6 +47,8 @@ export const PLAYLIST = [
     },
     text: 'Dear Backers, 100% Funded! + #1 on Trending! + Stretch Goal Unlocked!',
    }],
+  story: '  You won’t have heard of any new Transglobal Underground material for a while, but that doesn’t mean we’ve not been very busy behind the scenes. In fact, we’re recording a brand new album for release next year - but we need your help. \n' +
+      'Over the last decade we’ve released a series of albums under our own Mule Satellite label, and have distribution and manufacturing networks for our releases. But the actual work on writing and recording takes time, and these days the Transglobal family is pretty far-flung. We’ve therefore gone off the road for a while, have been preparing initial ideas, and want to put them... and the artists involved... together from May onwards.',
  },
  {
   id: 2,
@@ -96,6 +98,8 @@ export const PLAYLIST = [
     },
     text: 'Dear Backers, 100% Funded! + #1 on Trending! + Stretch Goal Unlocked!',
    }],
+  story: '  You won’t have heard of any new Transglobal Underground material for a while, but that doesn’t mean we’ve not been very busy behind the scenes. In fact, we’re recording a brand new album for release next year - but we need your help. \n' +
+      'Over the last decade we’ve released a series of albums under our own Mule Satellite label, and have distribution and manufacturing networks for our releases. But the actual work on writing and recording takes time, and these days the Transglobal family is pretty far-flung. We’ve therefore gone off the road for a while, have been preparing initial ideas, and want to put them... and the artists involved... together from May onwards.',
  },
  {
   id: 3,
@@ -145,6 +149,8 @@ export const PLAYLIST = [
     },
     text: 'Dear Backers, 100% Funded! + #1 on Trending! + Stretch Goal Unlocked!',
    }],
+  story: '  You won’t have heard of any new Transglobal Underground material for a while, but that doesn’t mean we’ve not been very busy behind the scenes. In fact, we’re recording a brand new album for release next year - but we need your help. \n' +
+      'Over the last decade we’ve released a series of albums under our own Mule Satellite label, and have distribution and manufacturing networks for our releases. But the actual work on writing and recording takes time, and these days the Transglobal family is pretty far-flung. We’ve therefore gone off the road for a while, have been preparing initial ideas, and want to put them... and the artists involved... together from May onwards.',
  },
  {
   id: 4,

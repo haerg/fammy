@@ -8,6 +8,7 @@ import CampaignMedia from './campaignMedia/campaignMedia';
 import CampaignDetails from './campaignDetails/campaignDetails';
 import CompaignSlider from './compaignSlider/compaignSlider'
 import CampaignChanges from './compaignChanges/compaignChanges'
+import CampaignStory from './compaignStory/compaignStory'
 import MainFooter from '../MainFooter/MainFooter';
 import TrackInfoPlayer from '../trackInfo/trackInfoPlayer/trackInfoPlayer';
 import FammyPlayer from '../../components/fammyTop/fammyPlayer/fammyPlayer';
@@ -34,6 +35,7 @@ class TrackInfo extends Component {
    currentTrack: element,
    comments: element.comments,
    updates: element.updates,
+   story: element.story,
   };
  }
 
@@ -96,7 +98,7 @@ class TrackInfo extends Component {
   } else if (isShowChanges) {
    componentUnderSlider = <CampaignChanges updates={this.state.updates}/>
   } else if (isShowStory) {
-   componentUnderSlider = <CampaignComments comments={this.state.comments}/>
+   componentUnderSlider = <CampaignStory story={this.state.story}/>
   } else {
    componentUnderSlider = <CampaignComments comments={this.state.comments}/>
   }
