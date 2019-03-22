@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './campaignTip.css';
 import youtube from './youtube.svg';
+import Typography from '@material-ui/core/Typography';
 
 class CampaignTip extends Component {
  render = () => {
@@ -16,16 +17,16 @@ class CampaignTip extends Component {
         <div className="campaign__information__icon">
          <img className="campaign__information__icon-original" src={youtube} alt=""/>
         </div>
-        <div className="campaign__information__title">
-         YouTube Pay Rate Per View
-        </div>
-        <div className="campaign__information__sub-title">
-         On average, you can earn $.80 according to 1,000 perspectives monetized by banner
-         advertisements,
-         or, $5-$8 consistent with 1,000 views on a video monetized by means of rollout
-         commercials.
-         So, on a video with 1,000,000 views monetized by rollout ads, you can earn 5,000-8,000.
-        </div>
+            <Typography component="p" variant="h6">
+                YouTube Pay Rate Per View
+            </Typography>
+            <Typography component="p" variant="subtitle1">
+                On average, video can earn $0.80 according to 1,000 perspectives monetized by banner
+                advertisements,
+                or $5-$8 consistent with 1,000 views on a video monetized by means of rollout
+                commercials.
+                So, on a video with 1,000,000 views monetized by rollout ads, video can earn $5,000-$8,000.
+            </Typography>
        </div>
 
       </div>
