@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
 import './CreateCampaign.css';
-import Header from "../welcomeScreen/welcomeScreen";
+import logo from "../header/logo/fammy.png";
+
+import {withStyles} from "@material-ui/core";
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import {withStyles} from "@material-ui/core";
-import Logo from "../header/header";
-import logo from "../header/logo/fammy.png";
 import Typography from '@material-ui/core/Typography';
-import PropTypes from 'prop-types';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import Input from '@material-ui/core/Input';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import Chip from '@material-ui/core/Chip';
 
 const styles = theme => ({
     container: {
@@ -28,7 +31,57 @@ const styles = theme => ({
     menu: {
         width: 200,
     },
+    formControl: {
+        marginLeft: 20,
+        marginRight: 20,
+    },
+    chips: {
+        display: 'flex',
+        flexWrap: 'wrap',
+    },
+    chip: {
+        margin: theme.spacing.unit / 4,
+    },
 });
+
+const ITEM_HEIGHT = 48;
+const ITEM_PADDING_TOP = 8;
+const MenuProps = {
+    PaperProps: {
+        style: {
+            maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+            width: 250,
+        },
+    },
+};
+
+const genres = [
+    'Pop',
+    'Rock',
+    'Hard Rock',
+    'Rhythm & Blues (R&B)',
+    'Country',
+    'Soul',
+    'Country Pop',
+    'Latin',
+    'Disco',
+    'Pop Rock',
+    'Alternative Rock',
+    'Dance',
+    'Jazz',
+    'New Wave',
+    'Hip Hop',
+    'Dance Pop',
+];
+
+// function getStyles(name, that) {
+//     return {
+//         fontWeight:
+//             that.state.name.indexOf(name) === -1
+//                 ? that.props.theme.typography.fontWeightRegular
+//                 : that.props.theme.typography.fontWeightMedium,
+//     };
+// }
 
 class CreateCampaign extends React.Component {
 
@@ -48,11 +101,16 @@ class CreateCampaign extends React.Component {
         this.setState({ [name]: event.target.checked });
     };
 
+    handleGenreChange = event => {
+        this.setState({ genre: event.target.value });
+    };
+
     constructor(props) {
         super(props);
 
         this.state = {
             name: "Name",
+            genre: [],
             email: "Email address",
             password: "Password",
             amount: "0",
@@ -131,13 +189,88 @@ class CreateCampaign extends React.Component {
                     <div className="create-campaign-horizontal-container">
                         <div className="create-campaign-horizontal-container-left">
                             <Typography component="p" variant="h6">
-                                Song cover image URL
+                                Song image URL
                             </Typography>
                         </div>
                         <div className="create-campaign-horizontal-container-right">
                             <TextField
                                 id="outlined-name"
-                                label="Cover image URL"
+                                label="image URL"
+                                className={classes.textField}
+                                // onChange={this.handleChange('name')}
+                                fullWidth
+                                margin="normal"
+                                variant="outlined"
+                            />
+                        </div>
+                    </div>
+
+                    <div className="create-campaign-horizontal-container">
+                        <div className="create-campaign-horizontal-container-left">
+                            <Typography component="p" variant="h6">
+                                Select genres
+                            </Typography>
+                        </div>
+                        <div className="create-campaign-horizontal-container-right">
+                            <FormControl className={classes.formControl} fullWidth>
+                                <InputLabel htmlFor="select-multiple-chip" >Genres</InputLabel>
+                                <Select
+                                    multiple
+                                    fullWidth
+                                    value={this.state.genre}
+                                    onChange={this.handleGenreChange}
+                                    input={<Input id="select-multiple-chip"/>}
+                                    renderValue={selected => (
+                                        <div className={classes.chips}>
+                                            {selected.map(value => (
+                                                <Chip key={value} label={value} className={classes.chip} />
+                                            ))}
+                                        </div>
+                                    )}
+                                    MenuProps={MenuProps}
+                                >
+                                    {genres.map(name => (
+                                        <MenuItem key={name} value={name}>
+                                            {name}
+                                        </MenuItem>
+                                    ))}
+                                </Select>
+                            </FormControl>
+                        </div>
+                    </div>
+
+                    <div className="create-campaign-horizontal-container">
+                        <div className="create-campaign-horizontal-container-left">
+                            <Typography component="p" variant="h6">
+                                Attach full version of the song
+                            </Typography>
+                        </div>
+                        <div className="create-campaign-horizontal-container-right">
+                            <TextField
+                                id="outlined-name"
+                                label="Spotify URL"
+                                className={classes.textField}
+                                // onChange={this.handleChange('name')}
+                                fullWidth
+                                margin="normal"
+                                variant="outlined"
+                            />
+                        </div>
+                    </div>
+
+                    <div className="create-campaign-horizontal-container-double-height">
+                        <div className="create-campaign-horizontal-container-left">
+                            <Typography component="p" variant="h6">
+                                Attach short version of the song
+                            </Typography>
+                            <Typography component="p" variant="subtitle1">
+                                30 seconds
+                            </Typography>
+                        </div>
+                        <div className="create-campaign-horizontal-container-right">
+                            <TextField
+                                id="outlined-name"
+                                label="YouTube URL"
                                 className={classes.textField}
                                 // onChange={this.handleChange('name')}
                                 fullWidth
@@ -157,6 +290,28 @@ class CreateCampaign extends React.Component {
                             <TextField
                                 id="outlined-name"
                                 label="Spotify URL"
+                                className={classes.textField}
+                                // onChange={this.handleChange('name')}
+                                fullWidth
+                                margin="normal"
+                                variant="outlined"
+                            />
+                        </div>
+                    </div>
+
+                    <div className="create-campaign-horizontal-container-double-height">
+                        <div className="create-campaign-horizontal-container-left">
+                            <Typography component="p" variant="h6">
+                                Add a link to your YouTube channel
+                            </Typography>
+                            <Typography component="p" variant="subtitle1">
+                                Video will be published on your channel
+                            </Typography>
+                        </div>
+                        <div className="create-campaign-horizontal-container-right">
+                            <TextField
+                                id="outlined-name"
+                                label="YouTube URL"
                                 className={classes.textField}
                                 // onChange={this.handleChange('name')}
                                 fullWidth
