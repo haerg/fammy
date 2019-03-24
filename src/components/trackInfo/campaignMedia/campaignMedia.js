@@ -5,7 +5,7 @@ class CampaignMedia extends Component {
 
  constructor({ media }) {
   super();
-
+  console.log(media);
   this.state = {
    currentMedia: media[0],
    media,
@@ -22,15 +22,24 @@ class CampaignMedia extends Component {
       this.state.currentMedia.id ? 'active' : '')}
            key={index}
            onClick={() => {this.chooseMedia(item);}}>
-       <img src={item.url}/>
+       {item.type === 'image' ?
+           <img src={item.url}/> :
+           <img src={'http://i.ytimg.com/vi/' + item.key + '/hqdefault.jpg'}>
+           </img>}
       </div>,
+  );
+
+  const mediaPreview = (this.state.currentMedia.type === 'image' ?
+          <img src={this.state.currentMedia.url}/> :
+          <iframe height="100%" width="100%" src={this.state.currentMedia.url}>
+          </iframe>
   );
 
   return (
       <div className="campaign__media">
        <div className="campaign__media-big">
         <div className="campaign__media__item">
-         <img src={this.state.currentMedia.url}/>
+         {mediaPreview}
         </div>
        </div>
        <div className="campaign__media-small">

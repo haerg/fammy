@@ -20,11 +20,17 @@ export const PLAYLIST = [
   media: [
    {
     id: 1,
+    key: '-rAvrBnR-7Q',
+    url: 'https://www.youtube.com/embed/-rAvrBnR-7Q',
+    type: 'video',
+   },
+   {
+    id: 2,
     url: 'http://fonday.ru/images/tmp/8/9/original/8994OsgvV97a5NIer54VNKcNxf9rm9z.jpg',
     type: 'image',
    },
    {
-    id: 2,
+    id: 3,
     url: 'https://static.addtoany.com/images/dracaena-cinnabari.jpg',
     type: 'image',
    },
@@ -65,6 +71,12 @@ export const PLAYLIST = [
   media: [
    {
     id: 1,
+    key: '-rAvrBnR-7Q',
+    url: 'https://www.youtube.com/embed/-rAvrBnR-7Q',
+    type: 'video',
+   },
+   {
+    id: 2,
     url: 'http://fonday.ru/images/tmp/8/9/original/8994OsgvV97a5NIer54VNKcNxf9rm9z.jpg',
     type: 'image',
    },
@@ -116,6 +128,12 @@ export const PLAYLIST = [
   media: [
    {
     id: 1,
+    key: '-rAvrBnR-7Q',
+    url: 'https://www.youtube.com/embed/-rAvrBnR-7Q',
+    type: 'video',
+   },
+   {
+    id: 2,
     url: 'http://fonday.ru/images/tmp/8/9/original/8994OsgvV97a5NIer54VNKcNxf9rm9z.jpg',
     type: 'image',
    },
@@ -167,6 +185,12 @@ export const PLAYLIST = [
   media: [
    {
     id: 1,
+    key: '-rAvrBnR-7Q',
+    url: 'https://www.youtube.com/embed/-rAvrBnR-7Q',
+    type: 'video',
+   },
+   {
+    id: 2,
     url: 'http://fonday.ru/images/tmp/8/9/original/8994OsgvV97a5NIer54VNKcNxf9rm9z.jpg',
     type: 'image',
    },
@@ -216,6 +240,12 @@ export const PLAYLIST = [
   media: [
    {
     id: 1,
+    key: '-rAvrBnR-7Q',
+    url: 'https://www.youtube.com/embed/-rAvrBnR-7Q',
+    type: 'video',
+   },
+   {
+    id: 2,
     url: 'http://fonday.ru/images/tmp/8/9/original/8994OsgvV97a5NIer54VNKcNxf9rm9z.jpg',
     type: 'image',
    },
@@ -265,6 +295,12 @@ export const PLAYLIST = [
   media: [
    {
     id: 1,
+    key: '-rAvrBnR-7Q',
+    url: 'https://www.youtube.com/embed/-rAvrBnR-7Q',
+    type: 'video',
+   },
+   {
+    id: 2,
     url: 'http://fonday.ru/images/tmp/8/9/original/8994OsgvV97a5NIer54VNKcNxf9rm9z.jpg',
     type: 'image',
    },
@@ -314,6 +350,12 @@ export const PLAYLIST = [
   media: [
    {
     id: 1,
+    key: '-rAvrBnR-7Q',
+    url: 'https://www.youtube.com/embed/-rAvrBnR-7Q',
+    type: 'video',
+   },
+   {
+    id: 2,
     url: 'http://fonday.ru/images/tmp/8/9/original/8994OsgvV97a5NIer54VNKcNxf9rm9z.jpg',
     type: 'image',
    },
@@ -363,6 +405,12 @@ export const PLAYLIST = [
   media: [
    {
     id: 1,
+    key: '-rAvrBnR-7Q',
+    url: 'https://www.youtube.com/embed/-rAvrBnR-7Q',
+    type: 'video',
+   },
+   {
+    id: 2,
     url: 'http://fonday.ru/images/tmp/8/9/original/8994OsgvV97a5NIer54VNKcNxf9rm9z.jpg',
     type: 'image',
    },
@@ -412,6 +460,12 @@ export const PLAYLIST = [
   media: [
    {
     id: 1,
+    key: '-rAvrBnR-7Q',
+    url: 'https://www.youtube.com/embed/-rAvrBnR-7Q',
+    type: 'video',
+   },
+   {
+    id: 2,
     url: 'http://fonday.ru/images/tmp/8/9/original/8994OsgvV97a5NIer54VNKcNxf9rm9z.jpg',
     type: 'image',
    },
