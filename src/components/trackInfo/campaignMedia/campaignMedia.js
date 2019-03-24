@@ -31,7 +31,7 @@ class CampaignMedia extends Component {
 
   const mediaPreview = (this.state.currentMedia.type === 'image' ?
           <img src={this.state.currentMedia.url}/> :
-          <iframe height="100%" width="100%" src={this.state.currentMedia.url}>
+          <iframe height="100%" width="100%" allowfullscreen="true" src={this.state.currentMedia.url}>
           </iframe>
   );
 
