@@ -74,15 +74,6 @@ const genres = [
     'Dance Pop',
 ];
 
-// function getStyles(name, that) {
-//     return {
-//         fontWeight:
-//             that.state.name.indexOf(name) === -1
-//                 ? that.props.theme.typography.fontWeightRegular
-//                 : that.props.theme.typography.fontWeightMedium,
-//     };
-// }
-
 class CreateCampaign extends React.Component {
 
     logInAction = (event) => {
@@ -195,7 +186,7 @@ class CreateCampaign extends React.Component {
                         <div className="create-campaign-horizontal-container-right">
                             <TextField
                                 id="outlined-name"
-                                label="image URL"
+                                label="Image URL"
                                 className={classes.textField}
                                 // onChange={this.handleChange('name')}
                                 fullWidth
@@ -248,7 +239,7 @@ class CreateCampaign extends React.Component {
                         <div className="create-campaign-horizontal-container-right">
                             <TextField
                                 id="outlined-name"
-                                label="Spotify URL"
+                                label="Attach full version of the song"
                                 className={classes.textField}
                                 // onChange={this.handleChange('name')}
                                 fullWidth
@@ -270,7 +261,7 @@ class CreateCampaign extends React.Component {
                         <div className="create-campaign-horizontal-container-right">
                             <TextField
                                 id="outlined-name"
-                                label="YouTube URL"
+                                label="Attach short version of the song"
                                 className={classes.textField}
                                 // onChange={this.handleChange('name')}
                                 fullWidth
@@ -311,7 +302,7 @@ class CreateCampaign extends React.Component {
                         <div className="create-campaign-horizontal-container-right">
                             <TextField
                                 id="outlined-name"
-                                label="YouTube URL"
+                                label="YouTube channel URL"
                                 className={classes.textField}
                                 // onChange={this.handleChange('name')}
                                 fullWidth
@@ -334,7 +325,7 @@ class CreateCampaign extends React.Component {
                         <div className="create-campaign-horizontal-container-right">
                             <TextField
                                 id="outlined-name"
-                                label="YouTube URL"
+                                label="YouTube URLs"
                                 className={classes.textField}
                                 // onChange={this.handleChange('name')}
                                 fullWidth
@@ -357,7 +348,7 @@ class CreateCampaign extends React.Component {
                         <div className="create-campaign-horizontal-container-right">
                             <TextField
                                 id="outlined-name"
-                                label="Write about your project, like you're explaining to a friend"
+                                label="Write about your project, like you're explaining it to a friend"
                                 className={classes.textField}
                                 multiline={true}
                                 // onChange={this.handleChange('name')}
