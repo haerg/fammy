@@ -83,7 +83,7 @@ class CompaignSlider extends React.Component {
     constructor({ }) {
         super();
         this.state = {
-            value: 2,
+            value: 0,
         };
     }
 

@@ -100,7 +100,7 @@ class TrackInfo extends Component {
   } else if (isShowStory) {
    componentUnderSlider = <CampaignStory story={this.state.story}/>
   } else {
-   componentUnderSlider = <CampaignComments comments={this.state.comments}/>
+   componentUnderSlider = <CampaignStory story={this.state.story}/>
   }
 
   return (
