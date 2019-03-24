@@ -6,7 +6,7 @@
 }
 
 .campaign__media-big {
-    height: 20rem;
+    height: 30rem;
 }
 
 .campaign__media__item {
@@ -25,7 +25,7 @@
 }
 
 .campaign__media-small__item {
-    height: 5rem;
+    height: 3.5rem;
     margin-right: 1rem;
     cursor: pointer;
     border: 2px solid transparent;

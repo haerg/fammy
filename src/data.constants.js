@@ -20,19 +20,15 @@ export const PLAYLIST = [
   media: [
    {
     id: 1,
-    key: '-rAvrBnR-7Q',
-    url: 'https://www.youtube.com/embed/-rAvrBnR-7Q',
+    key: 'gOzHzwYMtK4',
+    url: 'https://www.youtube.com/embed/gOzHzwYMtK4',
     type: 'video',
    },
    {
     id: 2,
-    url: 'http://fonday.ru/images/tmp/8/9/original/8994OsgvV97a5NIer54VNKcNxf9rm9z.jpg',
-    type: 'image',
-   },
-   {
-    id: 3,
-    url: 'https://static.addtoany.com/images/dracaena-cinnabari.jpg',
-    type: 'image',
+    key: 'pdDE1CzeYXg',
+    url: 'https://www.youtube.com/embed/pdDE1CzeYXg',
+    type: 'video',
    },
   ],
   comments: [
@@ -71,19 +67,15 @@ export const PLAYLIST = [
   media: [
    {
     id: 1,
-    key: '-rAvrBnR-7Q',
-    url: 'https://www.youtube.com/embed/-rAvrBnR-7Q',
+    key: 'z5NSfvK-iRs',
+    url: 'https://www.youtube.com/embed/z5NSfvK-iRs',
     type: 'video',
    },
    {
     id: 2,
-    url: 'http://fonday.ru/images/tmp/8/9/original/8994OsgvV97a5NIer54VNKcNxf9rm9z.jpg',
-    type: 'image',
-   },
-   {
-    id: 2,
-    url: 'https://static.addtoany.com/images/dracaena-cinnabari.jpg',
-    type: 'image',
+    key: 'ApXoWvfEYVU',
+    url: 'https://www.youtube.com/embed/ApXoWvfEYVU',
+    type: 'video',
    },
   ],
   info: {
