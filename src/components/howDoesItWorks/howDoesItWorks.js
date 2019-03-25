@@ -25,7 +25,7 @@ class HowDoesItWorks extends Component {
           Creator sets project's funding goal and deadline
          </div>
          <div className="how-does-it-works__feature__sub-title">
-          You can give money to make it happen.
+          You can give money to make it happen
          </div>
         </div>
 
@@ -37,8 +37,8 @@ class HowDoesItWorks extends Component {
           Once the project has reached its funding goal - all backers are charged
          </div>
          <div className="how-does-it-works__feature__sub-title">
-          If the project fails on its funding goal, no one
-          is charged.
+          If the project fails on its goal, no one
+          is charged
          </div>
         </div>
 
@@ -47,11 +47,11 @@ class HowDoesItWorks extends Component {
           <img className="how-does-it-works__feature__icon-original" src={dollar} alt=""/>
          </div>
          <div className="how-does-it-works__feature__title">
-          Backers get % from the video revenue, based on their contribution
+          Backers get part of the video revenue, based on their contribution
          </div>
          <div className="how-does-it-works__feature__sub-title">
           Win - win for backers and for
-          musicians.
+          musicians
          </div>
         </div>
 

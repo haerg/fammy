@@ -16,7 +16,8 @@
 }
 
 .how-does-it-works__feature {
-    max-width: 300px;
+    max-width: 340px;
+    min-height: 150px;
     -webkit-box-shadow: 0 0 18px -3px rgba(204, 204, 204, 1);
     -moz-box-shadow: 0 0 18px -3px rgba(204, 204, 204, 1);
     box-shadow: 0 0 18px -3px rgba(204, 204, 204, 1);
