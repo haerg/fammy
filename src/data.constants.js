@@ -49,8 +49,7 @@ export const PLAYLIST = [
     },
     text: 'Dear Backers, 100% Funded! + #1 on Trending! + Stretch Goal Unlocked!',
    }],
-  story: '  You won’t have heard of any new Transglobal Underground material for a while, but that doesn’t mean we’ve not been very busy behind the scenes. In fact, we’re recording a brand new album for release next year - but we need your help. \n' +
-      'Over the last decade we’ve released a series of albums under our own Mule Satellite label, and have distribution and manufacturing networks for our releases. But the actual work on writing and recording takes time, and these days the Transglobal family is pretty far-flung. We’ve therefore gone off the road for a while, have been preparing initial ideas, and want to put them... and the artists involved... together from May onwards.',
+  story: 'Daria and Sergey here :) Our project is about adding our personal touch and feel into music we love. It is all about bringing new energy and modern feel to our favourite old school classics and popular hits we all love so much. Basically it can be any song that resonates with us and with YOU. This is a fully independent total DIY project - from arrangements, recording, mixing&mastering all the way to filming and editing. All done at our home studio (Sershen Music Studio). As some of you may know, we do not release videos very often (once a month at best) and BECOMING A PATREON for us is great way for you to Motivate us to keep making more music!  We try to improve both visual and the sound because we want each new video to be better than the last! And here is how YOU can help us. Support us and get rewards in return! ',
  },
  {
   id: 2,

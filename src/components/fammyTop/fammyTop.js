@@ -145,7 +145,7 @@ class FammyTop extends Component {
       </div>);
 
   return (
-      <div className="fammy-top">
+      <div className="fammy-top" ref={this.props.refProp}>
 
        <div className="fammy-top__title">Hot Campaigns</div>
        <div className="fammy-top__chart">

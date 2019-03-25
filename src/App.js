@@ -13,12 +13,18 @@ import Condition from './components/Condition/Condition';
 library.add(faCoffee);
 
 class App extends Component {
+
+    constructor(props) {
+        super(props)
+        this.ref = React.createRef()
+    }
+
  render() {
   return (
       <div>
-       <WelcomeScreen/>
+       <WelcomeScreen refProp={this.ref}/>
        <HowDoesItWorks/>
-       <FammyTop/>
+       <FammyTop refProp={this.ref}/>
        {/*<Condition/>*/}
        <MainFooter/>
       </div>

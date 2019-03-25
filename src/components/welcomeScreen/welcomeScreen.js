@@ -53,11 +53,23 @@ const styles = {
 
 class WelcomeScreen extends Component {
 
-  createCampaign = (event) => {
+    constructor(props) {
+        super(props)
+    }
+
+    createCampaign = (event) => {
       event.preventDefault();
       event.stopPropagation();
       this.props.history.push(`/createCampaign`);
-  };
+    };
+
+    scrollToList = (event) => {
+        this.props.refProp.current.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center',
+            inline: 'center',
+        });
+    };
 
  render() {
   const { classes } = this.props;
@@ -80,7 +92,7 @@ class WelcomeScreen extends Component {
                        classes={{
                            root: classes.roundedWhite,
                            label: classes.redLabel,
-                       }}>
+                       }} onClick={this.scrollToList}>
                    Explore campaigns
                </Button>
                </div>

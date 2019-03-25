@@ -5,6 +5,12 @@ import goal from './goal.svg';
 import './howDoesItWorks.css';
 
 class HowDoesItWorks extends Component {
+
+ constructor(props) {
+  super(props)
+  this.ref = React.createRef()
+ }
+
  render() {
   return (
       <div className="how-does-it-works">
