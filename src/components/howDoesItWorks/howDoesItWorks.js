@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import singer from './singer.svg';
-import dollar from './dollar.svg';
-import goal from './goal.svg';
+import one from './one.svg';
+import two from './two.svg';
+import three from './three.svg';
 import './howDoesItWorks.css';
 
 class HowDoesItWorks extends Component {
@@ -19,7 +19,7 @@ class HowDoesItWorks extends Component {
 
         <div className="how-does-it-works__feature">
          <div className="how-does-it-works__feature__icon">
-          <img className="how-does-it-works__feature__icon-original" src={singer} alt=""/>
+          <img className="how-does-it-works__feature__icon-original" src={one} alt=""/>
          </div>
          <div className="how-does-it-works__feature__title">
           Creator sets project's funding goal and deadline
@@ -31,7 +31,7 @@ class HowDoesItWorks extends Component {
 
         <div className="how-does-it-works__feature">
          <div className="how-does-it-works__feature__icon">
-          <img className="how-does-it-works__feature__icon-original" src={goal} alt=""/>
+          <img className="how-does-it-works__feature__icon-original" src={two} alt=""/>
          </div>
          <div className="how-does-it-works__feature__title">
           Once the project has reached its funding goal - all backers are charged
@@ -44,7 +44,7 @@ class HowDoesItWorks extends Component {
 
         <div className="how-does-it-works__feature">
          <div className="how-does-it-works__feature__icon">
-          <img className="how-does-it-works__feature__icon-original" src={dollar} alt=""/>
+          <img className="how-does-it-works__feature__icon-original" src={three} alt=""/>
          </div>
          <div className="how-does-it-works__feature__title">
           Backers get part of the video revenue, based on their contribution
