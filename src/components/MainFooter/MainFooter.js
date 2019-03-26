@@ -38,6 +38,11 @@ class MainFooter extends Component {
                         onClick={this.logInAction}>
                     Terms of Use
                 </Button>
+                <Button color="primary"
+                        className={classes.button}
+                        onClick={this.logInAction}>
+                    Privacy Policy
+                </Button>
             </div>
         );
     }
