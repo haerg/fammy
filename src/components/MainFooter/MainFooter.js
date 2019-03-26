@@ -60,6 +60,9 @@ class MainFooter extends Component {
                     </Button>
                 </div>
                 <div className="footer-social-container">
+                    <Typography component="p" variant="subtitle1">
+                        Follow us
+                    </Typography>
                     <Button variant="text"  classes={{
                         root: classes.btnIcon,
                         label: classes.normalLabel,
