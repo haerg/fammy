@@ -81,7 +81,7 @@ class WelcomeScreen extends Component {
 
        <div className="welcome-screen__details">
         <div className="welcome-screen__details__title">
-         Fammy helps musicians find resources for a music video.
+         Fammy helps musicians find resources for a music video
         </div>
         <div className="welcome-screen__details__sub-title">Backers get part of the video revenue based on their contribution
         </div>

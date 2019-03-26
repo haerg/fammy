@@ -1,10 +1,10 @@
 .footer-background-view {
     background-color: #fdfdfd;
-    height: 200px;
+    height: 30px;
     margin: 0 auto 20px;
     padding: 20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     position: relative;
     z-index: 1;

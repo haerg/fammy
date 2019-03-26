@@ -22,7 +22,7 @@ class HowDoesItWorks extends Component {
           <img className="how-does-it-works__feature__icon-original" src={one} alt=""/>
          </div>
          <div className="how-does-it-works__feature__title">
-          Creator sets project's funding goal and deadline
+          Creator sets project's funding goal and a deadline
          </div>
          <div className="how-does-it-works__feature__sub-title">
           You can give money to make it happen

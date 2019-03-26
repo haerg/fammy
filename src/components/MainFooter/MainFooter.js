@@ -30,17 +30,14 @@ class MainFooter extends Component {
         const { classes } = this.props;
         return (
             <div className="footer-background-view">
-                <div id="mainLogo">
-                    <img src={logo} alt="Fammy" onClick={this.logoClick}/>
-                </div>
+                <Typography component="p" variant="subtitle1">
+                    © 2019 Fammy, Inc.
+                </Typography>
                 <Button color="primary"
                         className={classes.button}
                         onClick={this.logInAction}>
                     Terms of Use
                 </Button>
-                <Typography component="p" variant="h6">
-                    © 2019 Fammy, Inc.
-                </Typography>
             </div>
         );
     }
