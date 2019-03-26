@@ -7,6 +7,9 @@ import logo from "../header/logo/fammy.png";
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import {withStyles} from "@material-ui/core";
+import facebook from "./facebook-logo.svg";
+import inst from "./instagram.svg";
+import medium from "./medium-size.svg"
 
 const styles = theme => ({
     container: {
@@ -23,6 +26,12 @@ const styles = theme => ({
     menu: {
         width: 200,
     },
+    btnIcon: {
+        marginTop: 0,
+    },
+    normalLabel: {
+        textTransform: 'none',
+    },
 });
 
 class MainFooter extends Component {
@@ -30,19 +39,46 @@ class MainFooter extends Component {
         const { classes } = this.props;
         return (
             <div className="footer-background-view">
-                <Typography component="p" variant="subtitle1">
-                    © 2019 Fammy, Inc.
-                </Typography>
-                <Button color="primary"
-                        className={classes.button}
-                        onClick={this.logInAction}>
-                    Terms of Use
-                </Button>
-                <Button color="primary"
-                        className={classes.button}
-                        onClick={this.logInAction}>
-                    Privacy Policy
-                </Button>
+                <div className="footer-official-container">
+                    <Typography component="p" variant="subtitle1">
+                        © 2019 Fammy, Inc.
+                    </Typography>
+                    <Button variant="text"
+                            className={classes.button}
+                            onClick={this.logInAction}>
+                        Terms of Use
+                    </Button>
+                    <Button variant="text"
+                            className={classes.button}
+                            onClick={this.logInAction}>
+                        Privacy Policy
+                    </Button>
+                    <Button variant="text"
+                            className={classes.button}
+                            onClick={this.logInAction}>
+                        Blog
+                    </Button>
+                </div>
+                <div className="footer-social-container">
+                    <Button variant="text"  classes={{
+                        root: classes.btnIcon,
+                        label: classes.normalLabel,
+                    }}>
+                        <img className="footer-social_image" src={inst} alt=""/>
+                    </Button>
+                    <Button variant="text"  classes={{
+                        root: classes.btnIcon,
+                        label: classes.normalLabel,
+                    }}>
+                        <img className="footer-social_image" src={facebook} alt=""/>
+                    </Button>
+                    <Button variant="text"  classes={{
+                        root: classes.btnIcon,
+                        label: classes.normalLabel,
+                    }}>
+                        <img className="footer-social_image" src={medium} alt=""/>
+                    </Button>
+                </div>
             </div>
         );
     }

@@ -7,10 +7,10 @@
     flex-direction: row;
     align-items: center;
     position: relative;
+    justify-content: space-between;
     z-index: 1;
     background-position: bottom center;
     background-size: cover;
-    font-family: 'Roboto', sans-serif;
 }
 
 #mainLogo {
@@ -24,3 +24,23 @@
     cursor: pointer;
 }
 
+.footer-official-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer-social-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-social_image {
+    height: 17px;
+}
+
+.footer-social_image img {
+    width: 100%;
+    height: 100%;
+}

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 import './campaignDetails.css';
 import { withStyles } from '@material-ui/core';
-import facebook from './facebook-logo.svg';
+import facebook from '../../MainFooter/facebook-logo.svg';
 import twitter from './twitter-logo-on-black-background.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {PLAYLIST} from "../../../data.constants";
