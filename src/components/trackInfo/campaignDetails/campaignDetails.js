@@ -7,6 +7,7 @@ import twitter from './twitter-logo-on-black-background.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {PLAYLIST} from "../../../data.constants";
 import TrackInfoPlayer from '../../trackInfo/trackInfoPlayer/trackInfoPlayer';
+import Checkout from '../../Checkout/Checkout';
 
 const styles = theme => ({
  root: {
@@ -79,6 +80,10 @@ class CampaignDetails extends Component {
   this.playTrack(this.state.currentTrack);
  };
 
+ pay = (item) => {
+
+ };
+
 
  play = (item) => {
   item.isPlaying = true;
@@ -97,6 +102,7 @@ class CampaignDetails extends Component {
 
   return (
       <div className="campaign-details">
+
        <div className="campaign-details__title">Campaign</div>
 
        <div className="campaign-details__track">
@@ -154,7 +160,8 @@ class CampaignDetails extends Component {
        </div>
 
 
-       <div className="campaign-details__back-song-btn">Back this song</div>
+       {/*<div className="campaign-details__back-song-btn" onClick={this.pay}>Back this song</div>*/}
+       <Checkout/>
 
        <div className="campaign-details__share">
 
