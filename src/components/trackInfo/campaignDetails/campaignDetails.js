@@ -7,7 +7,7 @@ import twitter from './twitter-logo-on-black-background.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {PLAYLIST} from "../../../data.constants";
 import TrackInfoPlayer from '../../trackInfo/trackInfoPlayer/trackInfoPlayer';
-import Checkout from '../../Checkout/Checkout';
+import { withRouter } from 'react-router-dom';
 
 const styles = theme => ({
  root: {
@@ -81,7 +81,7 @@ class CampaignDetails extends Component {
  };
 
  pay = (item) => {
-
+   this.props.history.push(`/checkout`);
  };
 
 
@@ -159,9 +159,7 @@ class CampaignDetails extends Component {
 
        </div>
 
-
-       {/*<div className="campaign-details__back-song-btn" onClick={this.pay}>Back this song</div>*/}
-       <Checkout/>
+       <div className="campaign-details__back-song-btn" onClick={this.pay}>Back this song</div>
 
        <div className="campaign-details__share">
 
@@ -213,4 +211,4 @@ class CampaignDetails extends Component {
  };
 }
 
-export default withStyles(styles)(CampaignDetails);
+export default withStyles(styles)(withRouter(CampaignDetails));
