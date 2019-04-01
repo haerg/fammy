@@ -83,6 +83,7 @@ class LogIn extends React.Component {
                 <TextField
                     id="outlined-name"
                     label="Password"
+                    type="password"
                     className={classes.textField}
                     // onChange={this.handleChange('name')}
                     margin="normal"

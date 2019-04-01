@@ -8,6 +8,7 @@ import LogIn from './components/LoginFlow/LogIn';
 import SignUp from './components/LoginFlow/SignUp';
 import CreateCampaign from './components/CreateCampaign/CreateCampaign';
 import App from './App';
+import Checkout from './components/Checkout/Checkout';
 
 ReactDOM.render((
     <BrowserRouter>
@@ -16,6 +17,7 @@ ReactDOM.render((
           <Route path="/logIn" component={LogIn}/>
           <Route path="/signUp" component={SignUp}/>
           <Route path="/createCampaign" component={CreateCampaign}/>
+          <Route path="/checkout" component={Checkout}/>
           <Route path="/tracks/:id" component={TrackInfo}/>
           <Route path="/" component={App}/>
       </Switch>

@@ -8,7 +8,6 @@ import Logo from '../header/logo/logo';
 
 const styles = theme => ({
  root: {
-  backgroundColor: '#DB5643',
   color: 'white',
   '&:hover': {
    backgroundColor: '#DB5643',
@@ -41,20 +40,21 @@ class Header extends Component {
        <Logo/>
 
        <div className="header__buttons">
+           <Button variant="text"
+                   classes={{
+                       root: classes.root,
+                       label: classes.label,
+                   }} onClick={this.logInAction}>
+               Log in
+           </Button>
         <Button variant="text"
                 classes={{
                  root: classes.root,
                  label: classes.label,
                 }} onClick={this.signUpAction}>
-         Sign up
+         Create Account
         </Button>
-        <Button variant="text"
-                classes={{
-                 root: classes.root,
-                 label: classes.label,
-                }} onClick={this.logInAction}>
-         Log in
-        </Button>
+
        </div>
 
       </header>

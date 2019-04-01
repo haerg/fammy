@@ -35,6 +35,19 @@ const styles = theme => ({
 });
 
 class MainFooter extends Component {
+
+    blogAction = (event) => {
+        window.open("https://medium.com/fammy-fm");
+    };
+
+    instAction = (event) => {
+        window.open("https://www.instagram.com/fammy.fm/");
+    };
+
+    fbAction = (event) => {
+        window.open("https://www.facebook.com/fammy.fm");
+    };
+
     render() {
         const { classes } = this.props;
         return (
@@ -55,7 +68,7 @@ class MainFooter extends Component {
                     </Button>
                     <Button variant="text"
                             className={classes.button}
-                            onClick={this.logInAction}>
+                            onClick={this.blogAction}>
                         Blog
                     </Button>
                 </div>
@@ -66,19 +79,19 @@ class MainFooter extends Component {
                     <Button variant="text"  classes={{
                         root: classes.btnIcon,
                         label: classes.normalLabel,
-                    }}>
+                    }} onClick={this.instAction}>
                         <img className="footer-social_image" src={inst} alt=""/>
                     </Button>
                     <Button variant="text"  classes={{
                         root: classes.btnIcon,
                         label: classes.normalLabel,
-                    }}>
+                    }} onClick={this.fbAction}>
                         <img className="footer-social_image" src={facebook} alt=""/>
                     </Button>
                     <Button variant="text"  classes={{
                         root: classes.btnIcon,
                         label: classes.normalLabel,
-                    }}>
+                    }} onClick={this.blogAction}>
                         <img className="footer-social_image" src={medium} alt=""/>
                     </Button>
                 </div>
