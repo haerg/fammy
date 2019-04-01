@@ -95,6 +95,7 @@ class SignUp extends React.Component {
                         className={classes.textField}
                         // onChange={this.handleChange('name')}
                         margin="normal"
+                        type="password"
                         variant="outlined"
                     />
 
