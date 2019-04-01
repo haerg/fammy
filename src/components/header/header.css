@@ -7,6 +7,9 @@
 
 .header__buttons {
     display: flex;
-    width: 160px;
+    max-width: 300px;
     justify-content: space-between;
+}
+
+.header__buttons div {
 }
