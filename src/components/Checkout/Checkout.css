@@ -52,13 +52,14 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;
-    background-size: cover;
+    border-style: solid;
+    border-color: #949494;
     border-radius: 5px;
+    border-width: 1px;
 }
 
-.checkout-form div {
-   margin-top: 0px;
+.checkout-form:hover {
+    border-color: #000000;
 }
 
 .checkout-btn-container {
@@ -66,6 +67,12 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+.card-element {
+    margin-right: 0;
+    margin-left: 0;
+    width: 100%;
 }
 
 #mainLogo {
