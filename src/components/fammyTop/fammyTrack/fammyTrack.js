@@ -6,6 +6,7 @@ import './fammyTrack.css';
 import playBtn from '../../../images/play-button.svg';
 import pauseBtn from '../../../images/pause-button.svg';
 import { func, object } from 'prop-types';
+import {withStyles} from "@material-ui/core";
 
 class FammyTrack extends Component {
 
@@ -14,9 +15,9 @@ class FammyTrack extends Component {
  };
 
  backTrack = (event) => {
-  event.preventDefault();
-  event.stopPropagation();
-  alert('smile');
+     event.preventDefault();
+     event.stopPropagation();
+     this.props.history.push(`/checkout`);
  };
 
  detailsTrack = (event) => {

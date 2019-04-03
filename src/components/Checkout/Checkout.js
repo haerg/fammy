@@ -63,7 +63,7 @@ class Checkout extends Component {
                         variant="outlined"
                         label="Amount"
                         margin="normal"
-                        value={0}
+                        value={1}
                         // onChange={this.handleChange('amount')}
                         InputProps={{
                             startAdornment: <InputAdornment position="start">$</InputAdornment>,

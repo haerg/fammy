@@ -49,7 +49,9 @@ export const PLAYLIST = [
     },
     text: 'Dear Backers, 100% Funded! + #1 on Trending! + Stretch Goal Unlocked!',
    }],
-  story: 'Daria and Sergey here :) Our project is about adding our personal touch and feel into music we love. It is all about bringing new energy and modern feel to our favourite old school classics and popular hits we all love so much. Basically it can be any song that resonates with us and with YOU. This is a fully independent total DIY project - from arrangements, recording, mixing&mastering all the way to filming and editing. All done at our home studio (Sershen Music Studio). As some of you may know, we do not release videos very often (once a month at best) and BECOMING A PATREON for us is great way for you to Motivate us to keep making more music!  We try to improve both visual and the sound because we want each new video to be better than the last! And here is how YOU can help us. Support us and get rewards in return! ',
+  story: 'Hi, I\'m Laurie Penny and I\'ve been a journalist for ten years and a writer all my life. I report and write features about politics, social justice, culture and mental health. I\'m a contributing editor at New Statesman, and I’ve written six books, and am working on the next one right now. I’m travelling the United States trying to get under the skin of the political nightmare we’re all living in. And I’m asking for your help. Think of this as my tips jar.\n' +
+      '\n' +
+      'This is a scary time for the world, and a scary time for media and the arts. Journalism is an industry in trouble- at precisely the moment it most needs to be well-resourced, independent and not bound to clickbait, editors and reporters are having to make dreadful decisions about how to keep their business model going. ',
  },
  {
   id: 2,
