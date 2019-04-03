@@ -80,7 +80,10 @@ class Checkout extends Component {
                     />
 
                     <div className="checkout-btn-container">
-                        <Button variant="contained" color="primary"  >
+                        <Button color="primary" className={classes.button} onClick={this.actionSignUp}>
+                            We're using Stripe for payments
+                        </Button>
+                        <Button variant="contained" color="primary"  className={classes.button}>
                             Checkout
                         </Button>
                     </div>
