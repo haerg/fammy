@@ -60,3 +60,13 @@
     margin-left: 20px;
     margin-right: 10px;
 }
+
+@media all and (max-width: 600px) {
+    .welcome-screen__details {
+        padding: 0 1rem;
+    }
+
+    .welcome-screen__wrapper_getstarted_button {
+        flex-direction: column;
+    }
+}
