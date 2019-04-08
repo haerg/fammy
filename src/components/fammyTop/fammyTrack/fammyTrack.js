@@ -3,6 +3,7 @@ import './fammyTrack.css';
 import playBtn from '../../../images/play-button.svg';
 import pauseBtn from '../../../images/pause-button.svg';
 import { func, object } from 'prop-types';
+import { withRouter } from 'react-router-dom';
 
 class FammyTrack extends Component {
 
@@ -80,4 +81,4 @@ class FammyTrack extends Component {
  }
 }
 
-export default FammyTrack;
+export default withRouter(FammyTrack);
