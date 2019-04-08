@@ -23,15 +23,16 @@ class CampaignMedia extends Component {
            key={index}
            onClick={() => {this.chooseMedia(item);}}>
        {item.type === 'image' ?
-           <img src={item.url}/> :
-           <img src={'http://i.ytimg.com/vi/' + item.key + '/hqdefault.jpg'}>
+           <img alt="" src={item.url}/> :
+           <img alt="" src={'http://i.ytimg.com/vi/' + item.key + '/hqdefault.jpg'}>
            </img>}
       </div>,
   );
 
   const mediaPreview = (this.state.currentMedia.type === 'image' ?
-          <img src={this.state.currentMedia.url}/> :
-          <iframe height="100%" width="100%" allowfullscreen="true" src={this.state.currentMedia.url}>
+          <img alt="" src={this.state.currentMedia.url}/> :
+          <iframe height="100%" width="100%" allowfullscreen="true"
+                  src={this.state.currentMedia.url}>
           </iframe>
   );
 

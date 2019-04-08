@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './compaignStory.css';
-import Button from '@material-ui/core/Button/Button';
 import { withStyles } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 

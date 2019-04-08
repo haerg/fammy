@@ -1,10 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './SignUp.css';
-import Header from "../welcomeScreen/welcomeScreen";
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import {withStyles} from "@material-ui/core";
-import Logo from "../header/header";
 import logo from "../header/logo/fammy.png";
 
 const styles = theme => ({

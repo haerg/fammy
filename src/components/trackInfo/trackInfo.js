@@ -10,13 +10,6 @@ import CompaignSlider from './compaignSlider/compaignSlider'
 import CampaignChanges from './compaignChanges/compaignChanges'
 import CampaignStory from './compaignStory/compaignStory'
 import MainFooter from '../MainFooter/MainFooter';
-import TrackInfoPlayer from '../trackInfo/trackInfoPlayer/trackInfoPlayer';
-import FammyPlayer from '../../components/fammyTop/fammyPlayer/fammyPlayer';
-
-
-import {BrowserRouter as Router, BrowserRouter, Route, Switch} from "react-router-dom";
-import App from "../../App";
-// import FammyPlayer from "../fammyTop/fammyTop";
 
 class TrackInfo extends Component {
 

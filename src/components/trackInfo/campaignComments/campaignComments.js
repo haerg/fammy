@@ -67,7 +67,7 @@ class CampaignComments extends Component {
   const comments = this.state.comments.map((item, index) =>
       <div className="campaign__comment" key={index}>
        <div className="campaign__comment__avatar">
-        <img src={item.user.avatarUrl}/>
+        <img alt="" src={item.user.avatarUrl}/>
        </div>
        <div className="campaign__comment__data">
         <div className="campaign__comment__header">

@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React  from 'react';
 import { withStyles } from '@material-ui/core';
 import './LogIn.css';
-import Header from "../welcomeScreen/welcomeScreen";
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import logo from "../header/logo/fammy.png";

@@ -103,7 +103,7 @@ export default class FammyPlayer extends Component {
         </div>
         <div className="fammy-top__player__track__info">
          <div className="fammy-top__player__track__title">
-          <a href="">{this.props.item.track}</a>
+          <div>{this.props.item.track}</div>
          </div>
          <div className="fammy-top__player__track__artist">
           <span>{this.props.item.artist}</span>

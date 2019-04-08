@@ -3,13 +3,11 @@ import './Checkout.css';
 import logo from "../header/logo/fammy.png";
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import {CardElement, CardNumberElement, CardExpiryElement, CardCVCElement} from 'react-stripe-elements';
+import {CardElement, CardExpiryElement, CardCVCElement} from 'react-stripe-elements';
 import {Elements} from 'react-stripe-elements';
 import {injectStripe} from 'react-stripe-elements';
 import {StripeProvider} from 'react-stripe-elements';
-import TrackInfo from "../trackInfo/trackInfo";
 import InputAdornment from '@material-ui/core/InputAdornment';
-import Input from '@material-ui/core/Input';
 import {withStyles} from "@material-ui/core";
 
 const styles = theme => ({
@@ -155,7 +153,7 @@ class _CardCVC extends React.Component {
 }
 const CardCVC = injectStripe(_CardCVC);
 
-const createOptions = (fontSize: string, padding: ?string) => {
+const createOptions = (fontSize, padding) => {
     return {
         style: {
             base: {

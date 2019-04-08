@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-import {
- withRouter,
-} from 'react-router-dom';
 import './fammyTrack.css';
 import playBtn from '../../../images/play-button.svg';
 import pauseBtn from '../../../images/pause-button.svg';
 import { func, object } from 'prop-types';
-import {withStyles} from "@material-ui/core";
 
 class FammyTrack extends Component {
 
@@ -84,4 +80,4 @@ class FammyTrack extends Component {
  }
 }
 
-export default withRouter(FammyTrack);
+export default FammyTrack;

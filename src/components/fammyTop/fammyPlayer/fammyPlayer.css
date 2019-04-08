@@ -99,6 +99,10 @@
     padding-bottom: .3rem;
 }
 
+.fammy-top__player__track__title div {
+    cursor: pointer;
+}
+
 .fammy-top__player__track__title a {
     text-decoration: none;
     color: #000;

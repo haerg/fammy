@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './CreateCampaign.css';
 import logo from "../header/logo/fammy.png";
 

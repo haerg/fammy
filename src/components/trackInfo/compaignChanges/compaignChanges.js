@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './compaignChanges.css';
-import Button from '@material-ui/core/Button/Button';
 import { withStyles } from '@material-ui/core';
 
 const styles = theme => ({
@@ -44,12 +43,11 @@ class CampaignChanges extends Component {
     }
 
     render = () => {
-        const { classes } = this.props;
 
         const comments = this.state.updates.map((item, index) =>
             <div className="campaign__comment" key={index}>
                 <div className="campaign__comment__avatar">
-                    <img src={item.user.avatarUrl}/>
+                    <img alt="" src={item.user.avatarUrl}/>
                 </div>
                 <div className="campaign__comment__data">
                     <div className="campaign__comment__header">
