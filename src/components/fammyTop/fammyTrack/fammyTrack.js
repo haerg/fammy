@@ -46,10 +46,10 @@ class FammyTrack extends Component {
        </div>
        <div className="fammy-top__chart__track__info">
         <div className="fammy-top__chart__track__title">
-         <a href="">{this.props.item.track}</a>
+         <a href="" onClick={this.detailsTrack}>{this.props.item.track}</a>
         </div>
         <div className="fammy-top__chart__track__artist">
-         <a href="">{this.props.item.artist}</a>
+         <a href="" onClick={this.detailsTrack}>{this.props.item.artist}</a>
         </div>
        </div>
 
